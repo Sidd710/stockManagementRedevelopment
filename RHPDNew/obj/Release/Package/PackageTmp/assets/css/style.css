@@ -1,0 +1,534 @@
+﻿
+.full-pop-up {
+    position:absolute;
+    background-color: rgba(255,255,255,0.5);
+    top:0;
+    left:0;
+    width:100%;
+    height:200%;
+    text-align:center;
+    z-index:9999;
+    line-height:60;
+}
+#logo {
+    font-weight:bold;
+    padding:25px 0;
+}
+#logo span {
+    font-size:26px;
+}
+.heading-bg {
+    background:#51aeda;
+    text-align:center;
+    height:50px;
+}
+.upper-details {
+    margin-top:60px;
+}
+.row-2 {
+    margin-left:0;
+    margin-right:0;
+}
+.form-group-2 {
+    float: left;
+    margin-bottom: 15px;
+    width: 100%;
+}
+thead {
+    background:#ebebed;
+}
+.text-align-right {
+    text-align:right;
+}
+.padding-0 {
+    padding:0;
+}
+th {
+    font-weight:normal;
+    text-align:center;
+}
+td:first-child {
+    text-align:center;
+}
+.fixed {
+    opacity:0.85;
+}
+
+.myExcelbtn{ 
+        background: url("../Images/import_excel.png") no-repeat scroll 0 9px / 13% auto rgba(0, 0, 0, 0);
+        border: 0 none;
+        cursor: pointer;
+        font-family: Arial;
+        font-size: 10pt;
+        font-weight: normal;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 19px;
+        padding-top: 1px;
+         margin-right: -87%;
+        }
+
+ .GridCaption_Web20 {
+            color: #555557;
+            font-size: 30px;
+        }
+  .GridHeader_Web20, .ResizeHeader_Web20 {
+    background: none repeat scroll 0 0 #51aeda !important;
+}
+
+/*Vikas CSS 10-01-2015*/
+
+/*Reset CSS*/
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;padding:50px 0 100px 0;}
+.text-align-left{text-align:left !important;}
+.text-align-center{text-align:center !important;}
+.text-align-right{text-align:right !important;}
+.clear{clear:both !important;}
+.fleft{float:left !important;}
+.fright{float:right !important;}
+.floatnone{float:none !important;}
+
+.form-control{left:0 !important;top:0 !important;padding:5px 4px !important;}
+
+.margintop5{margin-top:5px !important;}
+.margintop10{margin-bottom:10px !important;}
+.margintop15{margin-top:15px !important;}
+.margintop20{margin-top:20px !important;}
+.margintop25{margin-top:25px !important;}
+.margintop30{margin-top:30px !important;}
+.margintop35{margin-top:35px !important;}
+.margintop40{margin-top:40px !important;}
+
+.marginbottom5{margin-bottom:5px !important;}
+.marginbottom10{margin-bottom:10px !important;}
+.marginbottom15{margin-bottom:15px !important;}
+.marginbottom20{margin-bottom:20px !important;}
+.marginbottom25{margin-bottom:25px !important;}
+.marginbottom30{margin-bottom:30px !important;}
+.marginbottom35{margin-bottom:35px !important;}
+.marginbottom40{margin-bottom:40px !important;}
+
+.marginright5{margin-right:5px !important;}
+.marginright10{margin-right:10px !important;}
+.marginright15{margin-right:15px !important;}
+.marginright20{margin-right:20px !important;}
+.marginright25{margin-right:25px !important;}
+.marginright30{margin-right:30px !important;}
+.marginright35{margin-right:35px !important;}
+.marginleft40{margin-right:40px !important;}
+
+.marginleft5{margin-left:5px !important;}
+.marginleft10{margin-left:10px !important;}
+.marginleft15{margin-left:15px !important;}
+.marginleft20{margin-left:20px !important;}
+.marginleft25{margin-left:25px !important;}
+.marginleft30{margin-left:30px !important;}
+.marginleft35{margin-left:35px !important;}
+.marginleft40{margin-left:40px !important;}
+
+.col-one,
+.col-two,
+.col-three,
+.col-four,
+.col-five,
+.col-six,
+.col-seven,
+.col-eight,
+.col-nine,
+.col-ten{float:left !important;}
+
+.col-one{width:10% !important;}
+.col-two{width:20% !important;}
+.col-three{width:30% !important;}
+.col-four{width:40% !important;}
+.col-five{width:50% !important;}
+.col-six{width:60% !important;}
+.col-seven{width:70% !important;}
+.col-eight{width:80% !important;}
+.col-nine{width:90% !important;}
+.col-ten{width:100% !important;}
+
+.form-outer{}
+
+.loginPageOuter{width:90%;margin:-59px auto;}
+
+.navbar-inverse .navbar-brand{color:#fff;}
+/*.navbar-inverse{height:38px;overflow:hidden}*/
+
+.welcome_note{width:100%;margin-bottom:20px;}
+.welcome_note h1{background:none;border-radius:0;border:0;margin:30px 0 0px;padding:0;color:#999;text-align:center;width:100%;}
+.pageHeading{width:100%;margin:20px 0;}
+.pageHeading h1{background:none;border-radius:0;border:0;margin:0;padding:0;color:#0066FF;text-align:center;width:100%;}
+
+input[type="text"],
+input[type="email"],
+input[type="contact"],
+input[type="tel"],
+input[type="password"],
+select,
+textarea{color:#000 !important;}
+
+.form-outer label{float:left;width:50%;}
+.form-outer input[type="text"],
+.form-outer input[type="email"],
+.form-outer input[type="contact"],
+.form-outer input[type="tel"],
+.form-outer input[type="password"],
+.form-outer select,
+.form-outer textarea{
+float:left;
+width:50%;
+font-size:13px;
+font-weight:normal;
+/*display: block;
+padding: 6px 7px;
+font-size: 14px;
+line-height: 1.42857;
+background-color: #F5F5F5;
+background-image: none;
+border-width: 1px;
+border-style:solid;
+border-radius: 4px;*/
+}
+
+.form-outer input[type="checkbox"],
+.form-outer input[type="radio"]{float:left;width:20px;}
+
+.form-outer .checkboxDiv,
+.form-outer .radioDiv{float:left;width:50%;}
+.form-outer .checkboxDiv input[type="checkbox"],
+.form-outer .checkboxDiv input[type="radio"],
+.form-outer .radioDiv input[type="checkbox"],
+.form-outer .radioDiv input[type="radio"]{float:left;width:20px;margin:5px 0 0 5px;vertical-align:middle;}
+
+.depotCode{background:#CC9900;padding:5px;border:1px solid #993300;float:left;margin:0 0 20px 0;border-radius:2px;}
+.forming_texting{}
+
+.col-five .unitType{width:50%;background:none;margin:0;}
+.col-five .unitType td{background:none;border:0;}
+.col-five .unitType label{width:auto !important;margin:3px 0 0;}
+
+.col-five .tableCheckbox{width:50%;background:none;margin:0;float:left;}
+.col-five .tableCheckbox table{width:100%;background:none;margin:0;}
+.col-five .tableCheckbox td{background:none;border:0;}
+.col-five .tableCheckbox label{width:auto !important;margin:3px 0 0;}
+
+@media (max-width: 991px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 569px) {
+	.col-one,
+	.col-two,
+	.col-three,
+	.col-four,
+	.col-five,
+	.col-six,
+	.col-seven,
+	.col-eight,
+	.col-nine,
+	.col-ten{width:100% !important;}
+	
+	.form_text{text-align:left;padding-right:0;}
+	.form-outer label{float:left;width:100% !important;}
+	.form-outer input[type="text"],
+	.form-outer input[type="email"],
+	.form-outer input[type="contact"],
+	.form-outer input[type="tel"],
+	.form-outer input[type="password"],
+	.form-outer select,
+	.form-outer textarea{float:left;width:100% !important;}
+	.col-five .unitType{width:100%;}
+	.col-five .tableCheckbox{width:100%;}
+}
+@media (min-width: 570px) {
+	.form_text{text-align:right;padding-right:10px}
+	/*.form-outer label{width:44% !important;}*/
+}
+@media (min-width: 571px) {
+	.forming_texting .form_text{width:38%;font-weight:normal;}
+}
+
+.tableDiv{border:1px solid #4e75b3;}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size:12px;
+}
+/* Zebra striping */
+thead tr:nth-of-type(odd) {
+  background: #6584bc;
+}
+tbody tr:nth-of-type(even){
+  background: #fff;
+}
+th{
+  background: #6584bc;
+  color: white;
+  font-weight: bold;
+  
+  padding: 5px;
+  border: 1px solid #355a99;
+  border-top: 1px solid #6788be;
+  border-bottom: 1px solid #355a99;
+  text-align: left;
+  border-radius:0;
+  -moz-border-radius:0;
+  -webkit-border-radius:0;
+}
+td{
+  padding: 5px;
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+.modalBackground{
+	background-color: Gray;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+	z-index: 10000;
+}
+:link, :visited {
+	color: #DF4F13;
+	text-decoration: none;
+}
+p.thicker {
+	font-weight: bold;
+}
+.btnCls {
+	font-weight: bold;
+}
+.clsIssueIDT {
+	font-weight: bold;
+}
+.clstxtIssueIDTNew {
+	font-size: 10px;
+	font-weight: normal;
+	background-color: #e9e0e0;
+	color: #000;
+	width: 70px;
+}
+.clsbtnIssueStatus {
+	font-size: 10px;
+	font-weight: normal;
+	background-color: #a09f9f;
+	color: #000;
+	margin-left: 2px;
+}
+.clsbtnIssueIDTUpdate {
+	font-size: 10px;
+	font-weight: normal;
+	background-color: #a09f9f;
+	color: #000;
+	margin-left: 2px;
+}
+.clsbtnOrderIDT {
+	font-size: 10px;
+	font-weight: normal;
+	background-color: #a09f9f;
+	color: #000;
+	margin-left: 2px;
+}
+.clsbtnIssueIDTNew {
+	font-size: 10px;
+	font-weight: normal;
+	background-color: #a09f9f;
+	color: #000;
+	margin-left: 2px;
+}
+.clsBtnAddMore {
+	font-size: 10px;
+	font-weight: normal;
+	background-color: #a09f9f;
+	color: #000;
+	margin-left: 2px;
+}
+.msg {
+	font-weight: normal;
+	color: red;
+}
+.currentIdt {
+	font-size: 11px;
+	font-weight: normal;
+	color: #0026ff;
+	margin-right: 5px;
+}
+.headerRow {
+	background: #c0c0c0;
+	font-size:13px;
+	font-weight:bold;
+	text-align:center;
+}
+.button-success {
+	background: blue; /* this is a green */
+	 border-radius: 8px;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.showpopup {
+	opacity: 1;
+	position: fixed;
+	left: 10%;
+	top: 5%;
+	background: none repeat scroll 0 0 #fff;
+	border: 10px solid #8CBF26;
+	border-radius: 5px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.32);
+	color: #000;
+	font-family: sans-serif;
+	min-height: 850px;
+	height: auto!important;
+	width: 85%;
+	z-index: 99999999999;
+	padding-bottom: 20px;
+	position: fixed; 
+	overflow-y:scroll
+}
+.showpopupaddqty{
+     opacity: 1;
+	position: fixed;
+	left: 30%;
+	top: 5%;
+	background: none repeat scroll 0 0 #fff;
+	border: 35px solid green;
+	border-radius: 37px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.32);
+	color: #000;
+	font-family: sans-serif;
+	min-height: 850px;
+	height: auto!important;
+	width: 45%;
+	z-index: 99999999999;
+	padding-bottom: 20px;
+	position: fixed; 
+	overflow-y:scroll
+}
+.button-success {
+	background: blue; /* this is a green */
+	 border-radius: 8px;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.loginBox{margin:0 auto;color:#000;
+background:url(/assets/images/asc-flag.png) no-repeat;
+background-size:cover;
+opacity:0.8;
+width:400px;padding:1% 0;height:266px;}
+.loginBox input{color:#000 !important;}
+.loginBox label{margin:20px 0 -6px;}
+.loginBox input[type="text"],
+.loginBox input[type="password"]{padding:11px;margin:12px 0 10px 0;font-size:13px;}
+
+.idtTable{width:100%;}
+.idtTable input[type="submit"],
+.idtTable input[type="button"],
+.clsbtnOrderIDT{
+	font-size:13px;
+	border:0;
+	background:#0066FF;
+	border:1px solid #0000CC;
+	border-radius:3px;
+	display:block;
+	margin:8px auto;
+	color:#fff;
+	font:bold 12px Arial, Helvetica, sans-serif;
+	padding:5px 10px;
+}
+.idtTable input[type="submit"]:hover,
+.idtTable input[type="button"]:hover,
+.clsbtnOrderIDT:hover{
+	background:#0000FF
+}
+.idtTable select{font:12px Arial, Helvetica, sans-serif;padding:5px 10px;border:1px solid #aaa;}
+.idtTable .currentIdt{font-size:13px;clear:both;display:block;margin:2px 0;text-align:center;}
+.idtTable div{text-align:center;}
+
+.idtTable input[type="text"]{border:1px solid #a9a9a9;width:auto;padding:4px 7px;font:12px Arial, Helvetica, sans-serif;background:#fff;}
+
+.Header{
+	background: #f0f0f0;
+	color: #000;
+	padding: 4px;
+	font-weight: bold;
+	border-bottom:1px solid #aaa;
+	cursor:pointer;
+}
+.Header:hover{
+	background:#336699;
+	color:#fff;
+}
+.SelectedHeader{
+	background: #d0d0d0;
+	color: #000;
+	padding: 4px;
+	font-weight: bold;
+	cursor:pointer;
+}
+.Contents{
+	background: #fff;
+	color:#111;
+	padding: 5px;
+}
+#ctl00_ContentPlaceHolder1_apStock_content_rbtnListTransferedBy{border:0;background:none;width:200px;}
+#ctl00_ContentPlaceHolder1_apStock_content_rbtnListTransferedBy td{border:0;background:none;}
+
+.myExcelbtn{ 
+	background: url("../Images/import_excel.png") no-repeat scroll 0 9px / 13% auto rgba(0, 0, 0, 0);
+	border: 0 none;
+	cursor: pointer;
+	font-family: Arial;
+	font-size: 10pt;
+	font-weight: normal;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 19px;
+	padding-top: 1px;
+	 margin-right: -87%;
+}
+.GridCaption_Web20 {
+	color: #555557;
+	font-size: 30px;
+}
+.GridHeader_Web20, .ResizeHeader_Web20 {
+    background: none repeat scroll 0 0 #51aeda !important;
+}
+.dropdown-menu{
+	width:260px;
+}
+.dropdown-menu > li > a:hover{background:#000;color:#fff;transition:all 0.1s;}
+
+
+.formationNoteControls {
+    float: left;
+    width: 280px;
+    font:14px;
+    height: 27px;
+}
+
+.formationNoteLabels {
+    float:left;
+    width: 200px;
+    position:relative;
+    font-size:14px;
+    text-align:left;
+    font-weight:normal;
+    margin-right:5px;
+}
+
+.tdFloatLeft {
+    float:left;
+    width: 500px;
+    border:hidden; 
+    background:none;   
+}
+
+.tdFloatRight {
+    float:right;
+    width: 500px;
+    border:hidden;
+    background:none;
+}
+.tr {
+    width:100%; 
+    border:hidden;
+    background:none;   
+}

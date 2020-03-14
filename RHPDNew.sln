@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RHPDNew", "RHPDNew\RHPDNew.csproj", "{CCC89950-900B-46FB-8414-17640A64C918}"
+	ProjectSection(ProjectDependencies) = postProject
+		{348D3C3A-26B1-42A8-AC81-B99120A2F808} = {348D3C3A-26B1-42A8-AC81-B99120A2F808}
+		{40D7584D-A0B4-4875-878E-288B1CA12274} = {40D7584D-A0B4-4875-878E-288B1CA12274}
+		{B7582679-232E-4701-A0E9-F92FC4ED1F7A} = {B7582679-232E-4701-A0E9-F92FC4ED1F7A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RHPDComponent", "RHPDComponent\RHPDComponent.csproj", "{B7582679-232E-4701-A0E9-F92FC4ED1F7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RHPDDalc", "RHPDDalc\RHPDDalc.csproj", "{40D7584D-A0B4-4875-878E-288B1CA12274}"
+	ProjectSection(ProjectDependencies) = postProject
+		{348D3C3A-26B1-42A8-AC81-B99120A2F808} = {348D3C3A-26B1-42A8-AC81-B99120A2F808}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RHPDEntity", "RHPDEntity\RHPDEntity.csproj", "{348D3C3A-26B1-42A8-AC81-B99120A2F808}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCC89950-900B-46FB-8414-17640A64C918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCC89950-900B-46FB-8414-17640A64C918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCC89950-900B-46FB-8414-17640A64C918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCC89950-900B-46FB-8414-17640A64C918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7582679-232E-4701-A0E9-F92FC4ED1F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7582679-232E-4701-A0E9-F92FC4ED1F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7582679-232E-4701-A0E9-F92FC4ED1F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7582679-232E-4701-A0E9-F92FC4ED1F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40D7584D-A0B4-4875-878E-288B1CA12274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D7584D-A0B4-4875-878E-288B1CA12274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40D7584D-A0B4-4875-878E-288B1CA12274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40D7584D-A0B4-4875-878E-288B1CA12274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{348D3C3A-26B1-42A8-AC81-B99120A2F808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{348D3C3A-26B1-42A8-AC81-B99120A2F808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{348D3C3A-26B1-42A8-AC81-B99120A2F808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{348D3C3A-26B1-42A8-AC81-B99120A2F808}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

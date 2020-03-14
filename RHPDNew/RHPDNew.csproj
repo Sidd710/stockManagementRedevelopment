@@ -1,0 +1,1456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CCC89950-900B-46FB-8414-17640A64C918}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RHPDNew</RootNamespace>
+    <AssemblyName>RHPDNew</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\Dlls &amp; DB Script\DLL\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="RHPDComponent">
+      <HintPath>..\RHPDComponent\bin\Debug\RHPDComponent.dll</HintPath>
+    </Reference>
+    <Reference Include="RHPDDalc">
+      <HintPath>..\RHPDComponent\bin\Debug\RHPDDalc.dll</HintPath>
+    </Reference>
+    <Reference Include="RHPDEntity">
+      <HintPath>..\RHPDComponent\bin\Debug\RHPDEntity.dll</HintPath>
+    </Reference>
+    <Reference Include="StarMethods">
+      <HintPath>..\..\..\Dlls &amp; DB Script\DLL\StarMethods.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Charting">
+      <HintPath>..\..\..\Telerik\Telerik.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Design">
+      <HintPath>..\..\..\Telerik\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Device.Detection">
+      <HintPath>..\..\..\Telerik\Telerik.Web.Device.Detection.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2008.2.826.20, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Telerik\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\..\..\Telerik\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="acsx\Menu.ascx" />
+    <Content Include="acsx\Menu1.ascx" />
+    <Content Include="assets\css\background.cycle.js" />
+    <Content Include="assets\css\background.cycle.min.js" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap.js" />
+    <Content Include="assets\css\chosen.css" />
+    <Content Include="assets\css\chosen.jquery.min.js" />
+    <Content Include="assets\css\function.js" />
+    <None Include="assets\css\jquery-1.10.2.intellisense.js" />
+    <Content Include="assets\css\jquery-1.10.2.js" />
+    <Content Include="assets\css\jquery-1.10.2.min.js" />
+    <None Include="assets\css\jquery-1.7.1.intellisense.js" />
+    <Content Include="assets\css\jquery-1.7.1.js" />
+    <Content Include="assets\css\jquery-1.7.1.min.js" />
+    <Content Include="assets\css\jquery.js" />
+    <Content Include="assets\css\jquery.min.js" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\Images\01-Cold.jpg" />
+    <Content Include="assets\Images\1.mp4" />
+    <Content Include="assets\Images\2.mp4" />
+    <Content Include="assets\Images\29212628.cms.jpe" />
+    <Content Include="assets\Images\3.mp4" />
+    <Content Include="assets\Images\5.mp4" />
+    <Content Include="assets\Images\army-wallpaper.jpg" />
+    <Content Include="assets\Images\armymanwithgun.jpg" />
+    <Content Include="assets\Images\armysitting.jpg" />
+    <Content Include="assets\Images\arrow.png" />
+    <Content Include="assets\Images\asc-flag.png" />
+    <Content Include="assets\Images\btnNo.jpg" />
+    <Content Include="assets\Images\btnyes.jpg" />
+    <Content Include="assets\Images\Close.gif" />
+    <Content Include="assets\Images\coast.jpg" />
+    <Content Include="assets\Images\cube.png" />
+    <Content Include="assets\Images\cube1.png" />
+    <Content Include="assets\Images\cuboid.jpg" />
+    <Content Include="assets\Images\cuboid1.png" />
+    <Content Include="assets\Images\cylinder.png" />
+    <Content Include="assets\Images\cylinder1.png" />
+    <Content Include="assets\Images\Delete.png" />
+    <Content Include="assets\Images\DSC.jpg" />
+    <Content Include="assets\Images\flag.jpg" />
+    <Content Include="assets\Images\flag2.jpg" />
+    <Content Include="assets\Images\form-loader.gif" />
+    <Content Include="assets\Images\globe.jpg" />
+    <Content Include="assets\Images\gunman.jpg" />
+    <Content Include="assets\Images\header.gif" />
+    <Content Include="assets\Images\import_excel.png" />
+    <Content Include="assets\Images\IndiaArmy_AFP.jpg" />
+    <Content Include="assets\Images\indian-army-parade.jpg" />
+    <Content Include="assets\Images\indian-rajputana-rifles.jpg" />
+    <Content Include="assets\Images\indianarmy.png" />
+    <Content Include="assets\Images\indianarmytransport.jpe" />
+    <Content Include="assets\Images\indiansiachen.jpg" />
+    <Content Include="assets\Images\indiawalpaper.jpg" />
+    <Content Include="assets\Images\issuevoucher.jpg" />
+    <Content Include="assets\Images\loaded.jpg" />
+    <Content Include="assets\Images\loader.gif" />
+    <Content Include="assets\Images\loader2.gif" />
+    <Content Include="assets\Images\loading%402x.gif" />
+    <Content Include="assets\Images\logistic.jpeg" />
+    <Content Include="assets\Images\logo.png" />
+    <Content Include="assets\Images\logo1.png" />
+    <Content Include="assets\Images\manoj123.jpg" />
+    <Content Include="assets\Images\menu.jpg" />
+    <Content Include="assets\Images\MilitaryWarehouse.jpg" />
+    <Content Include="assets\Images\next.png" />
+    <Content Include="assets\Images\other.png" />
+    <Content Include="assets\Images\parade.jpg" />
+    <Content Include="assets\Images\Picture2.jpg" />
+    <Content Include="assets\Images\Picture3.jpg" />
+    <Content Include="assets\Images\plus-gray.png" />
+    <Content Include="assets\Images\poonch.jpg" />
+    <Content Include="assets\Images\preloader.gif" />
+    <Content Include="assets\Images\prev.png" />
+    <Content Include="assets\Images\quotes.jpg" />
+    <Content Include="assets\Images\Siachen-19.jpg" />
+    <Content Include="assets\Images\Siachen-20.jpg" />
+    <Content Include="assets\Images\Siachen-3.jpg" />
+    <Content Include="assets\Images\Siachen.jpg" />
+    <Content Include="assets\Images\siachen2.jpg" />
+    <Content Include="assets\Images\siachen4.jpg" />
+    <Content Include="assets\Images\siachencollage.jpg" />
+    <Content Include="assets\Images\sphere.png" />
+    <Content Include="assets\Images\SubmarineBase.jpg" />
+    <Content Include="assets\Images\tankview.jpg" />
+    <Content Include="assets\Images\the-indian-army.jpg" />
+    <Content Include="assets\Images\vehicleloading.jpg" />
+    <Content Include="assets\Images\vid.mp4" />
+    <Content Include="assets\Images\warehouse.jpg" />
+    <Content Include="assets\Images\warehouseasc.jpg" />
+    <Content Include="assets\js\background.cycle.js" />
+    <Content Include="assets\js\background.cycle.min.js" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\chosen.jquery.min.js" />
+    <Content Include="assets\js\function.js" />
+    <None Include="assets\js\jquery-1.10.2.intellisense.js" />
+    <Content Include="assets\js\jquery-1.10.2.js" />
+    <Content Include="assets\js\jquery-1.10.2.min.js" />
+    <None Include="assets\js\jquery-1.7.1.intellisense.js" />
+    <Content Include="assets\js\jquery-1.7.1.js" />
+    <Content Include="assets\js\jquery-1.7.1.min.js" />
+    <Content Include="assets\js\jquery.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\menu-aim.js" />
+    <Content Include="assets\js\util.js" />
+    <Content Include="assets\logo\logo.png" />
+    <Content Include="assets\logo\logo1.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="Forms\AddCategoryType.aspx" />
+    <Content Include="Forms\AddDepu.aspx" />
+    <Content Include="Forms\AddProduct.aspx" />
+    <Content Include="Forms\AddRole.aspx" />
+    <Content Include="Forms\AddUnit.aspx" />
+    <Content Include="Forms\AddUser.aspx" />
+    <Content Include="Forms\CategoryMaster.aspx" />
+    <Content Include="Forms\Crv.aspx" />
+    <Content Include="Forms\CRVList.aspx" />
+    <Content Include="Forms\DepartmentMaster.aspx" />
+    <Content Include="Forms\ESL.aspx" />
+    <Content Include="Forms\ESLIssue.aspx" />
+    <Content Include="Forms\ESLIssueForwardingNote.aspx" />
+    <Content Include="Forms\ESLIssueStatus.aspx" />
+    <Content Include="Forms\ESLStatus.aspx" />
+    <Content Include="Forms\EslValidateSample.aspx" />
+    <Content Include="Forms\EslViewDetails.aspx" />
+    <Content Include="Forms\ExpenseVoucherPrint.aspx" />
+    <Content Include="Forms\ExpenseVoucherView.aspx" />
+    <Content Include="Forms\frmAddExpensePM.aspx" />
+    <Content Include="Forms\frmAddPMContainer.aspx" />
+    <Content Include="Forms\FrmCommandMaster.aspx" />
+    <Content Include="Forms\frmExpenseVoucherList.aspx" />
+    <Content Include="Forms\frmIndentDetails.aspx" />
+    <Content Include="Forms\frmLPCP.aspx" />
+    <Content Include="Forms\frmLPCPList.aspx" />
+    <Content Include="Forms\frmOriginalManufacture.aspx" />
+    <Content Include="Forms\frmPMCapacity.aspx" />
+    <Content Include="Forms\frmPMCondition.aspx" />
+    <Content Include="Forms\frmPMContainerMaster.aspx" />
+    <Content Include="Forms\frmPMGrade.aspx" />
+    <Content Include="Forms\frmPMList.aspx" />
+    <Content Include="Forms\frmPMName.aspx" />
+    <Content Include="Forms\frmSection.aspx" />
+    <Content Include="Forms\frmTallyDetails.aspx" />
+    <Content Include="Forms\FrmViewindent.aspx" />
+    <Content Include="Forms\frmWarehouse.aspx" />
+    <Content Include="Forms\GateInOutRegister.aspx" />
+    <Content Include="Forms\GateIssuedVoucherList.aspx" />
+    <Content Include="Forms\GateRegister.aspx" />
+    <Content Include="Forms\GatInOutView.aspx" />
+    <Content Include="Forms\GatRegisterList.aspx" />
+    <Content Include="Forms\Home.aspx" />
+    <Content Include="Forms\IssuedVoucherList.aspx" />
+    <Content Include="Forms\IssuedVoucherView.aspx" />
+    <Content Include="Forms\IssueVoucher.aspx" />
+    <Content Include="Forms\IssueVoucherGenrate.aspx" />
+    <Content Include="Forms\LPCPView.aspx" />
+    <Content Include="Forms\ManageFormation.aspx" />
+    <Content Include="Forms\ManageTallyList.aspx" />
+    <Content Include="Forms\ManageTallySheets.aspx" />
+    <Content Include="Forms\ManageTallyView.aspx" />
+    <Content Include="Forms\PrintCompactCRV.aspx" />
+    <Content Include="Forms\PrintCRV.aspx" />
+    <Content Include="Forms\printesl.aspx" />
+    <Content Include="Forms\PrintStockInCRV.aspx" />
+    <Content Include="Forms\Stock.aspx" />
+    <Content Include="Forms\StockManagement.aspx" />
+    <Content Include="Forms\StockTransformation.aspx" />
+    <Content Include="Forms\StockView.aspx" />
+    <Content Include="Forms\SupplierMgmt.aspx" />
+    <Content Include="logo.png" />
+    <Content Include="logout.aspx" />
+    <Content Include="stockoutpanel.asmx" />
+    <Content Include="StockOutPanel\addingIdtQuantity.aspx" />
+    <Content Include="StockOutPanel\Authoritymaster.aspx" />
+    <Content Include="StockOutPanel\frmIssueBatch.aspx" />
+    <Content Include="StockOutPanel\frmIssueVehicle.aspx" />
+    <Content Include="StockOutPanel\frmIssueVoucher.aspx" />
+    <Content Include="StockOutPanel\frmMonitoringStock.aspx" />
+    <Content Include="StockOutPanel\issueidtList.aspx" />
+    <Content Include="StockOutPanel\issueIdtQuantity.aspx" />
+    <Content Include="StockOutPanel\issueOrder.aspx" />
+    <Content Include="StockOutPanel\IssueOrderList.aspx" />
+    <Content Include="StockOutPanel\IssueVoucherCompactView.aspx" />
+    <Content Include="StockOutPanel\IV.aspx" />
+    <Content Include="StockOutPanel\loadTally.aspx" />
+    <Content Include="StockOutPanel\loadTallyList.aspx" />
+    <Content Include="StockOutPanel\loadtallyNumberlist.aspx" />
+    <Content Include="StockOutPanel\LoadTallyView.aspx" />
+    <Content Include="StockOutPanel\MonitoringTool.aspx" />
+    <Content Include="StockOutPanel\MonitoringToolSunny.aspx" />
+    <Content Include="StockOutPanel\PrintCompactLoadTally.aspx" />
+    <Content Include="StockOutPanel\PrintIssueVoucher.aspx" />
+    <Content Include="StockOutPanel\PrintIssueVoucherNormalView.aspx" />
+    <Content Include="StockOutPanel\PrintLoadTally.aspx" />
+    <Content Include="StockOutPanel\rhpd.ascx" />
+    <Content Include="StockOutPanel\Vechilemaster.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="acsx\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="acsx\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="acsx\Menu1.ascx.cs">
+      <DependentUpon>Menu1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="acsx\Menu1.ascx.designer.cs">
+      <DependentUpon>Menu1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AddPMContainer.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BatchDepot.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BatchMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryType.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CityMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CommandMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountryMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeptMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DepuMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESLIssue.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EslMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseVoucherMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Formation.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddCategoryType.aspx.cs">
+      <DependentUpon>AddCategoryType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCategoryType.aspx.designer.cs">
+      <DependentUpon>AddCategoryType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddDepu.aspx.cs">
+      <DependentUpon>AddDepu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddDepu.aspx.designer.cs">
+      <DependentUpon>AddDepu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddRole.aspx.cs">
+      <DependentUpon>AddRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddRole.aspx.designer.cs">
+      <DependentUpon>AddRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddUnit.aspx.cs">
+      <DependentUpon>AddUnit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddUnit.aspx.designer.cs">
+      <DependentUpon>AddUnit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CategoryMaster.aspx.cs">
+      <DependentUpon>CategoryMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CategoryMaster.aspx.designer.cs">
+      <DependentUpon>CategoryMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Crv.aspx.cs">
+      <DependentUpon>Crv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Crv.aspx.designer.cs">
+      <DependentUpon>Crv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CRVList.aspx.cs">
+      <DependentUpon>CRVList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CRVList.aspx.designer.cs">
+      <DependentUpon>CRVList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DepartmentMaster.aspx.cs">
+      <DependentUpon>DepartmentMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DepartmentMaster.aspx.designer.cs">
+      <DependentUpon>DepartmentMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ESL.aspx.cs">
+      <DependentUpon>ESL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ESL.aspx.designer.cs">
+      <DependentUpon>ESL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ESLIssue.aspx.cs">
+      <DependentUpon>ESLIssue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ESLIssue.aspx.designer.cs">
+      <DependentUpon>ESLIssue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ESLIssueForwardingNote.aspx.cs">
+      <DependentUpon>ESLIssueForwardingNote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ESLIssueForwardingNote.aspx.designer.cs">
+      <DependentUpon>ESLIssueForwardingNote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ESLIssueStatus.aspx.cs">
+      <DependentUpon>ESLIssueStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ESLIssueStatus.aspx.designer.cs">
+      <DependentUpon>ESLIssueStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ESLStatus.aspx.cs">
+      <DependentUpon>ESLStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ESLStatus.aspx.designer.cs">
+      <DependentUpon>ESLStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EslValidateSample.aspx.cs">
+      <DependentUpon>EslValidateSample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\EslValidateSample.aspx.designer.cs">
+      <DependentUpon>EslValidateSample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EslViewDetails.aspx.cs">
+      <DependentUpon>EslViewDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\EslViewDetails.aspx.designer.cs">
+      <DependentUpon>EslViewDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExpenseVoucherPrint.aspx.cs">
+      <DependentUpon>ExpenseVoucherPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ExpenseVoucherPrint.aspx.designer.cs">
+      <DependentUpon>ExpenseVoucherPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExpenseVoucherView.aspx.cs">
+      <DependentUpon>ExpenseVoucherView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ExpenseVoucherView.aspx.designer.cs">
+      <DependentUpon>ExpenseVoucherView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddExpensePM.aspx.cs">
+      <DependentUpon>frmAddExpensePM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddExpensePM.aspx.designer.cs">
+      <DependentUpon>frmAddExpensePM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddPMContainer.aspx.cs">
+      <DependentUpon>frmAddPMContainer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddPMContainer.aspx.designer.cs">
+      <DependentUpon>frmAddPMContainer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCommandMaster.aspx.cs">
+      <DependentUpon>FrmCommandMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCommandMaster.aspx.designer.cs">
+      <DependentUpon>FrmCommandMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExpenseVoucherList.aspx.cs">
+      <DependentUpon>frmExpenseVoucherList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExpenseVoucherList.aspx.designer.cs">
+      <DependentUpon>frmExpenseVoucherList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIndentDetails.aspx.cs">
+      <DependentUpon>frmIndentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIndentDetails.aspx.designer.cs">
+      <DependentUpon>frmIndentDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLPCP.aspx.cs">
+      <DependentUpon>frmLPCP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLPCP.aspx.designer.cs">
+      <DependentUpon>frmLPCP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLPCPList.aspx.cs">
+      <DependentUpon>frmLPCPList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLPCPList.aspx.designer.cs">
+      <DependentUpon>frmLPCPList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOriginalManufacture.aspx.cs">
+      <DependentUpon>frmOriginalManufacture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOriginalManufacture.aspx.designer.cs">
+      <DependentUpon>frmOriginalManufacture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPMCapacity.aspx.cs">
+      <DependentUpon>frmPMCapacity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPMCapacity.aspx.designer.cs">
+      <DependentUpon>frmPMCapacity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPMCondition.aspx.cs">
+      <DependentUpon>frmPMCondition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPMCondition.aspx.designer.cs">
+      <DependentUpon>frmPMCondition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPMContainerMaster.aspx.cs">
+      <DependentUpon>frmPMContainerMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPMContainerMaster.aspx.designer.cs">
+      <DependentUpon>frmPMContainerMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPMGrade.aspx.cs">
+      <DependentUpon>frmPMGrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPMGrade.aspx.designer.cs">
+      <DependentUpon>frmPMGrade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPMList.aspx.cs">
+      <DependentUpon>frmPMList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPMList.aspx.designer.cs">
+      <DependentUpon>frmPMList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPMName.aspx.cs">
+      <DependentUpon>frmPMName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPMName.aspx.designer.cs">
+      <DependentUpon>frmPMName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSection.aspx.cs">
+      <DependentUpon>frmSection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSection.aspx.designer.cs">
+      <DependentUpon>frmSection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTallyDetails.aspx.cs">
+      <DependentUpon>frmTallyDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTallyDetails.aspx.designer.cs">
+      <DependentUpon>frmTallyDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewindent.aspx.cs">
+      <DependentUpon>FrmViewindent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewindent.aspx.designer.cs">
+      <DependentUpon>FrmViewindent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWarehouse.aspx.cs">
+      <DependentUpon>frmWarehouse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWarehouse.aspx.designer.cs">
+      <DependentUpon>frmWarehouse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GateInOutRegister.aspx.cs">
+      <DependentUpon>GateInOutRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\GateInOutRegister.aspx.designer.cs">
+      <DependentUpon>GateInOutRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GateIssuedVoucherList.aspx.cs">
+      <DependentUpon>GateIssuedVoucherList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\GateIssuedVoucherList.aspx.designer.cs">
+      <DependentUpon>GateIssuedVoucherList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GateRegister.aspx.cs">
+      <DependentUpon>GateRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\GateRegister.aspx.designer.cs">
+      <DependentUpon>GateRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GatInOutView.aspx.cs">
+      <DependentUpon>GatInOutView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\GatInOutView.aspx.designer.cs">
+      <DependentUpon>GatInOutView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GatRegisterList.aspx.cs">
+      <DependentUpon>GatRegisterList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\GatRegisterList.aspx.designer.cs">
+      <DependentUpon>GatRegisterList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IssuedVoucherList.aspx.cs">
+      <DependentUpon>IssuedVoucherList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\IssuedVoucherList.aspx.designer.cs">
+      <DependentUpon>IssuedVoucherList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IssuedVoucherView.aspx.cs">
+      <DependentUpon>IssuedVoucherView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\IssuedVoucherView.aspx.designer.cs">
+      <DependentUpon>IssuedVoucherView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IssueVoucher.aspx.cs">
+      <DependentUpon>IssueVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\IssueVoucher.aspx.designer.cs">
+      <DependentUpon>IssueVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IssueVoucherGenrate.aspx.cs">
+      <DependentUpon>IssueVoucherGenrate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\IssueVoucherGenrate.aspx.designer.cs">
+      <DependentUpon>IssueVoucherGenrate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IssueVoucherList.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\IssueVoucherList.aspx.designer.cs">
+      <DependentUpon>IssueVoucherList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LPCPView.aspx.cs">
+      <DependentUpon>LPCPView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\LPCPView.aspx.designer.cs">
+      <DependentUpon>LPCPView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageFormation.aspx.cs">
+      <DependentUpon>ManageFormation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageFormation.aspx.designer.cs">
+      <DependentUpon>ManageFormation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageTallyList.aspx.cs">
+      <DependentUpon>ManageTallyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageTallyList.aspx.designer.cs">
+      <DependentUpon>ManageTallyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageTallySheets.aspx.cs">
+      <DependentUpon>ManageTallySheets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageTallySheets.aspx.designer.cs">
+      <DependentUpon>ManageTallySheets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageTallyView.aspx.cs">
+      <DependentUpon>ManageTallyView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageTallyView.aspx.designer.cs">
+      <DependentUpon>ManageTallyView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrintCompactCRV.aspx.cs">
+      <DependentUpon>PrintCompactCRV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintCompactCRV.aspx.designer.cs">
+      <DependentUpon>PrintCompactCRV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrintCRV.aspx.cs">
+      <DependentUpon>PrintCRV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintCRV.aspx.designer.cs">
+      <DependentUpon>PrintCRV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\printesl.aspx.cs">
+      <DependentUpon>printesl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\printesl.aspx.designer.cs">
+      <DependentUpon>printesl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrintStockInCRV.aspx.cs">
+      <DependentUpon>PrintStockInCRV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintStockInCRV.aspx.designer.cs">
+      <DependentUpon>PrintStockInCRV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock.aspx.cs">
+      <DependentUpon>Stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock.aspx.designer.cs">
+      <DependentUpon>Stock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StockManagement.aspx.cs">
+      <DependentUpon>StockManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\StockManagement.aspx.designer.cs">
+      <DependentUpon>StockManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StockTransformation.aspx.cs">
+      <DependentUpon>StockTransformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\StockTransformation.aspx.designer.cs">
+      <DependentUpon>StockTransformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StockView.aspx.cs">
+      <DependentUpon>StockView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\StockView.aspx.designer.cs">
+      <DependentUpon>StockView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierMgmt.aspx.cs">
+      <DependentUpon>SupplierMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierMgmt.aspx.designer.cs">
+      <DependentUpon>SupplierMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForwardNoteMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GateInout.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GatInOut.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="gh.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IDT.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IDTStockTransfer.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IssueVoucher.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManuMgmt.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalManufacture_.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PMandContainerMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PMCapacity.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PMCondition.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PMGrade.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PMName.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuantityType.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecievedFrom.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RHPD.Master.cs">
+      <DependentUpon>RHPD.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RHPD.Master.designer.cs">
+      <DependentUpon>RHPD.Master</DependentUpon>
+    </Compile>
+    <Compile Include="rhpdDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rhpdDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rhpdDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rhpdDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rhpdDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="RoleMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spcategorymaster_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spcategorytype_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spDepartment_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spDepu_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spESLIssue_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="speslstatus_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spExpenseVoucherList_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spExpenseVoucherSummary_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetBatchByProduct_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpGetIDTRecord_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetIssuedIDT_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spGetWareHouseSections_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Split_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spLPCPList_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spManageStock_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spProduct_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spRole_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spselectcrv_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spSelectTranfer_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spStock_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spUnitById_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spUnit_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spUser_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_EslForwardingNoteProc_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GateInOut_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_IssueVoucher_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_ManageTallySheet_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_OrderType_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_StockTransfer_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatesMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatusMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="stockoutpanel.asmx.cs">
+      <DependentUpon>stockoutpanel.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\addingIdtQuantity.aspx.cs">
+      <DependentUpon>addingIdtQuantity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\addingIdtQuantity.aspx.designer.cs">
+      <DependentUpon>addingIdtQuantity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\Authoritymaster.aspx.cs">
+      <DependentUpon>Authoritymaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\Authoritymaster.aspx.designer.cs">
+      <DependentUpon>Authoritymaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\frmIssueBatch.aspx.cs">
+      <DependentUpon>frmIssueBatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\frmIssueBatch.aspx.designer.cs">
+      <DependentUpon>frmIssueBatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\frmIssueVehicle.aspx.cs">
+      <DependentUpon>frmIssueVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\frmIssueVehicle.aspx.designer.cs">
+      <DependentUpon>frmIssueVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\frmIssueVoucher.aspx.cs">
+      <DependentUpon>frmIssueVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\frmIssueVoucher.aspx.designer.cs">
+      <DependentUpon>frmIssueVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\frmMonitoringStock.aspx.cs">
+      <DependentUpon>frmMonitoringStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\frmMonitoringStock.aspx.designer.cs">
+      <DependentUpon>frmMonitoringStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\issueidtList.aspx.cs">
+      <DependentUpon>issueidtList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\issueidtList.aspx.designer.cs">
+      <DependentUpon>issueidtList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\issueIdtQuantity.aspx.cs">
+      <DependentUpon>issueIdtQuantity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\issueIdtQuantity.aspx.designer.cs">
+      <DependentUpon>issueIdtQuantity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\issueOrder.aspx.cs">
+      <DependentUpon>issueOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\issueOrder.aspx.designer.cs">
+      <DependentUpon>issueOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\IssueOrderList.aspx.cs">
+      <DependentUpon>IssueOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\IssueOrderList.aspx.designer.cs">
+      <DependentUpon>IssueOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\IssueVoucherCompactView.aspx.cs">
+      <DependentUpon>IssueVoucherCompactView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\IssueVoucherCompactView.aspx.designer.cs">
+      <DependentUpon>IssueVoucherCompactView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\IV.aspx.cs">
+      <DependentUpon>IV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\IV.aspx.designer.cs">
+      <DependentUpon>IV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\loadTally.aspx.cs">
+      <DependentUpon>loadTally.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\loadTally.aspx.designer.cs">
+      <DependentUpon>loadTally.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\loadTallyList.aspx.cs">
+      <DependentUpon>loadTallyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\loadTallyList.aspx.designer.cs">
+      <DependentUpon>loadTallyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\loadtallyNumberlist.aspx.cs">
+      <DependentUpon>loadtallyNumberlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\loadtallyNumberlist.aspx.designer.cs">
+      <DependentUpon>loadtallyNumberlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\LoadTallyView.aspx.cs">
+      <DependentUpon>LoadTallyView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\LoadTallyView.aspx.designer.cs">
+      <DependentUpon>LoadTallyView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\MonitoringTool.aspx.cs">
+      <DependentUpon>MonitoringTool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\MonitoringTool.aspx.designer.cs">
+      <DependentUpon>MonitoringTool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\MonitoringToolSunny.aspx.cs">
+      <DependentUpon>MonitoringToolSunny.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\MonitoringToolSunny.aspx.designer.cs">
+      <DependentUpon>MonitoringToolSunny.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\PrintCompactLoadTally.aspx.cs">
+      <DependentUpon>PrintCompactLoadTally.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\PrintCompactLoadTally.aspx.designer.cs">
+      <DependentUpon>PrintCompactLoadTally.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\PrintIssueVoucher.aspx.cs">
+      <DependentUpon>PrintIssueVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\PrintIssueVoucher.aspx.designer.cs">
+      <DependentUpon>PrintIssueVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\PrintIssueVoucherNormalView.aspx.cs">
+      <DependentUpon>PrintIssueVoucherNormalView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\PrintIssueVoucherNormalView.aspx.designer.cs">
+      <DependentUpon>PrintIssueVoucherNormalView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\PrintLoadTally.aspx.cs">
+      <DependentUpon>PrintLoadTally.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\PrintLoadTally.aspx.designer.cs">
+      <DependentUpon>PrintLoadTally.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\rhpd.ascx.cs">
+      <DependentUpon>rhpd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\rhpd.ascx.designer.cs">
+      <DependentUpon>rhpd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="StockOutPanel\Vechilemaster.aspx.cs">
+      <DependentUpon>Vechilemaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockOutPanel\Vechilemaster.aspx.designer.cs">
+      <DependentUpon>Vechilemaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockPakaging.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockSpillage.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockTransfer.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockVehicle.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="supplier.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TallySheet.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblExpensePMContainer.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblIssueVoucherDetail.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblIssueVoucherVehicleDetail.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblLPCP.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblQuarter.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblSection.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblStockOutMain.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblWarehouse.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Atttribute.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Authority.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_batchIdt.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_financialyear.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_idtQty_Quarter.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_IDTrefrence.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_IssueOrder.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_IssueVoucher.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_issuevoucherdetail.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_loadtallydetail.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_loadtaly.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_ProductIDT_Quantity.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_QuarterRange.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_vechileMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_vechileMaster_Type.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeOfOrder.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnitMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UnitType.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserMaster.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_DeleteIssuedVehicle_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Dropdowngetcategory_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_DUMMYgrdbachwithproductqty_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getAllloadtallyDetail_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getattributeby_financialyear_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getAuthorityDetail_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetBatchquantity_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getcategory_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getcount_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getdeatilIssuevoucher_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getDepuName_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetFinancialyear_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetIdtqty_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getIssueIdtdetail_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getissuevoucherdetail_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getIssueVoucherList_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getissuevoucherNumber_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetIssueVoucherProductByVehicle_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetIssueVoucherToPrint_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetIssueVoucherVehicle_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getIssuOrderby_BatchIDT_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getisuueorder_forIssueVoucher_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetLoadTallyData_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getLoadtallydetail_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getLoadTallyList_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getLoadTallyNumber_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetLoadTallyToPrint_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetOrderDetail_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getprdDetail_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getproductData_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getStockQuantity_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getvechiledetailbatchwise_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getvechileDetailforLoadtally_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getVechiledetails_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetVechile_DetailBySearch_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetVechile_Detail_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getVechile_prdquantity_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_get_Authority_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_get_issueorder_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_grdbachwithproductqty_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_StockOutMain_GetDepots_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_StockOutMain_Products_Get_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_StockOutMain_Quarters_Get_Result.cs">
+      <DependentUpon>rhpdDataModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Forms\Logo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="RHPD.Master" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\RHPD.pubxml" />
+    <EntityDeploy Include="rhpdDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>rhpdDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="rhpdDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>rhpdDataModel.edmx</DependentUpon>
+      <LastGenOutput>rhpdDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="rhpdDataModel.edmx.diagram">
+      <DependentUpon>rhpdDataModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="rhpdDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>rhpdDataModel.edmx</DependentUpon>
+      <LastGenOutput>rhpdDataModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51632</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7870/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

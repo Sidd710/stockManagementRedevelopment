@@ -1,0 +1,2416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="rhpdModelStoreContainer" CdmEntityContainer="rhpdEntities">
+    <FunctionImportMapping FunctionImportName="managecommand" FunctionName="rhpdModel.Store.managecommand" />
+    <FunctionImportMapping FunctionImportName="sp_Gat" FunctionName="rhpdModel.Store.sp_Gat" />
+    <FunctionImportMapping FunctionImportName="sp_GateInOut" FunctionName="rhpdModel.Store.sp_GateInOut">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.sp_GateInOut_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="vehbano" ColumnName="vehbano" />
+          <ScalarProperty Name="franchiseeno" ColumnName="franchiseeno" />
+          <ScalarProperty Name="ArmyNo" ColumnName="ArmyNo" />
+          <ScalarProperty Name="rank" ColumnName="rank" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="timein" ColumnName="timein" />
+          <ScalarProperty Name="typeofvehicle" ColumnName="typeofvehicle" />
+          <ScalarProperty Name="unitQuantityTypeId" ColumnName="unitQuantityTypeId" />
+          <ScalarProperty Name="loadin" ColumnName="loadin" />
+          <ScalarProperty Name="IdtId" ColumnName="IdtId" />
+          <ScalarProperty Name="timeout" ColumnName="timeout" />
+          <ScalarProperty Name="loadout" ColumnName="loadout" />
+          <ScalarProperty Name="stationDepuID" ColumnName="stationDepuID" />
+          <ScalarProperty Name="stationUnitId" ColumnName="stationUnitId" />
+          <ScalarProperty Name="fuelintankIn" ColumnName="fuelintankIn" />
+          <ScalarProperty Name="fuelintankOut" ColumnName="fuelintankOut" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_IssueVoucher" FunctionName="rhpdModel.Store.sp_IssueVoucher">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.sp_IssueVoucher_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdtId" ColumnName="IdtId" />
+          <ScalarProperty Name="ToDepuId" ColumnName="ToDepuId" />
+          <ScalarProperty Name="ToUnitId" ColumnName="ToUnitId" />
+          <ScalarProperty Name="VechileNo" ColumnName="VechileNo" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ManageTallySheet" FunctionName="rhpdModel.Store.sp_ManageTallySheet">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.sp_ManageTallySheet_Result">
+          <ScalarProperty Name="DepuName" ColumnName="DepuName" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdtId" ColumnName="IdtId" />
+          <ScalarProperty Name="DepuIdFrom" ColumnName="DepuIdFrom" />
+          <ScalarProperty Name="UnitIdFrom" ColumnName="UnitIdFrom" />
+          <ScalarProperty Name="ToDepuId" ColumnName="ToDepuId" />
+          <ScalarProperty Name="ToUnitId" ColumnName="ToUnitId" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="VehBaNo" ColumnName="VehBaNo" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Id1" ColumnName="Id1" />
+          <ScalarProperty Name="IndentName" ColumnName="IndentName" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsIssueVoucherId" ColumnName="IsIssueVoucherId" />
+          <ScalarProperty Name="IsTallySheetId" ColumnName="IsTallySheetId" />
+          <ScalarProperty Name="IsGateOut" ColumnName="IsGateOut" />
+          <ScalarProperty Name="AddedBy1" ColumnName="AddedBy1" />
+          <ScalarProperty Name="AddedOn1" ColumnName="AddedOn1" />
+          <ScalarProperty Name="ModifiedBy1" ColumnName="ModifiedBy1" />
+          <ScalarProperty Name="ModifiedOn1" ColumnName="ModifiedOn1" />
+          <ScalarProperty Name="IsActive1" ColumnName="IsActive1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_OrderType" FunctionName="rhpdModel.Store.sp_OrderType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.sp_OrderType_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_StockTransfer" FunctionName="rhpdModel.Store.sp_StockTransfer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.sp_StockTransfer_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DepuMasterId" ColumnName="DepuMasterId" />
+          <ScalarProperty Name="IsUnit" ColumnName="IsUnit" />
+          <ScalarProperty Name="UnitMasterId" ColumnName="UnitMasterId" />
+          <ScalarProperty Name="CategoryTypeID" ColumnName="CategoryTypeID" />
+          <ScalarProperty Name="CategoryMasterId" ColumnName="CategoryMasterId" />
+          <ScalarProperty Name="ProductMasterId" ColumnName="ProductMasterId" />
+          <ScalarProperty Name="BatchMasterId" ColumnName="BatchMasterId" />
+          <ScalarProperty Name="TypeOfOrderId" ColumnName="TypeOfOrderId" />
+          <ScalarProperty Name="IndentId" ColumnName="IndentId" />
+          <ScalarProperty Name="QtyIssued" ColumnName="QtyIssued" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spcategorymaster" FunctionName="rhpdModel.Store.spcategorymaster">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spcategorymaster_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Category_Code" ColumnName="Category_Code" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="Category_TypeId" ColumnName="Category_TypeId" />
+          <ScalarProperty Name="Category_desc" ColumnName="Category_desc" />
+          <ScalarProperty Name="ParentCategory_Id" ColumnName="ParentCategory_Id" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spcategorytype" FunctionName="rhpdModel.Store.spcategorytype">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spcategorytype_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDepartment" FunctionName="rhpdModel.Store.spDepartment">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spDepartment_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Modifiedby" ColumnName="Modifiedby" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDepu" FunctionName="rhpdModel.Store.spDepu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spDepu_Result">
+          <ScalarProperty Name="Depu_Id" ColumnName="Depu_Id" />
+          <ScalarProperty Name="Depu_Name" ColumnName="Depu_Name" />
+          <ScalarProperty Name="Depu_Location" ColumnName="Depu_Location" />
+          <ScalarProperty Name="Depot_Code" ColumnName="Depot_Code" />
+          <ScalarProperty Name="IsParent" ColumnName="IsParent" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spESLIssue" FunctionName="rhpdModel.Store.spESLIssue" />
+    <FunctionImportMapping FunctionImportName="speslstatus" FunctionName="rhpdModel.Store.speslstatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.speslstatus_Result">
+          <ScalarProperty Name="BID" ColumnName="BID" />
+          <ScalarProperty Name="dateofreceipt" ColumnName="dateofreceipt" />
+          <ScalarProperty Name="crvno" ColumnName="crvno" />
+          <ScalarProperty Name="fromwhomreceived" ColumnName="fromwhomreceived" />
+          <ScalarProperty Name="atnodate" ColumnName="atnodate" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="MFGDate" ColumnName="MFGDate" />
+          <ScalarProperty Name="ESLDATE" ColumnName="ESLDATE" />
+          <ScalarProperty Name="EXPDate" ColumnName="EXPDate" />
+          <ScalarProperty Name="ProductStatus" ColumnName="ProductStatus" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="IsProductStatus" ColumnName="IsProductStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetBatchByProduct" FunctionName="rhpdModel.Store.spGetBatchByProduct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spGetBatchByProduct_Result">
+          <ScalarProperty Name="Batch" ColumnName="Batch" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="BID" ColumnName="BID" />
+          <ScalarProperty Name="BatchName" ColumnName="BatchName" />
+          <ScalarProperty Name="BatchCode" ColumnName="BatchCode" />
+          <ScalarProperty Name="BatchDesc" ColumnName="BatchDesc" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="ATNo" ColumnName="ATNo" />
+          <ScalarProperty Name="VechicleNo" ColumnName="VechicleNo" />
+          <ScalarProperty Name="RecievedFrom" ColumnName="RecievedFrom" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="MFGDate" ColumnName="MFGDate" />
+          <ScalarProperty Name="EXPDate" ColumnName="EXPDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DepotID" ColumnName="DepotID" />
+          <ScalarProperty Name="Esl" ColumnName="Esl" />
+          <ScalarProperty Name="IsSentto" ColumnName="IsSentto" />
+          <ScalarProperty Name="IsBatchStatus" ColumnName="IsBatchStatus" />
+          <ScalarProperty Name="SID" ColumnName="SID" />
+          <ScalarProperty Name="Quantity1" ColumnName="Quantity1" />
+          <ScalarProperty Name="MinQuantity" ColumnName="MinQuantity" />
+          <ScalarProperty Name="QuantityType" ColumnName="QuantityType" />
+          <ScalarProperty Name="BID1" ColumnName="BID1" />
+          <ScalarProperty Name="IsActive1" ColumnName="IsActive1" />
+          <ScalarProperty Name="IsStockIn" ColumnName="IsStockIn" />
+          <ScalarProperty Name="AddedOn1" ColumnName="AddedOn1" />
+          <ScalarProperty Name="AddedBy1" ColumnName="AddedBy1" />
+          <ScalarProperty Name="ModifiedOn1" ColumnName="ModifiedOn1" />
+          <ScalarProperty Name="ModifiedBy1" ColumnName="ModifiedBy1" />
+          <ScalarProperty Name="IssueQty" ColumnName="IssueQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetIDTRecord" FunctionName="rhpdModel.Store.SpGetIDTRecord">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.SpGetIDTRecord_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ID1" ColumnName="ID1" />
+          <ScalarProperty Name="DepuMasterId" ColumnName="DepuMasterId" />
+          <ScalarProperty Name="IsUnit" ColumnName="IsUnit" />
+          <ScalarProperty Name="UnitMasterId" ColumnName="UnitMasterId" />
+          <ScalarProperty Name="IndentId" ColumnName="IndentId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IndentName" ColumnName="IndentName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPINDENT" FunctionName="rhpdModel.Store.SPINDENT" />
+    <FunctionImportMapping FunctionImportName="spManageBatch" FunctionName="rhpdModel.Store.spManageBatch" />
+    <FunctionImportMapping FunctionImportName="spManageStock" FunctionName="rhpdModel.Store.spManageStock">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spManageStock_Result">
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Desc" ColumnName="Product_Desc" />
+          <ScalarProperty Name="Short_Product_Desc" ColumnName="Short_Product_Desc" />
+          <ScalarProperty Name="Admin_Remarks" ColumnName="Admin_Remarks" />
+          <ScalarProperty Name="product_cost" ColumnName="product_cost" />
+          <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="MfgDate" ColumnName="MfgDate" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="StockQty" ColumnName="StockQty" />
+          <ScalarProperty Name="IsProductStatus" ColumnName="IsProductStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spProduct" FunctionName="rhpdModel.Store.spProduct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spProduct_Result">
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Desc" ColumnName="Product_Desc" />
+          <ScalarProperty Name="Short_Product_Desc" ColumnName="Short_Product_Desc" />
+          <ScalarProperty Name="Admin_Remarks" ColumnName="Admin_Remarks" />
+          <ScalarProperty Name="product_cost" ColumnName="product_cost" />
+          <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="MfgDate" ColumnName="MfgDate" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="StockQty" ColumnName="StockQty" />
+          <ScalarProperty Name="IsProductStatus" ColumnName="IsProductStatus" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRole" FunctionName="rhpdModel.Store.spRole">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spRole_Result">
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="Role_ID" ColumnName="Role_ID" />
+          <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Role_Desc" ColumnName="Role_Desc" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AddedOn1" ColumnName="AddedOn1" />
+          <ScalarProperty Name="AddedBy1" ColumnName="AddedBy1" />
+          <ScalarProperty Name="ModifiedOn1" ColumnName="ModifiedOn1" />
+          <ScalarProperty Name="Modifiedby1" ColumnName="Modifiedby1" />
+          <ScalarProperty Name="IsActive1" ColumnName="IsActive1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spselectcrv" FunctionName="rhpdModel.Store.spselectcrv">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spselectcrv_Result">
+          <ScalarProperty Name="BID" ColumnName="BID" />
+          <ScalarProperty Name="dateofreceipt" ColumnName="dateofreceipt" />
+          <ScalarProperty Name="crvno" ColumnName="crvno" />
+          <ScalarProperty Name="VechicleNo" ColumnName="VechicleNo" />
+          <ScalarProperty Name="RecievedFromname" ColumnName="RecievedFromname" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="QuantityTypeNAME" ColumnName="QuantityTypeNAME" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="fromwhomreceived" ColumnName="fromwhomreceived" />
+          <ScalarProperty Name="atnodate" ColumnName="atnodate" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="MFGDate" ColumnName="MFGDate" />
+          <ScalarProperty Name="ESLDATE" ColumnName="ESLDATE" />
+          <ScalarProperty Name="EXPDate" ColumnName="EXPDate" />
+          <ScalarProperty Name="BatchName" ColumnName="BatchName" />
+          <ScalarProperty Name="BatchDesc" ColumnName="BatchDesc" />
+          <ScalarProperty Name="ProductStatus" ColumnName="ProductStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spUnit" FunctionName="rhpdModel.Store.spUnit">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spUnit_Result">
+          <ScalarProperty Name="Unit_Id" ColumnName="Unit_Id" />
+          <ScalarProperty Name="Depu_Id" ColumnName="Depu_Id" />
+          <ScalarProperty Name="Unit_Name" ColumnName="Unit_Name" />
+          <ScalarProperty Name="Unit_Code" ColumnName="Unit_Code" />
+          <ScalarProperty Name="Unit_Desc" ColumnName="Unit_Desc" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spUnitById" FunctionName="rhpdModel.Store.spUnitById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spUnitById_Result">
+          <ScalarProperty Name="Unit_Id" ColumnName="Unit_Id" />
+          <ScalarProperty Name="Depu_Id" ColumnName="Depu_Id" />
+          <ScalarProperty Name="Unit_Name" ColumnName="Unit_Name" />
+          <ScalarProperty Name="Unit_Code" ColumnName="Unit_Code" />
+          <ScalarProperty Name="Unit_Desc" ColumnName="Unit_Desc" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spUser" FunctionName="rhpdModel.Store.spUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spUser_Result">
+          <ScalarProperty Name="Depu_Id" ColumnName="Depu_Id" />
+          <ScalarProperty Name="Depu_Name" ColumnName="Depu_Name" />
+          <ScalarProperty Name="Depu_Location" ColumnName="Depu_Location" />
+          <ScalarProperty Name="Depot_Code" ColumnName="Depot_Code" />
+          <ScalarProperty Name="IsParent" ColumnName="IsParent" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="proc_getSeedNumber" FunctionName="rhpdModel.Store.proc_getSeedNumber" />
+    <FunctionImportMapping FunctionImportName="spIDTStockTranfer" FunctionName="rhpdModel.Store.spIDTStockTranfer" />
+    <FunctionImportMapping FunctionImportName="spIssueVoucherVehicleUpdate" FunctionName="rhpdModel.Store.spIssueVoucherVehicleUpdate" />
+    <FunctionImportMapping FunctionImportName="Split" FunctionName="rhpdModel.Store.Split" />
+    <FunctionImportMapping FunctionImportName="spSelectTranfer" FunctionName="rhpdModel.Store.spSelectTranfer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spSelectTranfer_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IssueVoucherId" ColumnName="IssueVoucherId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="PMQuantity" ColumnName="PMQuantity" />
+          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+          <ScalarProperty Name="VoucherRemarks" ColumnName="VoucherRemarks" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="dateofgenration" ColumnName="dateofgenration" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="issueVoucher_status" ColumnName="issueVoucher_status" />
+          <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+          <ScalarProperty Name="issueorderID" ColumnName="issueorderID" />
+          <ScalarProperty Name="batchno" ColumnName="batchno" />
+          <ScalarProperty Name="FormatFull" ColumnName="FormatFull" />
+          <ScalarProperty Name="FormatLoose" ColumnName="FormatLoose" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spStock" FunctionName="rhpdModel.Store.spStock">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.spStock_Result">
+          <ScalarProperty Name="Cat" ColumnName="Cat" />
+          <ScalarProperty Name="AU" ColumnName="AU" />
+          <ScalarProperty Name="ITEMS" ColumnName="ITEMS" />
+          <ScalarProperty Name="GenericName" ColumnName="GenericName" />
+          <ScalarProperty Name="SID" ColumnName="SID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="MinQuantity" ColumnName="MinQuantity" />
+          <ScalarProperty Name="QuantityType" ColumnName="QuantityType" />
+          <ScalarProperty Name="BID" ColumnName="BID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsStockIn" ColumnName="IsStockIn" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IssueQty" ColumnName="IssueQty" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="GenericName1" ColumnName="GenericName1" />
+          <ScalarProperty Name="OriginalManf" ColumnName="OriginalManf" />
+          <ScalarProperty Name="SentQty" ColumnName="SentQty" />
+          <ScalarProperty Name="RecievedOn" ColumnName="RecievedOn" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="InterTransferId" ColumnName="InterTransferId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ChallanOrIrNo" ColumnName="ChallanOrIrNo" />
+          <ScalarProperty Name="IsChallanNo" ColumnName="IsChallanNo" />
+          <ScalarProperty Name="IsIrNo" ColumnName="IsIrNo" />
+          <ScalarProperty Name="PackingMaterial" ColumnName="PackingMaterial" />
+          <ScalarProperty Name="UnitInfo" ColumnName="UnitInfo" />
+          <ScalarProperty Name="ATNo" ColumnName="ATNo" />
+          <ScalarProperty Name="RecievedFrom" ColumnName="RecievedFrom" />
+          <ScalarProperty Name="OtherSupplier" ColumnName="OtherSupplier" />
+          <ScalarProperty Name="TransferedBy" ColumnName="TransferedBy" />
+          <ScalarProperty Name="SampleSent" ColumnName="SampleSent" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="CostOfParticular" ColumnName="CostOfParticular" />
+          <ScalarProperty Name="PackagingMaterialShape" ColumnName="PackagingMaterialShape" />
+          <ScalarProperty Name="PackagingMaterialSize" ColumnName="PackagingMaterialSize" />
+          <ScalarProperty Name="PackagingMaterialFormatLevel" ColumnName="PackagingMaterialFormatLevel" />
+          <ScalarProperty Name="PackingMaterialFormat" ColumnName="PackingMaterialFormat" />
+          <ScalarProperty Name="CRVNo" ColumnName="CRVNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_Autogenrate_LoadTallyNumber" FunctionName="rhpdModel.Store.usp_Autogenrate_LoadTallyNumber" />
+    <FunctionImportMapping FunctionImportName="usp_creareIssueVoucherNumber" FunctionName="rhpdModel.Store.usp_creareIssueVoucherNumber" />
+    <FunctionImportMapping FunctionImportName="usp_createIssueOrderNumber" FunctionName="rhpdModel.Store.usp_createIssueOrderNumber" />
+    <FunctionImportMapping FunctionImportName="usp_Dropdowngetcategory" FunctionName="rhpdModel.Store.usp_Dropdowngetcategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_Dropdowngetcategory_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_DUMMYgrdbachwithproductqty" FunctionName="rhpdModel.Store.usp_DUMMYgrdbachwithproductqty">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_DUMMYgrdbachwithproductqty_Result">
+          <ScalarProperty Name="SID" ColumnName="SID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="MinQuantity" ColumnName="MinQuantity" />
+          <ScalarProperty Name="QuantityType" ColumnName="QuantityType" />
+          <ScalarProperty Name="BID" ColumnName="BID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsStockIn" ColumnName="IsStockIn" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IssueQty" ColumnName="IssueQty" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="GenericName" ColumnName="GenericName" />
+          <ScalarProperty Name="OriginalManf" ColumnName="OriginalManf" />
+          <ScalarProperty Name="SentQty" ColumnName="SentQty" />
+          <ScalarProperty Name="RecievedOn" ColumnName="RecievedOn" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="InterTransferId" ColumnName="InterTransferId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ChallanOrIrNo" ColumnName="ChallanOrIrNo" />
+          <ScalarProperty Name="IsChallanNo" ColumnName="IsChallanNo" />
+          <ScalarProperty Name="IsIrNo" ColumnName="IsIrNo" />
+          <ScalarProperty Name="PackingMaterial" ColumnName="PackingMaterial" />
+          <ScalarProperty Name="UnitInfo" ColumnName="UnitInfo" />
+          <ScalarProperty Name="ATNo" ColumnName="ATNo" />
+          <ScalarProperty Name="RecievedFrom" ColumnName="RecievedFrom" />
+          <ScalarProperty Name="OtherSupplier" ColumnName="OtherSupplier" />
+          <ScalarProperty Name="TransferedBy" ColumnName="TransferedBy" />
+          <ScalarProperty Name="SampleSent" ColumnName="SampleSent" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="CostOfParticular" ColumnName="CostOfParticular" />
+          <ScalarProperty Name="PackagingMaterialShape" ColumnName="PackagingMaterialShape" />
+          <ScalarProperty Name="PackagingMaterialSize" ColumnName="PackagingMaterialSize" />
+          <ScalarProperty Name="PackagingMaterialFormatLevel" ColumnName="PackagingMaterialFormatLevel" />
+          <ScalarProperty Name="PackingMaterialFormat" ColumnName="PackingMaterialFormat" />
+          <ScalarProperty Name="CRVNo" ColumnName="CRVNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GenrateIssueVoucher" FunctionName="rhpdModel.Store.usp_GenrateIssueVoucher" />
+    <FunctionImportMapping FunctionImportName="usp_get_issueorder" FunctionName="rhpdModel.Store.usp_get_issueorder">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_get_issueorder_Result">
+          <ScalarProperty Name="IssueOrderNo" ColumnName="IssueOrderNo" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="issueorder_date" ColumnName="issueorder_date" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="IssueOrderId" ColumnName="IssueOrderId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getAllloadtallyDetail" FunctionName="rhpdModel.Store.usp_getAllloadtallyDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getAllloadtallyDetail_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="loadtallyNumber" ColumnName="loadtallyNumber" />
+          <ScalarProperty Name="IssueorderId" ColumnName="IssueorderId" />
+          <ScalarProperty Name="vechileNo" ColumnName="vechileNo" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="UnitNo" ColumnName="UnitNo" />
+          <ScalarProperty Name="DateofGenration" ColumnName="DateofGenration" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="Modifiedby" ColumnName="Modifiedby" />
+          <ScalarProperty Name="Modifieddate" ColumnName="Modifieddate" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="LoadtallyId" ColumnName="LoadtallyId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getBatch" FunctionName="rhpdModel.Store.usp_getBatch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getBatch_Result">
+          <ScalarProperty Name="BID" ColumnName="BID" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="batchcodeWithQty" ColumnName="batchcodeWithQty" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetBatchquantity" FunctionName="rhpdModel.Store.usp_GetBatchquantity">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_GetBatchquantity_Result">
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="BatchName" ColumnName="BatchName" />
+          <ScalarProperty Name="issueqty" ColumnName="issueqty" />
+          <ScalarProperty Name="DepuID" ColumnName="DepuID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Qid" ColumnName="Qid" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+          <ScalarProperty Name="issueorder_Status" ColumnName="issueorder_Status" />
+          <ScalarProperty Name="IssueOrderId" ColumnName="IssueOrderId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getcategory" FunctionName="rhpdModel.Store.usp_getcategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getcategory_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Category_Code" ColumnName="Category_Code" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="Category_TypeId" ColumnName="Category_TypeId" />
+          <ScalarProperty Name="Category_desc" ColumnName="Category_desc" />
+          <ScalarProperty Name="ParentCategory_Id" ColumnName="ParentCategory_Id" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getcount" FunctionName="rhpdModel.Store.usp_getcount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getcount_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IssueVoucherId" ColumnName="IssueVoucherId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="PMQuantity" ColumnName="PMQuantity" />
+          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+          <ScalarProperty Name="VoucherRemarks" ColumnName="VoucherRemarks" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="dateofgenration" ColumnName="dateofgenration" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="issueVoucher_status" ColumnName="issueVoucher_status" />
+          <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+          <ScalarProperty Name="issueorderID" ColumnName="issueorderID" />
+          <ScalarProperty Name="batchno" ColumnName="batchno" />
+          <ScalarProperty Name="FormatFull" ColumnName="FormatFull" />
+          <ScalarProperty Name="FormatLoose" ColumnName="FormatLoose" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getcount_satus" FunctionName="rhpdModel.Store.usp_getcount_satus" />
+    <FunctionImportMapping FunctionImportName="usp_getdeatilIssuevoucher" FunctionName="rhpdModel.Store.usp_getdeatilIssuevoucher">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getdeatilIssuevoucher_Result">
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IssueOrderId" ColumnName="IssueOrderId" />
+          <ScalarProperty Name="IssueOrderNo" ColumnName="IssueOrderNo" />
+          <ScalarProperty Name="DepotId" ColumnName="DepotId" />
+          <ScalarProperty Name="QuarterId" ColumnName="QuarterId" />
+          <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="createduserid" ColumnName="createduserid" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="issueorder_date" ColumnName="issueorder_date" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="issuequantity" ColumnName="issuequantity" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Desc" ColumnName="Product_Desc" />
+          <ScalarProperty Name="Short_Product_Desc" ColumnName="Short_Product_Desc" />
+          <ScalarProperty Name="Admin_Remarks" ColumnName="Admin_Remarks" />
+          <ScalarProperty Name="product_cost" ColumnName="product_cost" />
+          <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="MfgDate" ColumnName="MfgDate" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="StockQty" ColumnName="StockQty" />
+          <ScalarProperty Name="IsProductStatus" ColumnName="IsProductStatus" />
+          <ScalarProperty Name="Cat" ColumnName="Cat" />
+          <ScalarProperty Name="productUnit" ColumnName="productUnit" />
+          <ScalarProperty Name="GSreservre" ColumnName="GSreservre" />
+          <ScalarProperty Name="ID1" ColumnName="ID1" />
+          <ScalarProperty Name="Category_Code" ColumnName="Category_Code" />
+          <ScalarProperty Name="Category_Name1" ColumnName="Category_Name1" />
+          <ScalarProperty Name="Category_TypeId" ColumnName="Category_TypeId" />
+          <ScalarProperty Name="Category_desc" ColumnName="Category_desc" />
+          <ScalarProperty Name="ParentCategory_Id" ColumnName="ParentCategory_Id" />
+          <ScalarProperty Name="AddedOn1" ColumnName="AddedOn1" />
+          <ScalarProperty Name="AddedBy1" ColumnName="AddedBy1" />
+          <ScalarProperty Name="ModifiedOn1" ColumnName="ModifiedOn1" />
+          <ScalarProperty Name="ModifiedBy1" ColumnName="ModifiedBy1" />
+          <ScalarProperty Name="IsActive1" ColumnName="IsActive1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getDepuName" FunctionName="rhpdModel.Store.usp_getDepuName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getDepuName_Result">
+          <ScalarProperty Name="Depu_Id" ColumnName="Depu_Id" />
+          <ScalarProperty Name="Depu_Name" ColumnName="Depu_Name" />
+          <ScalarProperty Name="Depu_Location" ColumnName="Depu_Location" />
+          <ScalarProperty Name="Depot_Code" ColumnName="Depot_Code" />
+          <ScalarProperty Name="IsParent" ColumnName="IsParent" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CommandId" ColumnName="CommandId" />
+          <ScalarProperty Name="FormationId" ColumnName="FormationId" />
+          <ScalarProperty Name="Corp" ColumnName="Corp" />
+          <ScalarProperty Name="DepotNo" ColumnName="DepotNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetIdtqty" FunctionName="rhpdModel.Store.usp_GetIdtqty">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_GetIdtqty_Result">
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="TotalIDT" ColumnName="TotalIDT" />
+          <ScalarProperty Name="DepotId" ColumnName="DepotId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getIssueIdtdetail" FunctionName="rhpdModel.Store.usp_getIssueIdtdetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getIssueIdtdetail_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="BatchName" ColumnName="BatchName" />
+          <ScalarProperty Name="issueqty" ColumnName="issueqty" />
+          <ScalarProperty Name="DepuID" ColumnName="DepuID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Qid" ColumnName="Qid" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+          <ScalarProperty Name="issueorder_Status" ColumnName="issueorder_Status" />
+          <ScalarProperty Name="IssueOrderId" ColumnName="IssueOrderId" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Depu_Name" ColumnName="Depu_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getissuevoucherdetail" FunctionName="rhpdModel.Store.usp_getissuevoucherdetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getissuevoucherdetail_Result">
+          <ScalarProperty Name="issuevoucherid" ColumnName="issuevoucherid" />
+          <ScalarProperty Name="dateofgenration" ColumnName="dateofgenration" />
+          <ScalarProperty Name="through" ColumnName="through" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getIssueVoucherList" FunctionName="rhpdModel.Store.usp_getIssueVoucherList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getIssueVoucherList_Result">
+          <ScalarProperty Name="IssusevoucherName" ColumnName="IssusevoucherName" />
+          <ScalarProperty Name="Status1" ColumnName="Status1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getissuevoucherNumber" FunctionName="rhpdModel.Store.usp_getissuevoucherNumber">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getissuevoucherNumber_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IssueorderId" ColumnName="IssueorderId" />
+          <ScalarProperty Name="IssusevoucherName" ColumnName="IssusevoucherName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="Modifieddate" ColumnName="Modifieddate" />
+          <ScalarProperty Name="Modifiedby" ColumnName="Modifiedby" />
+          <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+          <ScalarProperty Name="ID1" ColumnName="ID1" />
+          <ScalarProperty Name="IssueOrderId1" ColumnName="IssueOrderId1" />
+          <ScalarProperty Name="IssueOrderNo" ColumnName="IssueOrderNo" />
+          <ScalarProperty Name="DepotId" ColumnName="DepotId" />
+          <ScalarProperty Name="QuarterId" ColumnName="QuarterId" />
+          <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+          <ScalarProperty Name="Active1" ColumnName="Active1" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="createduserid" ColumnName="createduserid" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="issueorder_date" ColumnName="issueorder_date" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="issuequantity" ColumnName="issuequantity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetIssuevoucherQuantity_Batchwise" FunctionName="rhpdModel.Store.usp_GetIssuevoucherQuantity_Batchwise" />
+    <FunctionImportMapping FunctionImportName="usp_GetIssueVoucherToPrint" FunctionName="rhpdModel.Store.usp_GetIssueVoucherToPrint">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_GetIssueVoucherToPrint_Result">
+          <ScalarProperty Name="IssueVoucherId" ColumnName="IssueVoucherId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PMquantity" ColumnName="PMquantity" />
+          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+          <ScalarProperty Name="productid" ColumnName="productid" />
+          <ScalarProperty Name="productUnit" ColumnName="productUnit" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="through" ColumnName="through" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getIssuOrderby_BatchIDT" FunctionName="rhpdModel.Store.usp_getIssuOrderby_BatchIDT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getIssuOrderby_BatchIDT_Result">
+          <ScalarProperty Name="issueqty" ColumnName="issueqty" />
+          <ScalarProperty Name="productid" ColumnName="productid" />
+          <ScalarProperty Name="qid" ColumnName="qid" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="productUnit" ColumnName="productUnit" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getisuueorder_forIssueVoucher" FunctionName="rhpdModel.Store.usp_getisuueorder_forIssueVoucher">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getisuueorder_forIssueVoucher_Result">
+          <ScalarProperty Name="PackingMaterial" ColumnName="PackingMaterial" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IssueOrderId" ColumnName="IssueOrderId" />
+          <ScalarProperty Name="IssueOrderNo" ColumnName="IssueOrderNo" />
+          <ScalarProperty Name="DepotId" ColumnName="DepotId" />
+          <ScalarProperty Name="QuarterId" ColumnName="QuarterId" />
+          <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="createduserid" ColumnName="createduserid" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="issueorder_date" ColumnName="issueorder_date" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="issuequantity" ColumnName="issuequantity" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Desc" ColumnName="Product_Desc" />
+          <ScalarProperty Name="Short_Product_Desc" ColumnName="Short_Product_Desc" />
+          <ScalarProperty Name="Admin_Remarks" ColumnName="Admin_Remarks" />
+          <ScalarProperty Name="product_cost" ColumnName="product_cost" />
+          <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="MfgDate" ColumnName="MfgDate" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="StockQty" ColumnName="StockQty" />
+          <ScalarProperty Name="IsProductStatus" ColumnName="IsProductStatus" />
+          <ScalarProperty Name="Cat" ColumnName="Cat" />
+          <ScalarProperty Name="productUnit" ColumnName="productUnit" />
+          <ScalarProperty Name="GSreservre" ColumnName="GSreservre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getLoadtallydetail" FunctionName="rhpdModel.Store.usp_getLoadtallydetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getLoadtallydetail_Result">
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="productUnit" ColumnName="productUnit" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IssueVoucherId" ColumnName="IssueVoucherId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="PMQuantity" ColumnName="PMQuantity" />
+          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+          <ScalarProperty Name="VoucherRemarks" ColumnName="VoucherRemarks" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="dateofgenration" ColumnName="dateofgenration" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="issueVoucher_status" ColumnName="issueVoucher_status" />
+          <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+          <ScalarProperty Name="issueorderID" ColumnName="issueorderID" />
+          <ScalarProperty Name="batchno" ColumnName="batchno" />
+          <ScalarProperty Name="FormatFull" ColumnName="FormatFull" />
+          <ScalarProperty Name="FormatLoose" ColumnName="FormatLoose" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getLoadTallyList" FunctionName="rhpdModel.Store.usp_getLoadTallyList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getLoadTallyList_Result">
+          <ScalarProperty Name="SNo" ColumnName="SNo" />
+          <ScalarProperty Name="loadtallyNumber" ColumnName="loadtallyNumber" />
+          <ScalarProperty Name="VechileNo" ColumnName="VechileNo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getLoadTallyNumber" FunctionName="rhpdModel.Store.usp_getLoadTallyNumber">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getLoadTallyNumber_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="loadtallyNumber" ColumnName="loadtallyNumber" />
+          <ScalarProperty Name="IssueorderId" ColumnName="IssueorderId" />
+          <ScalarProperty Name="vechileNo" ColumnName="vechileNo" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="Modifiedby" ColumnName="Modifiedby" />
+          <ScalarProperty Name="Modifieddate" ColumnName="Modifieddate" />
+          <ScalarProperty Name="loadtally_status" ColumnName="loadtally_status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetLoadTallyToPrint" FunctionName="rhpdModel.Store.usp_GetLoadTallyToPrint">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_GetLoadTallyToPrint_Result">
+          <ScalarProperty Name="SNo" ColumnName="SNo" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="vechileNo" ColumnName="vechileNo" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="productunit" ColumnName="productunit" />
+          <ScalarProperty Name="stockquantity" ColumnName="stockquantity" />
+          <ScalarProperty Name="PMQuantity" ColumnName="PMQuantity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetOrderDetail" FunctionName="rhpdModel.Store.usp_GetOrderDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_GetOrderDetail_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IssueOrderId" ColumnName="IssueOrderId" />
+          <ScalarProperty Name="IssueOrderNo" ColumnName="IssueOrderNo" />
+          <ScalarProperty Name="DepotId" ColumnName="DepotId" />
+          <ScalarProperty Name="QuarterId" ColumnName="QuarterId" />
+          <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="createduserid" ColumnName="createduserid" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="issueorder_date" ColumnName="issueorder_date" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="issuequantity" ColumnName="issuequantity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getprdDetail" FunctionName="rhpdModel.Store.usp_getprdDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getprdDetail_Result">
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Desc" ColumnName="Product_Desc" />
+          <ScalarProperty Name="Short_Product_Desc" ColumnName="Short_Product_Desc" />
+          <ScalarProperty Name="Admin_Remarks" ColumnName="Admin_Remarks" />
+          <ScalarProperty Name="product_cost" ColumnName="product_cost" />
+          <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="MfgDate" ColumnName="MfgDate" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="StockQty" ColumnName="StockQty" />
+          <ScalarProperty Name="IsProductStatus" ColumnName="IsProductStatus" />
+          <ScalarProperty Name="Cat" ColumnName="Cat" />
+          <ScalarProperty Name="productUnit" ColumnName="productUnit" />
+          <ScalarProperty Name="GSreservre" ColumnName="GSreservre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getproductData" FunctionName="rhpdModel.Store.usp_getproductData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getproductData_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Dipu" ColumnName="Dipu" />
+          <ScalarProperty Name="Dipuprd_IDTqty" ColumnName="Dipuprd_IDTqty" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+          <ScalarProperty Name="modifieddate" ColumnName="modifieddate" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Product_Name1" ColumnName="Product_Name1" />
+          <ScalarProperty Name="Product_Desc" ColumnName="Product_Desc" />
+          <ScalarProperty Name="Short_Product_Desc" ColumnName="Short_Product_Desc" />
+          <ScalarProperty Name="Admin_Remarks" ColumnName="Admin_Remarks" />
+          <ScalarProperty Name="product_cost" ColumnName="product_cost" />
+          <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="MfgDate" ColumnName="MfgDate" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive1" ColumnName="IsActive1" />
+          <ScalarProperty Name="StockQty" ColumnName="StockQty" />
+          <ScalarProperty Name="IsProductStatus" ColumnName="IsProductStatus" />
+          <ScalarProperty Name="Cat" ColumnName="Cat" />
+          <ScalarProperty Name="productUnit" ColumnName="productUnit" />
+          <ScalarProperty Name="GSreservre" ColumnName="GSreservre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getRemainingIDT" FunctionName="rhpdModel.Store.usp_getRemainingIDT" />
+    <FunctionImportMapping FunctionImportName="usp_getStockQuantity" FunctionName="rhpdModel.Store.usp_getStockQuantity">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getStockQuantity_Result">
+          <ScalarProperty Name="StockQty" ColumnName="StockQty" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="productUnit" ColumnName="productUnit" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Product_Name1" ColumnName="Product_Name1" />
+          <ScalarProperty Name="Product_Desc" ColumnName="Product_Desc" />
+          <ScalarProperty Name="Short_Product_Desc" ColumnName="Short_Product_Desc" />
+          <ScalarProperty Name="Admin_Remarks" ColumnName="Admin_Remarks" />
+          <ScalarProperty Name="product_cost" ColumnName="product_cost" />
+          <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="MfgDate" ColumnName="MfgDate" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="StockQty1" ColumnName="StockQty1" />
+          <ScalarProperty Name="IsProductStatus" ColumnName="IsProductStatus" />
+          <ScalarProperty Name="Cat" ColumnName="Cat" />
+          <ScalarProperty Name="productUnit1" ColumnName="productUnit1" />
+          <ScalarProperty Name="GSreservre" ColumnName="GSreservre" />
+          <ScalarProperty Name="SID" ColumnName="SID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="MinQuantity" ColumnName="MinQuantity" />
+          <ScalarProperty Name="QuantityType" ColumnName="QuantityType" />
+          <ScalarProperty Name="BID" ColumnName="BID" />
+          <ScalarProperty Name="IsActive1" ColumnName="IsActive1" />
+          <ScalarProperty Name="IsStockIn" ColumnName="IsStockIn" />
+          <ScalarProperty Name="AddedOn1" ColumnName="AddedOn1" />
+          <ScalarProperty Name="AddedBy1" ColumnName="AddedBy1" />
+          <ScalarProperty Name="ModifiedOn1" ColumnName="ModifiedOn1" />
+          <ScalarProperty Name="ModifiedBy1" ColumnName="ModifiedBy1" />
+          <ScalarProperty Name="IssueQty" ColumnName="IssueQty" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="GenericName" ColumnName="GenericName" />
+          <ScalarProperty Name="OriginalManf" ColumnName="OriginalManf" />
+          <ScalarProperty Name="SentQty" ColumnName="SentQty" />
+          <ScalarProperty Name="RecievedOn" ColumnName="RecievedOn" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="InterTransferId" ColumnName="InterTransferId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ChallanOrIrNo" ColumnName="ChallanOrIrNo" />
+          <ScalarProperty Name="IsChallanNo" ColumnName="IsChallanNo" />
+          <ScalarProperty Name="IsIrNo" ColumnName="IsIrNo" />
+          <ScalarProperty Name="PackingMaterial" ColumnName="PackingMaterial" />
+          <ScalarProperty Name="UnitInfo" ColumnName="UnitInfo" />
+          <ScalarProperty Name="ATNo" ColumnName="ATNo" />
+          <ScalarProperty Name="RecievedFrom" ColumnName="RecievedFrom" />
+          <ScalarProperty Name="OtherSupplier" ColumnName="OtherSupplier" />
+          <ScalarProperty Name="TransferedBy" ColumnName="TransferedBy" />
+          <ScalarProperty Name="SampleSent" ColumnName="SampleSent" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="CostOfParticular" ColumnName="CostOfParticular" />
+          <ScalarProperty Name="PackagingMaterialShape" ColumnName="PackagingMaterialShape" />
+          <ScalarProperty Name="PackagingMaterialSize" ColumnName="PackagingMaterialSize" />
+          <ScalarProperty Name="PackagingMaterialFormatLevel" ColumnName="PackagingMaterialFormatLevel" />
+          <ScalarProperty Name="PackingMaterialFormat" ColumnName="PackingMaterialFormat" />
+          <ScalarProperty Name="CRVNo" ColumnName="CRVNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetVechile_Detail" FunctionName="rhpdModel.Store.usp_GetVechile_Detail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_GetVechile_Detail_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="VechileNumber" ColumnName="VechileNumber" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="CreateduserId" ColumnName="CreateduserId" />
+          <ScalarProperty Name="Modifieddate" ColumnName="Modifieddate" />
+          <ScalarProperty Name="Modifieduserid" ColumnName="Modifieduserid" />
+          <ScalarProperty Name="loadtallystatus" ColumnName="loadtallystatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getVechile_prdquantity" FunctionName="rhpdModel.Store.usp_getVechile_prdquantity">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getVechile_prdquantity_Result">
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="issueorderID" ColumnName="issueorderID" />
+          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getvechileAutocompete" FunctionName="rhpdModel.Store.usp_getvechileAutocompete" />
+    <FunctionImportMapping FunctionImportName="usp_getvechiledetailbatchwise" FunctionName="rhpdModel.Store.usp_getvechiledetailbatchwise">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getvechiledetailbatchwise_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IssueVoucherId" ColumnName="IssueVoucherId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="PMQuantity" ColumnName="PMQuantity" />
+          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+          <ScalarProperty Name="VoucherRemarks" ColumnName="VoucherRemarks" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="dateofgenration" ColumnName="dateofgenration" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="issueVoucher_status" ColumnName="issueVoucher_status" />
+          <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+          <ScalarProperty Name="issueorderID" ColumnName="issueorderID" />
+          <ScalarProperty Name="batchno" ColumnName="batchno" />
+          <ScalarProperty Name="FormatFull" ColumnName="FormatFull" />
+          <ScalarProperty Name="FormatLoose" ColumnName="FormatLoose" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getvechileDetailforLoadtally" FunctionName="rhpdModel.Store.usp_getvechileDetailforLoadtally">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getvechileDetailforLoadtally_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="VechileNumber" ColumnName="VechileNumber" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="CreateduserId" ColumnName="CreateduserId" />
+          <ScalarProperty Name="Modifieddate" ColumnName="Modifieddate" />
+          <ScalarProperty Name="Modifieduserid" ColumnName="Modifieduserid" />
+          <ScalarProperty Name="loadtallystatus" ColumnName="loadtallystatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_getVechiledetails" FunctionName="rhpdModel.Store.usp_getVechiledetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_getVechiledetails_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IssueVoucherId" ColumnName="IssueVoucherId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="PMQuantity" ColumnName="PMQuantity" />
+          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+          <ScalarProperty Name="VoucherRemarks" ColumnName="VoucherRemarks" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="dateofgenration" ColumnName="dateofgenration" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="issueVoucher_status" ColumnName="issueVoucher_status" />
+          <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+          <ScalarProperty Name="issueorderID" ColumnName="issueorderID" />
+          <ScalarProperty Name="batchno" ColumnName="batchno" />
+          <ScalarProperty Name="FormatFull" ColumnName="FormatFull" />
+          <ScalarProperty Name="FormatLoose" ColumnName="FormatLoose" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_grdbachwithproductqty" FunctionName="rhpdModel.Store.usp_grdbachwithproductqty">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_grdbachwithproductqty_Result">
+          <ScalarProperty Name="SID" ColumnName="SID" />
+          <ScalarProperty Name="Esl" ColumnName="Esl" />
+          <ScalarProperty Name="sQuantity" ColumnName="sQuantity" />
+          <ScalarProperty Name="FullPack" ColumnName="FullPack" />
+          <ScalarProperty Name="LoosePack" ColumnName="LoosePack" />
+          <ScalarProperty Name="FullPackQty" ColumnName="FullPackQty" />
+          <ScalarProperty Name="LoosePackQty" ColumnName="LoosePackQty" />
+          <ScalarProperty Name="BID" ColumnName="BID" />
+          <ScalarProperty Name="BatchName" ColumnName="BatchName" />
+          <ScalarProperty Name="BatchCode" ColumnName="BatchCode" />
+          <ScalarProperty Name="BatchDesc" ColumnName="BatchDesc" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="ATNo" ColumnName="ATNo" />
+          <ScalarProperty Name="VechicleNo" ColumnName="VechicleNo" />
+          <ScalarProperty Name="RecievedFrom" ColumnName="RecievedFrom" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="MFGDate" ColumnName="MFGDate" />
+          <ScalarProperty Name="EXPDate" ColumnName="EXPDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DepotID" ColumnName="DepotID" />
+          <ScalarProperty Name="Esl1" ColumnName="Esl1" />
+          <ScalarProperty Name="IsSentto" ColumnName="IsSentto" />
+          <ScalarProperty Name="IsBatchStatus" ColumnName="IsBatchStatus" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PackagingType" ColumnName="PackagingType" />
+          <ScalarProperty Name="StockBatchId" ColumnName="StockBatchId" />
+          <ScalarProperty Name="RemainingQty" ColumnName="RemainingQty" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_idtQty_Quarter" FunctionName="rhpdModel.Store.usp_idtQty_Quarter" />
+    <FunctionImportMapping FunctionImportName="usp_Insert_IssueOrder" FunctionName="rhpdModel.Store.usp_Insert_IssueOrder" />
+    <FunctionImportMapping FunctionImportName="usp_InsertBatchIDT" FunctionName="rhpdModel.Store.usp_InsertBatchIDT" />
+    <FunctionImportMapping FunctionImportName="usp_InsertPrdIdt_QTY" FunctionName="rhpdModel.Store.usp_InsertPrdIdt_QTY" />
+    <FunctionImportMapping FunctionImportName="usp_InsertQuarter" FunctionName="rhpdModel.Store.usp_InsertQuarter" />
+    <FunctionImportMapping FunctionImportName="usp_IssueVoucherDetail_AddUpdate" FunctionName="rhpdModel.Store.usp_IssueVoucherDetail_AddUpdate" />
+    <FunctionImportMapping FunctionImportName="usp_IssueVoucherVehicleDetail_AddUpdate" FunctionName="rhpdModel.Store.usp_IssueVoucherVehicleDetail_AddUpdate" />
+    <FunctionImportMapping FunctionImportName="usp_StockOutMain_AddUpdate" FunctionName="rhpdModel.Store.usp_StockOutMain_AddUpdate" />
+    <FunctionImportMapping FunctionImportName="usp_StockOutMain_Depot_Update" FunctionName="rhpdModel.Store.usp_StockOutMain_Depot_Update" />
+    <FunctionImportMapping FunctionImportName="usp_StockOutMain_GetDatabyQuarter" FunctionName="rhpdModel.Store.usp_StockOutMain_GetDatabyQuarter" />
+    <FunctionImportMapping FunctionImportName="usp_StockOutMain_GetDepots" FunctionName="rhpdModel.Store.usp_StockOutMain_GetDepots">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_StockOutMain_GetDepots_Result">
+          <ScalarProperty Name="Depu_Id" ColumnName="Depu_Id" />
+          <ScalarProperty Name="Depu_Name" ColumnName="Depu_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_StockOutMain_Product_Add" FunctionName="rhpdModel.Store.usp_StockOutMain_Product_Add" />
+    <FunctionImportMapping FunctionImportName="usp_StockOutMain_Products_Get" FunctionName="rhpdModel.Store.usp_StockOutMain_Products_Get">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_StockOutMain_Products_Get_Result">
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Desc" ColumnName="Product_Desc" />
+          <ScalarProperty Name="Short_Product_Desc" ColumnName="Short_Product_Desc" />
+          <ScalarProperty Name="Admin_Remarks" ColumnName="Admin_Remarks" />
+          <ScalarProperty Name="product_cost" ColumnName="product_cost" />
+          <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="MfgDate" ColumnName="MfgDate" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="StockQty" ColumnName="StockQty" />
+          <ScalarProperty Name="IsProductStatus" ColumnName="IsProductStatus" />
+          <ScalarProperty Name="Cat" ColumnName="Cat" />
+          <ScalarProperty Name="productUnit" ColumnName="productUnit" />
+          <ScalarProperty Name="GSreservre" ColumnName="GSreservre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_StockOutMain_Quarters_Get" FunctionName="rhpdModel.Store.usp_StockOutMain_Quarters_Get">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="rhpdModel.usp_StockOutMain_Quarters_Get_Result">
+          <ScalarProperty Name="QuarterId" ColumnName="QuarterId" />
+          <ScalarProperty Name="QuarterName" ColumnName="QuarterName" />
+          <ScalarProperty Name="QuarterYear" ColumnName="QuarterYear" />
+          <ScalarProperty Name="QuarterRank" ColumnName="QuarterRank" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_UpdateIdtQty" FunctionName="rhpdModel.Store.usp_UpdateIdtQty" />
+    <FunctionImportMapping FunctionImportName="usp_VechileMaster_AddUpdate" FunctionName="rhpdModel.Store.usp_VechileMaster_AddUpdate" />
+    <EntitySetMapping Name="AddPMContainers">
+      <EntityTypeMapping TypeName="rhpdModel.AddPMContainer">
+        <MappingFragment StoreEntitySet="AddPMContainer">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModidfiedOn" ColumnName="ModidfiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="DateOfReceival" ColumnName="DateOfReceival" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PMID" ColumnName="PMID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BatchDepots">
+      <EntityTypeMapping TypeName="rhpdModel.BatchDepot">
+        <MappingFragment StoreEntitySet="BatchDepot">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DepotId" ColumnName="DepotId" />
+          <ScalarProperty Name="BatchId" ColumnName="BatchId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BatchMasters">
+      <EntityTypeMapping TypeName="rhpdModel.BatchMaster">
+        <MappingFragment StoreEntitySet="BatchMaster">
+          <ScalarProperty Name="SectionCol" ColumnName="SectionCol" />
+          <ScalarProperty Name="SectionRows" ColumnName="SectionRows" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="SampleSentQty" ColumnName="SampleSentQty" />
+          <ScalarProperty Name="WarehouseNo" ColumnName="WarehouseNo" />
+          <ScalarProperty Name="WeightUnit" ColumnName="WeightUnit" />
+          <ScalarProperty Name="WeightofParticular" ColumnName="WeightofParticular" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="CostOfParticular" ColumnName="CostOfParticular" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="IsBatchStatus" ColumnName="IsBatchStatus" />
+          <ScalarProperty Name="IsSentto" ColumnName="IsSentto" />
+          <ScalarProperty Name="Esl" ColumnName="Esl" />
+          <ScalarProperty Name="DepotID" ColumnName="DepotID" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="EXPDate" ColumnName="EXPDate" />
+          <ScalarProperty Name="MFGDate" ColumnName="MFGDate" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="RecievedFrom" ColumnName="RecievedFrom" />
+          <ScalarProperty Name="VechicleNo" ColumnName="VechicleNo" />
+          <ScalarProperty Name="ATNo" ColumnName="ATNo" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="BatchDesc" ColumnName="BatchDesc" />
+          <ScalarProperty Name="BatchCode" ColumnName="BatchCode" />
+          <ScalarProperty Name="BatchName" ColumnName="BatchName" />
+          <ScalarProperty Name="BID" ColumnName="BID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryMasters">
+      <EntityTypeMapping TypeName="rhpdModel.CategoryMaster">
+        <MappingFragment StoreEntitySet="CategoryMaster">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="ParentCategory_Id" ColumnName="ParentCategory_Id" />
+          <ScalarProperty Name="Category_desc" ColumnName="Category_desc" />
+          <ScalarProperty Name="Category_TypeId" ColumnName="Category_TypeId" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="Category_Code" ColumnName="Category_Code" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryTypes">
+      <EntityTypeMapping TypeName="rhpdModel.CategoryType">
+        <MappingFragment StoreEntitySet="CategoryType">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CityMasters">
+      <EntityTypeMapping TypeName="rhpdModel.CityMaster">
+        <MappingFragment StoreEntitySet="CityMaster">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommandMasters">
+      <EntityTypeMapping TypeName="rhpdModel.CommandMaster">
+        <MappingFragment StoreEntitySet="CommandMaster">
+          <ScalarProperty Name="UndatedOn" ColumnName="UndatedOn" />
+          <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+          <ScalarProperty Name="Addedon" ColumnName="Addedon" />
+          <ScalarProperty Name="Addedby" ColumnName="Addedby" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Descripition" ColumnName="Descripition" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CountryMasters">
+      <EntityTypeMapping TypeName="rhpdModel.CountryMaster">
+        <MappingFragment StoreEntitySet="CountryMaster">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="AllowShiping" ColumnName="AllowShiping" />
+          <ScalarProperty Name="AllowBilling" ColumnName="AllowBilling" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeptMasters">
+      <EntityTypeMapping TypeName="rhpdModel.DeptMaster">
+        <MappingFragment StoreEntitySet="DeptMaster">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Modifiedby" ColumnName="Modifiedby" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepuMasters">
+      <EntityTypeMapping TypeName="rhpdModel.DepuMaster">
+        <MappingFragment StoreEntitySet="DepuMaster">
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="AWS" ColumnName="AWS" />
+          <ScalarProperty Name="ICT" ColumnName="ICT" />
+          <ScalarProperty Name="IDT" ColumnName="IDT" />
+          <ScalarProperty Name="DepotNo" ColumnName="DepotNo" />
+          <ScalarProperty Name="Corp" ColumnName="Corp" />
+          <ScalarProperty Name="FormationId" ColumnName="FormationId" />
+          <ScalarProperty Name="CommandId" ColumnName="CommandId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="IsParent" ColumnName="IsParent" />
+          <ScalarProperty Name="Depot_Code" ColumnName="Depot_Code" />
+          <ScalarProperty Name="Depu_Location" ColumnName="Depu_Location" />
+          <ScalarProperty Name="Depu_Name" ColumnName="Depu_Name" />
+          <ScalarProperty Name="Depu_Id" ColumnName="Depu_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESLIssues">
+      <EntityTypeMapping TypeName="rhpdModel.ESLIssue">
+        <MappingFragment StoreEntitySet="ESLIssue">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="RecievedDate" ColumnName="RecievedDate" />
+          <ScalarProperty Name="SentOn" ColumnName="SentOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Addedby" ColumnName="Addedby" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="OverallRemarks" ColumnName="OverallRemarks" />
+          <ScalarProperty Name="RemarksByjDSO" ColumnName="RemarksByjDSO" />
+          <ScalarProperty Name="RemarksByjcoiGP" ColumnName="RemarksByjcoiGP" />
+          <ScalarProperty Name="RemarksBynurGP" ColumnName="RemarksBynurGP" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Quantitytype" ColumnName="Quantitytype" />
+          <ScalarProperty Name="IssueTo" ColumnName="IssueTo" />
+          <ScalarProperty Name="BID" ColumnName="BID" />
+          <ScalarProperty Name="EslID" ColumnName="EslID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EslMasters">
+      <EntityTypeMapping TypeName="rhpdModel.EslMaster">
+        <MappingFragment StoreEntitySet="EslMaster">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="Unit_Id" ColumnName="Unit_Id" />
+          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpenseVoucherMasters">
+      <EntityTypeMapping TypeName="rhpdModel.ExpenseVoucherMaster">
+        <MappingFragment StoreEntitySet="ExpenseVoucherMaster">
+          <ScalarProperty Name="ExpenseVoucherNo" ColumnName="ExpenseVoucherNo" />
+          <ScalarProperty Name="RemainingQty" ColumnName="RemainingQty" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="FormatLoose" ColumnName="FormatLoose" />
+          <ScalarProperty Name="FormatFull" ColumnName="FormatFull" />
+          <ScalarProperty Name="UsedFromFullPackets" ColumnName="UsedFromFullPackets" />
+          <ScalarProperty Name="UsedQty" ColumnName="UsedQty" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Formations">
+      <EntityTypeMapping TypeName="rhpdModel.Formation">
+        <MappingFragment StoreEntitySet="Formation">
+          <ScalarProperty Name="CommandId" ColumnName="CommandId" />
+          <ScalarProperty Name="UndatedOn" ColumnName="UndatedOn" />
+          <ScalarProperty Name="Updatedby" ColumnName="Updatedby" />
+          <ScalarProperty Name="Addedon" ColumnName="Addedon" />
+          <ScalarProperty Name="Addedby" ColumnName="Addedby" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Descripition" ColumnName="Descripition" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GateInouts">
+      <EntityTypeMapping TypeName="rhpdModel.GateInout">
+        <MappingFragment StoreEntitySet="GateInout">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="fuelintankOut" ColumnName="fuelintankOut" />
+          <ScalarProperty Name="fuelintankIn" ColumnName="fuelintankIn" />
+          <ScalarProperty Name="stationUnitId" ColumnName="stationUnitId" />
+          <ScalarProperty Name="stationDepuID" ColumnName="stationDepuID" />
+          <ScalarProperty Name="loadout" ColumnName="loadout" />
+          <ScalarProperty Name="timeout" ColumnName="timeout" />
+          <ScalarProperty Name="IdtId" ColumnName="IdtId" />
+          <ScalarProperty Name="loadin" ColumnName="loadin" />
+          <ScalarProperty Name="unitQuantityTypeId" ColumnName="unitQuantityTypeId" />
+          <ScalarProperty Name="typeofvehicle" ColumnName="typeofvehicle" />
+          <ScalarProperty Name="timein" ColumnName="timein" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="rank" ColumnName="rank" />
+          <ScalarProperty Name="ArmyNo" ColumnName="ArmyNo" />
+          <ScalarProperty Name="franchiseeno" ColumnName="franchiseeno" />
+          <ScalarProperty Name="vehbano" ColumnName="vehbano" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GatInOuts">
+      <EntityTypeMapping TypeName="rhpdModel.GatInOut">
+        <MappingFragment StoreEntitySet="GatInOut">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="fuelintankOut" ColumnName="fuelintankOut" />
+          <ScalarProperty Name="fuelintankIn" ColumnName="fuelintankIn" />
+          <ScalarProperty Name="stationUnitId" ColumnName="stationUnitId" />
+          <ScalarProperty Name="stationDepuID" ColumnName="stationDepuID" />
+          <ScalarProperty Name="loadout" ColumnName="loadout" />
+          <ScalarProperty Name="timeout" ColumnName="timeout" />
+          <ScalarProperty Name="IdtId" ColumnName="IdtId" />
+          <ScalarProperty Name="loadin" ColumnName="loadin" />
+          <ScalarProperty Name="unitQuantityTypeId" ColumnName="unitQuantityTypeId" />
+          <ScalarProperty Name="typeofvehicle" ColumnName="typeofvehicle" />
+          <ScalarProperty Name="timein" ColumnName="timein" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="rank" ColumnName="rank" />
+          <ScalarProperty Name="ArmyNo" ColumnName="ArmyNo" />
+          <ScalarProperty Name="franchiseeno" ColumnName="franchiseeno" />
+          <ScalarProperty Name="vehbano" ColumnName="vehbano" />
+          <ScalarProperty Name="Recievedfrom" ColumnName="Recievedfrom" />
+          <ScalarProperty Name="IsLoadIn" ColumnName="IsLoadIn" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IDTs">
+      <EntityTypeMapping TypeName="rhpdModel.IDT">
+        <MappingFragment StoreEntitySet="IDT">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="IsGateOut" ColumnName="IsGateOut" />
+          <ScalarProperty Name="IsTallySheetId" ColumnName="IsTallySheetId" />
+          <ScalarProperty Name="IsIssueVoucherId" ColumnName="IsIssueVoucherId" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IndentName" ColumnName="IndentName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IDTStockTransfers">
+      <EntityTypeMapping TypeName="rhpdModel.IDTStockTransfer">
+        <MappingFragment StoreEntitySet="IDTStockTransfer">
+          <ScalarProperty Name="ToLooseCount" ColumnName="ToLooseCount" />
+          <ScalarProperty Name="Dated" ColumnName="Dated" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PackingType" ColumnName="PackingType" />
+          <ScalarProperty Name="IDTId" ColumnName="IDTId" />
+          <ScalarProperty Name="BatchId" ColumnName="BatchId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IssueVouchers">
+      <EntityTypeMapping TypeName="rhpdModel.IssueVoucher">
+        <MappingFragment StoreEntitySet="IssueVoucher">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="VechileNo" ColumnName="VechileNo" />
+          <ScalarProperty Name="ToUnitId" ColumnName="ToUnitId" />
+          <ScalarProperty Name="ToDepuId" ColumnName="ToDepuId" />
+          <ScalarProperty Name="IdtId" ColumnName="IdtId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ManuMgmts">
+      <EntityTypeMapping TypeName="rhpdModel.ManuMgmt">
+        <MappingFragment StoreEntitySet="ManuMgmt">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ManuLink" ColumnName="ManuLink" />
+          <ScalarProperty Name="ManuName" ColumnName="ManuName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OriginalManufacture_">
+      <EntityTypeMapping TypeName="rhpdModel.OriginalManufacture_">
+        <MappingFragment StoreEntitySet="OriginalManufacture ">
+          <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PMandContainerMasters">
+      <EntityTypeMapping TypeName="rhpdModel.PMandContainerMaster">
+        <MappingFragment StoreEntitySet="PMandContainerMaster">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="Condition" ColumnName="Condition" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PMCapacities">
+      <EntityTypeMapping TypeName="rhpdModel.PMCapacity">
+        <MappingFragment StoreEntitySet="PMCapacity">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PMConditions">
+      <EntityTypeMapping TypeName="rhpdModel.PMCondition">
+        <MappingFragment StoreEntitySet="PMCondition">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="Condition" ColumnName="Condition" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PMGrades">
+      <EntityTypeMapping TypeName="rhpdModel.PMGrade">
+        <MappingFragment StoreEntitySet="PMGrade">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PMNames">
+      <EntityTypeMapping TypeName="rhpdModel.PMName">
+        <MappingFragment StoreEntitySet="PMNames">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductMasters">
+      <EntityTypeMapping TypeName="rhpdModel.ProductMaster">
+        <MappingFragment StoreEntitySet="ProductMaster">
+          <ScalarProperty Name="GSreservre" ColumnName="GSreservre" />
+          <ScalarProperty Name="productUnit" ColumnName="productUnit" />
+          <ScalarProperty Name="Cat" ColumnName="Cat" />
+          <ScalarProperty Name="IsProductStatus" ColumnName="IsProductStatus" />
+          <ScalarProperty Name="StockQty" ColumnName="StockQty" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="MfgDate" ColumnName="MfgDate" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="Product_Code" ColumnName="Product_Code" />
+          <ScalarProperty Name="product_cost" ColumnName="product_cost" />
+          <ScalarProperty Name="Admin_Remarks" ColumnName="Admin_Remarks" />
+          <ScalarProperty Name="Short_Product_Desc" ColumnName="Short_Product_Desc" />
+          <ScalarProperty Name="Product_Desc" ColumnName="Product_Desc" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuantityTypes">
+      <EntityTypeMapping TypeName="rhpdModel.QuantityType">
+        <MappingFragment StoreEntitySet="QuantityType">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="QuantityType1" ColumnName="QuantityType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecievedFroms">
+      <EntityTypeMapping TypeName="rhpdModel.RecievedFrom">
+        <MappingFragment StoreEntitySet="RecievedFrom">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="RecievedFrom1" ColumnName="RecievedFrom" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleMasters">
+      <EntityTypeMapping TypeName="rhpdModel.RoleMaster">
+        <MappingFragment StoreEntitySet="RoleMaster">
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Role_Desc" ColumnName="Role_Desc" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+          <ScalarProperty Name="Role_ID" ColumnName="Role_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatesMasters">
+      <EntityTypeMapping TypeName="rhpdModel.StatesMaster">
+        <MappingFragment StoreEntitySet="StatesMaster">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="SUCode" ColumnName="SUCode" />
+          <ScalarProperty Name="SUCountry" ColumnName="SUCountry" />
+          <ScalarProperty Name="SUName" ColumnName="SUName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusMasters">
+      <EntityTypeMapping TypeName="rhpdModel.StatusMaster">
+        <MappingFragment StoreEntitySet="StatusMaster">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreateedOn" ColumnName="CreateedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockMasters">
+      <EntityTypeMapping TypeName="rhpdModel.StockMaster">
+        <MappingFragment StoreEntitySet="StockMaster">
+          <ScalarProperty Name="Session" ColumnName="Session" />
+          <ScalarProperty Name="SubShapeUnit" ColumnName="SubShapeUnit" />
+          <ScalarProperty Name="SubWeightUnit" ColumnName="SubWeightUnit" />
+          <ScalarProperty Name="SubWeight" ColumnName="SubWeight" />
+          <ScalarProperty Name="SubPMSize" ColumnName="SubPMSize" />
+          <ScalarProperty Name="SubPMShape" ColumnName="SubPMShape" />
+          <ScalarProperty Name="SubPMConditionId" ColumnName="SubPMConditionId" />
+          <ScalarProperty Name="SubPMCapacityId" ColumnName="SubPMCapacityId" />
+          <ScalarProperty Name="SubPMGradeId" ColumnName="SubPMGradeId" />
+          <ScalarProperty Name="SubPMName" ColumnName="SubPMName" />
+          <ScalarProperty Name="IsDW" ColumnName="IsDW" />
+          <ScalarProperty Name="IsSubPacking" ColumnName="IsSubPacking" />
+          <ScalarProperty Name="IsWithoutPacking" ColumnName="IsWithoutPacking" />
+          <ScalarProperty Name="IsEmptyPM" ColumnName="IsEmptyPM" />
+          <ScalarProperty Name="PMConditionId" ColumnName="PMConditionId" />
+          <ScalarProperty Name="PMCapacityId" ColumnName="PMCapacityId" />
+          <ScalarProperty Name="PMGradeId" ColumnName="PMGradeId" />
+          <ScalarProperty Name="ShapeUnit" ColumnName="ShapeUnit" />
+          <ScalarProperty Name="WeigthUnit" ColumnName="WeigthUnit" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="SupplierNo" ColumnName="SupplierNo" />
+          <ScalarProperty Name="CRVNo" ColumnName="CRVNo" />
+          <ScalarProperty Name="PackingMaterialFormat" ColumnName="PackingMaterialFormat" />
+          <ScalarProperty Name="PackagingMaterialFormatLevel" ColumnName="PackagingMaterialFormatLevel" />
+          <ScalarProperty Name="PackagingMaterialSize" ColumnName="PackagingMaterialSize" />
+          <ScalarProperty Name="PackagingMaterialShape" ColumnName="PackagingMaterialShape" />
+          <ScalarProperty Name="CostOfParticular" ColumnName="CostOfParticular" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="SampleSent" ColumnName="SampleSent" />
+          <ScalarProperty Name="TransferedBy" ColumnName="TransferedBy" />
+          <ScalarProperty Name="OtherSupplier" ColumnName="OtherSupplier" />
+          <ScalarProperty Name="RecievedFrom" ColumnName="RecievedFrom" />
+          <ScalarProperty Name="ATNo" ColumnName="ATNo" />
+          <ScalarProperty Name="UnitInfo" ColumnName="UnitInfo" />
+          <ScalarProperty Name="PackingMaterial" ColumnName="PackingMaterial" />
+          <ScalarProperty Name="IsIrNo" ColumnName="IsIrNo" />
+          <ScalarProperty Name="IsChallanNo" ColumnName="IsChallanNo" />
+          <ScalarProperty Name="ChallanOrIrNo" ColumnName="ChallanOrIrNo" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="InterTransferId" ColumnName="InterTransferId" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="RecievedOn" ColumnName="RecievedOn" />
+          <ScalarProperty Name="SentQty" ColumnName="SentQty" />
+          <ScalarProperty Name="OriginalManf" ColumnName="OriginalManf" />
+          <ScalarProperty Name="GenericName" ColumnName="GenericName" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="IssueQty" ColumnName="IssueQty" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="IsStockIn" ColumnName="IsStockIn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="BID" ColumnName="BID" />
+          <ScalarProperty Name="QuantityType" ColumnName="QuantityType" />
+          <ScalarProperty Name="MinQuantity" ColumnName="MinQuantity" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="SID" ColumnName="SID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockPakagings">
+      <EntityTypeMapping TypeName="rhpdModel.StockPakaging">
+        <MappingFragment StoreEntitySet="StockPakaging">
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="RemainingQty" ColumnName="RemainingQty" />
+          <ScalarProperty Name="StockBatchId" ColumnName="StockBatchId" />
+          <ScalarProperty Name="PackagingType" ColumnName="PackagingType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockSpillages">
+      <EntityTypeMapping TypeName="rhpdModel.StockSpillage">
+        <MappingFragment StoreEntitySet="StockSpillage">
+          <ScalarProperty Name="BothAffected" ColumnName="BothAffected" />
+          <ScalarProperty Name="SampleAffected" ColumnName="SampleAffected" />
+          <ScalarProperty Name="SpillageAffected" ColumnName="SpillageAffected" />
+          <ScalarProperty Name="DamagedBoxes" ColumnName="DamagedBoxes" />
+          <ScalarProperty Name="SpilledQty" ColumnName="SpilledQty" />
+          <ScalarProperty Name="StockBatchId" ColumnName="StockBatchId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockTransfers">
+      <EntityTypeMapping TypeName="rhpdModel.StockTransfer">
+        <MappingFragment StoreEntitySet="StockTransfer">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="QtyIssued" ColumnName="QtyIssued" />
+          <ScalarProperty Name="IndentId" ColumnName="IndentId" />
+          <ScalarProperty Name="TypeOfOrderId" ColumnName="TypeOfOrderId" />
+          <ScalarProperty Name="BatchMasterId" ColumnName="BatchMasterId" />
+          <ScalarProperty Name="ProductMasterId" ColumnName="ProductMasterId" />
+          <ScalarProperty Name="CategoryMasterId" ColumnName="CategoryMasterId" />
+          <ScalarProperty Name="CategoryTypeID" ColumnName="CategoryTypeID" />
+          <ScalarProperty Name="UnitMasterId" ColumnName="UnitMasterId" />
+          <ScalarProperty Name="IsUnit" ColumnName="IsUnit" />
+          <ScalarProperty Name="DepuMasterId" ColumnName="DepuMasterId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockVehicles">
+      <EntityTypeMapping TypeName="rhpdModel.StockVehicle">
+        <MappingFragment StoreEntitySet="StockVehicle">
+          <ScalarProperty Name="IsDDOrCHT" ColumnName="IsDDOrCHT" />
+          <ScalarProperty Name="ChallanNo" ColumnName="ChallanNo" />
+          <ScalarProperty Name="RecievedQty" ColumnName="RecievedQty" />
+          <ScalarProperty Name="SentQty" ColumnName="SentQty" />
+          <ScalarProperty Name="StockBatchId" ColumnName="StockBatchId" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="StockID" ColumnName="StockID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="suppliers">
+      <EntityTypeMapping TypeName="rhpdModel.supplier">
+        <MappingFragment StoreEntitySet="supplier">
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TallySheets">
+      <EntityTypeMapping TypeName="rhpdModel.TallySheet">
+        <MappingFragment StoreEntitySet="TallySheet">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="VehBaNo" ColumnName="VehBaNo" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="ToUnitId" ColumnName="ToUnitId" />
+          <ScalarProperty Name="ToDepuId" ColumnName="ToDepuId" />
+          <ScalarProperty Name="UnitIdFrom" ColumnName="UnitIdFrom" />
+          <ScalarProperty Name="DepuIdFrom" ColumnName="DepuIdFrom" />
+          <ScalarProperty Name="IdtId" ColumnName="IdtId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblExpensePMContainers">
+      <EntityTypeMapping TypeName="rhpdModel.tblExpensePMContainer">
+        <MappingFragment StoreEntitySet="tblExpensePMContainer">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="IsSentfromCP" ColumnName="IsSentfromCP" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PMContainerId" ColumnName="PMContainerId" />
+          <ScalarProperty Name="ExpenseVoucherNo" ColumnName="ExpenseVoucherNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblIssueVoucherDetails">
+      <EntityTypeMapping TypeName="rhpdModel.tblIssueVoucherDetail">
+        <MappingFragment StoreEntitySet="tblIssueVoucherDetail">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DateOfGeneratation" ColumnName="DateOfGeneratation" />
+          <ScalarProperty Name="IssueVoucherName" ColumnName="IssueVoucherName" />
+          <ScalarProperty Name="IssueOrderId" ColumnName="IssueOrderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblIssueVoucherVehicleDetails">
+      <EntityTypeMapping TypeName="rhpdModel.tblIssueVoucherVehicleDetail">
+        <MappingFragment StoreEntitySet="tblIssueVoucherVehicleDetail">
+          <ScalarProperty Name="FullOccupied" ColumnName="FullOccupied" />
+          <ScalarProperty Name="BID" ColumnName="BID" />
+          <ScalarProperty Name="FormatLoose" ColumnName="FormatLoose" />
+          <ScalarProperty Name="FormatFull" ColumnName="FormatFull" />
+          <ScalarProperty Name="batchno" ColumnName="batchno" />
+          <ScalarProperty Name="issueorderID" ColumnName="issueorderID" />
+          <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+          <ScalarProperty Name="issueVoucher_status" ColumnName="issueVoucher_status" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="dateofgenration" ColumnName="dateofgenration" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="VoucherRemarks" ColumnName="VoucherRemarks" />
+          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+          <ScalarProperty Name="PMQuantity" ColumnName="PMQuantity" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IssueVoucherId" ColumnName="IssueVoucherId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLPCPs">
+      <EntityTypeMapping TypeName="rhpdModel.tblLPCP">
+        <MappingFragment StoreEntitySet="tblLPCP">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="Dispute" ColumnName="Dispute" />
+          <ScalarProperty Name="Late" ColumnName="Late" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="DeliveryTime" ColumnName="DeliveryTime" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="OriginalMfgID" ColumnName="OriginalMfgID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="LDPer" ColumnName="LDPer" />
+          <ScalarProperty Name="TenderDate" ColumnName="TenderDate" />
+          <ScalarProperty Name="SupplierContactNo" ColumnName="SupplierContactNo" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="ATSONo" ColumnName="ATSONo" />
+          <ScalarProperty Name="IsSONo" ColumnName="IsSONo" />
+          <ScalarProperty Name="IsATNo" ColumnName="IsATNo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblQuarters">
+      <EntityTypeMapping TypeName="rhpdModel.tblQuarter">
+        <MappingFragment StoreEntitySet="tblQuarter">
+          <ScalarProperty Name="YearRange" ColumnName="YearRange" />
+          <ScalarProperty Name="QuarterRank" ColumnName="QuarterRank" />
+          <ScalarProperty Name="QuarterYear" ColumnName="QuarterYear" />
+          <ScalarProperty Name="QuarterName" ColumnName="QuarterName" />
+          <ScalarProperty Name="QuarterId" ColumnName="QuarterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSections">
+      <EntityTypeMapping TypeName="rhpdModel.tblSection">
+        <MappingFragment StoreEntitySet="tblSection">
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="Drawers" ColumnName="Drawers" />
+          <ScalarProperty Name="Col" ColumnName="Col" />
+          <ScalarProperty Name="Row" ColumnName="Row" />
+          <ScalarProperty Name="IsParent" ColumnName="IsParent" />
+          <ScalarProperty Name="SubSection" ColumnName="SubSection" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStockOutMains">
+      <EntityTypeMapping TypeName="rhpdModel.tblStockOutMain">
+        <MappingFragment StoreEntitySet="tblStockOutMain">
+          <ScalarProperty Name="yearvalue" ColumnName="yearvalue" />
+          <ScalarProperty Name="Typeid" ColumnName="Typeid" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="TotalIDT" ColumnName="TotalIDT" />
+          <ScalarProperty Name="DepotId" ColumnName="DepotId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="QuarterId" ColumnName="QuarterId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWarehouses">
+      <EntityTypeMapping TypeName="rhpdModel.tblWarehouse">
+        <MappingFragment StoreEntitySet="tblWarehouse">
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="WareHouseNo" ColumnName="WareHouseNo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeOfOrders">
+      <EntityTypeMapping TypeName="rhpdModel.TypeOfOrder">
+        <MappingFragment StoreEntitySet="TypeOfOrder">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnitMasters">
+      <EntityTypeMapping TypeName="rhpdModel.UnitMaster">
+        <MappingFragment StoreEntitySet="UnitMaster">
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="Formation" ColumnName="Formation" />
+          <ScalarProperty Name="Command" ColumnName="Command" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedOn" ColumnName="AddedOn" />
+          <ScalarProperty Name="Unit_Desc" ColumnName="Unit_Desc" />
+          <ScalarProperty Name="Unit_Code" ColumnName="Unit_Code" />
+          <ScalarProperty Name="Unit_Name" ColumnName="Unit_Name" />
+          <ScalarProperty Name="Depu_Id" ColumnName="Depu_Id" />
+          <ScalarProperty Name="Unit_Id" ColumnName="Unit_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnitTypes">
+      <EntityTypeMapping TypeName="rhpdModel.UnitType">
+        <MappingFragment StoreEntitySet="UnitType">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserMasters">
+      <EntityTypeMapping TypeName="rhpdModel.UserMaster">
+        <MappingFragment StoreEntitySet="UserMaster">
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ArmyNo" ColumnName="ArmyNo" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="Modifiedon" ColumnName="Modifiedon" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="Addedon" ColumnName="Addedon" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ghs">
+      <EntityTypeMapping TypeName="rhpdModel.gh">
+        <MappingFragment StoreEntitySet="gh">
+          <ScalarProperty Name="a" ColumnName="a" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Atttribute">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_Atttribute">
+        <MappingFragment StoreEntitySet="tbl_Atttribute">
+          <ScalarProperty Name="Modifieddate" ColumnName="Modifieddate" />
+          <ScalarProperty Name="ModifieduserId" ColumnName="ModifieduserId" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="CreateduserId" ColumnName="CreateduserId" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="AttributeName" ColumnName="AttributeName" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Authority">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_Authority">
+        <MappingFragment StoreEntitySet="tbl_Authority">
+          <ScalarProperty Name="modifieduserid" ColumnName="modifieduserid" />
+          <ScalarProperty Name="Createduserid" ColumnName="Createduserid" />
+          <ScalarProperty Name="modifieddate" ColumnName="modifieddate" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="Qid" ColumnName="Qid" />
+          <ScalarProperty Name="Fyear" ColumnName="Fyear" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="AuthorityName" ColumnName="AuthorityName" />
+          <ScalarProperty Name="AuId" ColumnName="AuId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_batchIdt">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_batchIdt">
+        <MappingFragment StoreEntitySet="tbl_batchIdt">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="BID" ColumnName="BID" />
+          <ScalarProperty Name="IssueOrderId" ColumnName="IssueOrderId" />
+          <ScalarProperty Name="issueorder_Status" ColumnName="issueorder_Status" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+          <ScalarProperty Name="Qid" ColumnName="Qid" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="DepuID" ColumnName="DepuID" />
+          <ScalarProperty Name="issueqty" ColumnName="issueqty" />
+          <ScalarProperty Name="BatchName" ColumnName="BatchName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_financialyear">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_financialyear">
+        <MappingFragment StoreEntitySet="tbl_financialyear">
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="FyidRange" ColumnName="FyidRange" />
+          <ScalarProperty Name="FYID" ColumnName="FYID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_idtQty_Quarter">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_idtQty_Quarter">
+        <MappingFragment StoreEntitySet="tbl_idtQty_Quarter">
+          <ScalarProperty Name="modifieddate" ColumnName="modifieddate" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+          <ScalarProperty Name="Isactive" ColumnName="Isactive" />
+          <ScalarProperty Name="fyid" ColumnName="fyid" />
+          <ScalarProperty Name="left_IDTqty" ColumnName="left_IDTqty" />
+          <ScalarProperty Name="IDTqty" ColumnName="IDTqty" />
+          <ScalarProperty Name="dipuid" ColumnName="dipuid" />
+          <ScalarProperty Name="dipu" ColumnName="dipu" />
+          <ScalarProperty Name="QuarterRange" ColumnName="QuarterRange" />
+          <ScalarProperty Name="Qid" ColumnName="Qid" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_IDTrefrence">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_IDTrefrence">
+        <MappingFragment StoreEntitySet="tbl_IDTrefrence">
+          <ScalarProperty Name="Qid" ColumnName="Qid" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="refrenceDate" ColumnName="refrenceDate" />
+          <ScalarProperty Name="refrence_letterNo" ColumnName="refrence_letterNo" />
+          <ScalarProperty Name="depuid" ColumnName="depuid" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_IssueOrder">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_IssueOrder">
+        <MappingFragment StoreEntitySet="tbl_IssueOrder">
+          <ScalarProperty Name="IDTICTAWS" ColumnName="IDTICTAWS" />
+          <ScalarProperty Name="issuequantity" ColumnName="issuequantity" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="issueorder_date" ColumnName="issueorder_date" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="createduserid" ColumnName="createduserid" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+          <ScalarProperty Name="QuarterId" ColumnName="QuarterId" />
+          <ScalarProperty Name="DepotId" ColumnName="DepotId" />
+          <ScalarProperty Name="IssueOrderNo" ColumnName="IssueOrderNo" />
+          <ScalarProperty Name="IssueOrderId" ColumnName="IssueOrderId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_IssueVoucher">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_IssueVoucher">
+        <MappingFragment StoreEntitySet="tbl_IssueVoucher">
+          <ScalarProperty Name="ModifieduserID" ColumnName="ModifieduserID" />
+          <ScalarProperty Name="craeteduserID" ColumnName="craeteduserID" />
+          <ScalarProperty Name="modifieddate" ColumnName="modifieddate" />
+          <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+          <ScalarProperty Name="IssueQuantity" ColumnName="IssueQuantity" />
+          <ScalarProperty Name="VechileName" ColumnName="VechileName" />
+          <ScalarProperty Name="VechileID" ColumnName="VechileID" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="PMquantity" ColumnName="PMquantity" />
+          <ScalarProperty Name="PMID" ColumnName="PMID" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_issuevoucherdetail">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_issuevoucherdetail">
+        <MappingFragment StoreEntitySet="tbl_issuevoucherdetail">
+          <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+          <ScalarProperty Name="Modifiedby" ColumnName="Modifiedby" />
+          <ScalarProperty Name="Modifieddate" ColumnName="Modifieddate" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="IssusevoucherName" ColumnName="IssusevoucherName" />
+          <ScalarProperty Name="IssueorderId" ColumnName="IssueorderId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_loadtallydetail">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_loadtallydetail">
+        <MappingFragment StoreEntitySet="tbl_loadtallydetail">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="LoadtallyId" ColumnName="LoadtallyId" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="Modifieddate" ColumnName="Modifieddate" />
+          <ScalarProperty Name="Modifiedby" ColumnName="Modifiedby" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DateofGenration" ColumnName="DateofGenration" />
+          <ScalarProperty Name="UnitNo" ColumnName="UnitNo" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="vechileNo" ColumnName="vechileNo" />
+          <ScalarProperty Name="IssueorderId" ColumnName="IssueorderId" />
+          <ScalarProperty Name="loadtallyNumber" ColumnName="loadtallyNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_loadtaly">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_loadtaly">
+        <MappingFragment StoreEntitySet="tbl_loadtaly">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="loadtally_status" ColumnName="loadtally_status" />
+          <ScalarProperty Name="Modifieddate" ColumnName="Modifieddate" />
+          <ScalarProperty Name="Modifiedby" ColumnName="Modifiedby" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="vechileNo" ColumnName="vechileNo" />
+          <ScalarProperty Name="IssueorderId" ColumnName="IssueorderId" />
+          <ScalarProperty Name="loadtallyNumber" ColumnName="loadtallyNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ProductIDT_Quantity">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_ProductIDT_Quantity">
+        <MappingFragment StoreEntitySet="tbl_ProductIDT_Quantity">
+          <ScalarProperty Name="modifieddate" ColumnName="modifieddate" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Dipuprd_IDTqty" ColumnName="Dipuprd_IDTqty" />
+          <ScalarProperty Name="Dipu" ColumnName="Dipu" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_QuarterRange">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_QuarterRange">
+        <MappingFragment StoreEntitySet="tbl_QuarterRange">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="FYID" ColumnName="FYID" />
+          <ScalarProperty Name="QuarterRange" ColumnName="QuarterRange" />
+          <ScalarProperty Name="QuarterRangeValue" ColumnName="QuarterRangeValue" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_vechileMaster">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_vechileMaster">
+        <MappingFragment StoreEntitySet="tbl_vechileMaster">
+          <ScalarProperty Name="vechileType" ColumnName="vechileType" />
+          <ScalarProperty Name="ArmyNo" ColumnName="ArmyNo" />
+          <ScalarProperty Name="loadtallystatus" ColumnName="loadtallystatus" />
+          <ScalarProperty Name="Modifieduserid" ColumnName="Modifieduserid" />
+          <ScalarProperty Name="Modifieddate" ColumnName="Modifieddate" />
+          <ScalarProperty Name="CreateduserId" ColumnName="CreateduserId" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="VechileNumber" ColumnName="VechileNumber" />
+          <ScalarProperty Name="Through" ColumnName="Through" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_vechileMaster_Type">
+      <EntityTypeMapping TypeName="rhpdModel.tbl_vechileMaster_Type">
+        <MappingFragment StoreEntitySet="tbl_vechileMaster_Type">
+          <ScalarProperty Name="ModifieduserId" ColumnName="ModifieduserId" />
+          <ScalarProperty Name="Createduserid" ColumnName="Createduserid" />
+          <ScalarProperty Name="Modifieddate" ColumnName="Modifieddate" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="Isactive" ColumnName="Isactive" />
+          <ScalarProperty Name="Vtypename" ColumnName="Vtypename" />
+          <ScalarProperty Name="VtypeId" ColumnName="VtypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

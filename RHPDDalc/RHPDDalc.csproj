@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40D7584D-A0B4-4875-878E-288B1CA12274}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RHPDDalc</RootNamespace>
+    <AssemblyName>RHPDDalc</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\..\..\Sunny Vohra\My\RHPD\Dlls &amp; DB Script\DLL\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="StarMethods">
+      <HintPath>..\..\..\Sunny Vohra\My\RHPD\Dlls &amp; DB Script\DLL\StarMethods.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddcategoryDalc.cs" />
+    <Compile Include="AddDepuDalc.cs" />
+    <Compile Include="AddProductDalc.cs" />
+    <Compile Include="AddroleDalc.cs" />
+    <Compile Include="AddunitDalc.cs" />
+    <Compile Include="AddUserDalc.cs" />
+    <Compile Include="ESLIssueDALC.cs" />
+    <Compile Include="ESLIssueStatusDALC.cs" />
+    <Compile Include="GateInOutDalc.cs" />
+    <Compile Include="GatInOutDALC.cs" />
+    <Compile Include="IndnetDalc.cs" />
+    <Compile Include="IssueVoucherDalc.cs" />
+    <Compile Include="ManagestockDalc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StockDAL.cs" />
+    <Compile Include="stockout.cs" />
+    <Compile Include="StockTransferDalc.cs" />
+    <Compile Include="TallySheetDalc.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RHPDEntity\RHPDEntity.csproj">
+      <Project>{348d3c3a-26b1-42a8-ac81-b99120a2f808}</Project>
+      <Name>RHPDEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,2779 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SamrthDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AddPMContainer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PMID" Type="int" />
+    <Property Name="Quantity" Type="decimal" Precision="36" Scale="3" />
+    <Property Name="DateOfReceival" Type="datetime" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModidfiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="CategoryID" Type="int" />
+  </EntityType>
+  <EntityType Name="BatchDepot">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchId" Type="int" />
+    <Property Name="DepotId" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="BatchMaster">
+    <Key>
+      <PropertyRef Name="BID" />
+    </Key>
+    <Property Name="BID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchName" Type="varchar" MaxLength="50" />
+    <Property Name="BatchCode" Type="varchar" MaxLength="50" />
+    <Property Name="BatchDesc" Type="varchar" MaxLength="1000" />
+    <Property Name="BatchNo" Type="varchar(max)" />
+    <Property Name="ATNo" Type="varchar" MaxLength="50" />
+    <Property Name="VechicleNo" Type="varchar" MaxLength="50" />
+    <Property Name="RecievedFrom" Type="varchar" MaxLength="50" />
+    <Property Name="PID" Type="int" />
+    <Property Name="MFGDate" Type="datetime" />
+    <Property Name="EXPDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="DepotID" Type="int" />
+    <Property Name="Esl" Type="datetime" />
+    <Property Name="IsSentto" Type="bit" />
+    <Property Name="IsBatchStatus" Type="varchar" MaxLength="50" />
+    <Property Name="StockId" Type="int" />
+    <Property Name="ContactNo" Type="varchar(max)" />
+    <Property Name="Remarks" Type="varchar" MaxLength="500" />
+    <Property Name="Cost" Type="decimal" Precision="36" Scale="2" />
+    <Property Name="CostOfParticular" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Weight" Type="decimal" Precision="36" Scale="18" />
+    <Property Name="WeightofParticular" Type="decimal" Precision="36" Scale="18" />
+    <Property Name="WeightUnit" Type="varchar" MaxLength="50" />
+    <Property Name="WarehouseNo" Type="varchar" MaxLength="500" />
+    <Property Name="SampleSentQty" Type="decimal" Precision="36" Scale="18" />
+    <Property Name="WarehouseID" Type="int" />
+    <Property Name="SectionID" Type="int" />
+    <Property Name="SectionRows" Type="int" />
+    <Property Name="SectionCol" Type="int" />
+  </EntityType>
+  <EntityType Name="CategoryMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Category_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Category_TypeId" Type="int" />
+    <Property Name="Category_desc" Type="varchar" MaxLength="500" />
+    <Property Name="ParentCategory_Id" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="CategoryType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="CityMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="CityCode" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="StateID" Type="int" Nullable="false" />
+    <Property Name="CountryID" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommandMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar(max)" />
+    <Property Name="Descripition" Type="varchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Addedby" Type="int" />
+    <Property Name="Addedon" Type="datetime" />
+    <Property Name="Updatedby" Type="int" />
+    <Property Name="UndatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CountryMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryCode" Type="nvarchar" MaxLength="2" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="255" />
+    <Property Name="AllowBilling" Type="bit" />
+    <Property Name="AllowShiping" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="DeptMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeptName" Type="varchar" MaxLength="50" />
+    <Property Name="DeptCode" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Modifiedby" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="DepuMaster">
+    <Key>
+      <PropertyRef Name="Depu_Id" />
+    </Key>
+    <Property Name="Depu_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Depu_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Depu_Location" Type="varchar" MaxLength="50" />
+    <Property Name="Depot_Code" Type="varchar" MaxLength="50" />
+    <Property Name="IsParent" Type="bit" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CommandId" Type="int" />
+    <Property Name="FormationId" Type="int" />
+    <Property Name="Corp" Type="varchar" MaxLength="100" />
+    <Property Name="DepotNo" Type="varchar" MaxLength="50" />
+    <Property Name="IDT" Type="varchar" MaxLength="50" />
+    <Property Name="ICT" Type="varchar" MaxLength="50" />
+    <Property Name="AWS" Type="varchar" MaxLength="50" />
+    <Property Name="UnitName" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="ESLIssue">
+    <Key>
+      <PropertyRef Name="EslID" />
+    </Key>
+    <Property Name="EslID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BID" Type="int" />
+    <Property Name="IssueTo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Quantitytype" Type="varchar" MaxLength="50" />
+    <Property Name="Quantity" Type="varchar" MaxLength="50" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="RemarksBynurGP" Type="varchar" MaxLength="50" />
+    <Property Name="RemarksByjcoiGP" Type="varchar" MaxLength="50" />
+    <Property Name="RemarksByjDSO" Type="varchar" MaxLength="50" />
+    <Property Name="OverallRemarks" Type="varchar" MaxLength="50" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="Addedby" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="SentOn" Type="datetime" />
+    <Property Name="RecievedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="EslMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Product_Id" Type="int" />
+    <Property Name="Unit_Id" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="ExpenseVoucherMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="BatchID" Type="int" />
+    <Property Name="UsedQty" Type="decimal" Precision="36" Scale="3" />
+    <Property Name="UsedFromFullPackets" Type="decimal" Precision="36" Scale="3" />
+    <Property Name="FormatFull" Type="varchar(max)" />
+    <Property Name="FormatLoose" Type="varchar(max)" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="RemainingQty" Type="decimal" Precision="36" Scale="3" />
+    <Property Name="ExpenseVoucherNo" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Formation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar(max)" />
+    <Property Name="Descripition" Type="varchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Addedby" Type="int" />
+    <Property Name="Addedon" Type="datetime" />
+    <Property Name="Updatedby" Type="int" />
+    <Property Name="UndatedOn" Type="datetime" />
+    <Property Name="CommandId" Type="int" />
+  </EntityType>
+  <EntityType Name="GateInout">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vehbano" Type="varchar" MaxLength="50" />
+    <Property Name="franchiseeno" Type="varchar" MaxLength="50" />
+    <Property Name="ArmyNo" Type="varchar" MaxLength="50" />
+    <Property Name="rank" Type="varchar" MaxLength="50" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="timein" Type="datetime" />
+    <Property Name="typeofvehicle" Type="varchar" MaxLength="50" />
+    <Property Name="unitQuantityTypeId" Type="int" />
+    <Property Name="loadin" Type="varchar" MaxLength="50" />
+    <Property Name="IdtId" Type="int" />
+    <Property Name="timeout" Type="datetime" />
+    <Property Name="loadout" Type="varchar" MaxLength="50" />
+    <Property Name="stationDepuID" Type="int" />
+    <Property Name="stationUnitId" Type="int" />
+    <Property Name="fuelintankIn" Type="varchar" MaxLength="50" />
+    <Property Name="fuelintankOut" Type="varchar" MaxLength="50" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="GatInOut">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsLoadIn" Type="bit" />
+    <Property Name="Recievedfrom" Type="varchar" MaxLength="50" />
+    <Property Name="vehbano" Type="varchar" MaxLength="50" />
+    <Property Name="franchiseeno" Type="varchar" MaxLength="50" />
+    <Property Name="ArmyNo" Type="varchar" MaxLength="50" />
+    <Property Name="rank" Type="varchar" MaxLength="50" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="timein" Type="datetime" />
+    <Property Name="typeofvehicle" Type="varchar" MaxLength="50" />
+    <Property Name="unitQuantityTypeId" Type="varchar" MaxLength="50" />
+    <Property Name="loadin" Type="varchar" MaxLength="50" />
+    <Property Name="IdtId" Type="varchar" MaxLength="50" />
+    <Property Name="timeout" Type="datetime" />
+    <Property Name="loadout" Type="varchar" MaxLength="50" />
+    <Property Name="stationDepuID" Type="varchar" MaxLength="50" />
+    <Property Name="stationUnitId" Type="varchar" MaxLength="50" />
+    <Property Name="fuelintankIn" Type="varchar" MaxLength="50" />
+    <Property Name="fuelintankOut" Type="varchar" MaxLength="50" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.gh' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="gh">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="a" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="IDT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IndentName" Type="varchar" MaxLength="100" />
+    <Property Name="IsApproved" Type="bit" />
+    <Property Name="IsIssueVoucherId" Type="bit" />
+    <Property Name="IsTallySheetId" Type="bit" />
+    <Property Name="IsGateOut" Type="bit" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="IDTStockTransfer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchId" Type="int" />
+    <Property Name="IDTId" Type="int" />
+    <Property Name="PackingType" Type="varchar" MaxLength="10" />
+    <Property Name="Quantity" Type="numeric" Precision="36" Scale="11" />
+    <Property Name="Format" Type="varchar(max)" />
+    <Property Name="Dated" Type="datetime" />
+    <Property Name="ToLooseCount" Type="int" />
+  </EntityType>
+  <EntityType Name="IssueVoucher">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdtId" Type="int" />
+    <Property Name="ToDepuId" Type="int" />
+    <Property Name="ToUnitId" Type="int" />
+    <Property Name="VechileNo" Type="varchar" MaxLength="50" />
+    <Property Name="Authority" Type="varchar" MaxLength="50" />
+    <Property Name="Through" Type="varchar" MaxLength="100" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="ManuMgmt">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ManuName" Type="varchar(max)" />
+    <Property Name="ManuLink" Type="varchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="OriginalManufacture ">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="ContactNo" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IsActivated" Type="bit" />
+  </EntityType>
+  <EntityType Name="PMandContainerMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaterialName" Type="varchar" MaxLength="500" />
+    <Property Name="Capacity" Type="varchar" MaxLength="500" />
+    <Property Name="Grade" Type="varchar" MaxLength="500" />
+    <Property Name="Condition" Type="varchar" MaxLength="500" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="PMCapacity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Capacity" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Unit" Type="varchar" MaxLength="500" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="PMCondition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Condition" Type="varchar" MaxLength="500" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="PMGrade">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Grade" Type="varchar" MaxLength="50" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="PMNames">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="500" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="ProductMaster">
+    <Key>
+      <PropertyRef Name="Product_ID" />
+    </Key>
+    <Property Name="Product_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Product_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Product_Desc" Type="varchar" MaxLength="500" />
+    <Property Name="Short_Product_Desc" Type="varchar" MaxLength="200" />
+    <Property Name="Admin_Remarks" Type="varchar" MaxLength="50" />
+    <Property Name="product_cost" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Product_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Category_Id" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="MfgDate" Type="datetime" />
+    <Property Name="ExpDate" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="StockQty" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IsProductStatus" Type="varchar" MaxLength="50" />
+    <Property Name="Cat" Type="varchar(max)" />
+    <Property Name="productUnit" Type="varchar" MaxLength="100" />
+    <Property Name="GSreservre" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="QuantityType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="QuantityType" Type="varchar" MaxLength="50" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="RecievedFrom">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RecievedFrom" Type="varchar" MaxLength="50" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="RoleMaster">
+    <Key>
+      <PropertyRef Name="Role_ID" />
+    </Key>
+    <Property Name="Role_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Role_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Role" Type="varchar" MaxLength="50" />
+    <Property Name="Role_Desc" Type="varchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="DeptId" Type="int" />
+    <Property Name="Rank" Type="int" />
+  </EntityType>
+  <EntityType Name="StatesMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SUName" Type="nvarchar" MaxLength="255" />
+    <Property Name="SUCountry" Type="nvarchar" MaxLength="2" />
+    <Property Name="SUCode" Type="nvarchar" MaxLength="4" />
+    <Property Name="CountryID" Type="int" />
+    <Property Name="ZoneID" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatusMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="CreateedOn" Type="date" />
+    <Property Name="UpdatedOn" Type="date" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="StockMaster">
+    <Key>
+      <PropertyRef Name="SID" />
+    </Key>
+    <Property Name="SID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Quantity" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="MinQuantity" Type="varchar" MaxLength="1000" />
+    <Property Name="QuantityType" Type="varchar" MaxLength="50" />
+    <Property Name="BID" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsStockIn" Type="bit" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="IssueQty" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="SupplierId" Type="int" />
+    <Property Name="GenericName" Type="varchar" MaxLength="50" />
+    <Property Name="OriginalManf" Type="varchar" MaxLength="50" />
+    <Property Name="SentQty" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="RecievedOn" Type="datetime" />
+    <Property Name="DriverName" Type="varchar" MaxLength="100" />
+    <Property Name="InterTransferId" Type="int" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="ChallanOrIrNo" Type="varchar" MaxLength="50" />
+    <Property Name="IsChallanNo" Type="bit" />
+    <Property Name="IsIrNo" Type="bit" />
+    <Property Name="PackingMaterial" Type="varchar(max)" />
+    <Property Name="UnitInfo" Type="varchar" MaxLength="100" />
+    <Property Name="ATNo" Type="varchar(max)" />
+    <Property Name="RecievedFrom" Type="varchar" MaxLength="50" />
+    <Property Name="OtherSupplier" Type="varchar" MaxLength="50" />
+    <Property Name="TransferedBy" Type="varchar" MaxLength="50" />
+    <Property Name="SampleSent" Type="bit" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="CostOfParticular" Type="float" />
+    <Property Name="PackagingMaterialShape" Type="varchar" MaxLength="50" />
+    <Property Name="PackagingMaterialSize" Type="varchar" MaxLength="50" />
+    <Property Name="PackagingMaterialFormatLevel" Type="int" />
+    <Property Name="PackingMaterialFormat" Type="varchar(max)" />
+    <Property Name="CRVNo" Type="varchar(max)" />
+    <Property Name="SupplierNo" Type="varchar(max)" />
+    <Property Name="Weight" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="WeigthUnit" Type="varchar" MaxLength="50" />
+    <Property Name="ShapeUnit" Type="varchar" MaxLength="50" />
+    <Property Name="PMGradeId" Type="int" />
+    <Property Name="PMCapacityId" Type="int" />
+    <Property Name="PMConditionId" Type="int" />
+    <Property Name="IsEmptyPM" Type="bit" />
+    <Property Name="IsWithoutPacking" Type="bit" />
+    <Property Name="IsSubPacking" Type="bit" />
+    <Property Name="IsDW" Type="bit" />
+    <Property Name="SubPMName" Type="varchar(max)" />
+    <Property Name="SubPMGradeId" Type="int" />
+    <Property Name="SubPMCapacityId" Type="int" />
+    <Property Name="SubPMConditionId" Type="int" />
+    <Property Name="SubPMShape" Type="varchar" MaxLength="50" />
+    <Property Name="SubPMSize" Type="varchar" MaxLength="50" />
+    <Property Name="SubWeight" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="SubWeightUnit" Type="varchar" MaxLength="50" />
+    <Property Name="SubShapeUnit" Type="varchar" MaxLength="50" />
+    <Property Name="Session" Type="datetime" />
+  </EntityType>
+  <EntityType Name="StockPakaging">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PackagingType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StockBatchId" Type="int" Nullable="false" />
+    <Property Name="RemainingQty" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="Format" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StockSpillage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StockId" Type="int" Nullable="false" />
+    <Property Name="StockBatchId" Type="int" Nullable="false" />
+    <Property Name="SpilledQty" Type="decimal" Precision="36" Scale="18" Nullable="false" />
+    <Property Name="DamagedBoxes" Type="decimal" Precision="36" Scale="0" Nullable="false" />
+    <Property Name="SpillageAffected" Type="decimal" Precision="36" Scale="0" Nullable="false" />
+    <Property Name="SampleAffected" Type="decimal" Precision="36" Scale="0" Nullable="false" />
+    <Property Name="BothAffected" Type="decimal" Precision="36" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StockTransfer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepuMasterId" Type="int" />
+    <Property Name="IsUnit" Type="bit" />
+    <Property Name="UnitMasterId" Type="int" />
+    <Property Name="CategoryTypeID" Type="int" />
+    <Property Name="CategoryMasterId" Type="int" />
+    <Property Name="ProductMasterId" Type="int" />
+    <Property Name="BatchMasterId" Type="int" />
+    <Property Name="TypeOfOrderId" Type="int" />
+    <Property Name="IndentId" Type="int" />
+    <Property Name="QtyIssued" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="StockVehicle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StockID" Type="int" Nullable="false" />
+    <Property Name="DriverName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VehicleNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StockBatchId" Type="int" Nullable="false" />
+    <Property Name="SentQty" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="RecievedQty" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="ChallanNo" Type="varchar" MaxLength="50" />
+    <Property Name="IsDDOrCHT" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="supplier">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="IsActivated" Type="bit" />
+    <Property Name="ContactNo" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="TallySheet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdtId" Type="int" />
+    <Property Name="DepuIdFrom" Type="int" />
+    <Property Name="UnitIdFrom" Type="int" />
+    <Property Name="ToDepuId" Type="int" />
+    <Property Name="ToUnitId" Type="int" />
+    <Property Name="Authority" Type="varchar" MaxLength="50" />
+    <Property Name="Through" Type="varchar" MaxLength="50" />
+    <Property Name="VehBaNo" Type="varchar" MaxLength="50" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_Atttribute' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_Atttribute">
+    <Key>
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Name="TypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AttributeName" Type="varchar" MaxLength="500" />
+    <Property Name="Active" Type="int" />
+    <Property Name="CreateduserId" Type="int" />
+    <Property Name="Createddate" Type="datetime" />
+    <Property Name="ModifieduserId" Type="int" />
+    <Property Name="Modifieddate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_Authority' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_Authority">
+    <Key>
+      <PropertyRef Name="AuId" />
+      <PropertyRef Name="AuthorityName" />
+      <PropertyRef Name="Createddate" />
+      <PropertyRef Name="modifieddate" />
+    </Key>
+    <Property Name="AuId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AuthorityName" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Fyear" Type="int" />
+    <Property Name="Qid" Type="int" />
+    <Property Name="OrderType" Type="int" />
+    <Property Name="Createddate" Type="datetime" Nullable="false" />
+    <Property Name="modifieddate" Type="datetime" Nullable="false" />
+    <Property Name="Createduserid" Type="int" />
+    <Property Name="modifieduserid" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_batchIdt' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_batchIdt">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Remarks" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchName" Type="varchar" MaxLength="50" />
+    <Property Name="issueqty" Type="decimal" Precision="36" Scale="11" />
+    <Property Name="DepuID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="Qid" Type="int" />
+    <Property Name="createddate" Type="datetime" />
+    <Property Name="issueorder_Status" Type="int" />
+    <Property Name="IssueOrderId" Type="int" />
+    <Property Name="BID" Type="int" />
+    <Property Name="Remarks" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_financialyear' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_financialyear">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FYID" Type="int" />
+    <Property Name="FyidRange" Type="varchar" MaxLength="200" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="createddate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_idtQty_Quarter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_idtQty_Quarter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pid" Type="int" />
+    <Property Name="Product_Name" Type="varchar" MaxLength="500" />
+    <Property Name="Qid" Type="int" />
+    <Property Name="QuarterRange" Type="varchar" MaxLength="500" />
+    <Property Name="dipu" Type="varchar" MaxLength="200" />
+    <Property Name="dipuid" Type="int" />
+    <Property Name="IDTqty" Type="int" />
+    <Property Name="left_IDTqty" Type="int" />
+    <Property Name="fyid" Type="int" />
+    <Property Name="Isactive" Type="bit" />
+    <Property Name="createddate" Type="datetime" />
+    <Property Name="modifieddate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_IDTrefrence' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_IDTrefrence">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="depuid" Type="int" />
+    <Property Name="refrence_letterNo" Type="varchar" MaxLength="200" />
+    <Property Name="refrenceDate" Type="datetime" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="Createddate" Type="datetime" />
+    <Property Name="Qid" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_IssueOrder' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_IssueOrder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IssueOrderId" Type="int" />
+    <Property Name="IssueOrderNo" Type="varchar" MaxLength="500" />
+    <Property Name="DepotId" Type="int" />
+    <Property Name="QuarterId" Type="int" />
+    <Property Name="OrderStatusId" Type="int" />
+    <Property Name="Active" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="createduserid" Type="int" />
+    <Property Name="Authority" Type="varchar" MaxLength="200" />
+    <Property Name="issueorder_date" Type="datetime" />
+    <Property Name="productID" Type="int" />
+    <Property Name="issuequantity" Type="int" />
+    <Property Name="IDTICTAWS" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_IssueVoucher' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_IssueVoucher">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoryID" Type="int" />
+    <Property Name="Through" Type="varchar" MaxLength="200" />
+    <Property Name="Authority" Type="varchar" MaxLength="200" />
+    <Property Name="PID" Type="int" />
+    <Property Name="PMID" Type="int" />
+    <Property Name="PMquantity" Type="int" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="VechileID" Type="int" />
+    <Property Name="VechileName" Type="varchar" MaxLength="500" />
+    <Property Name="IssueQuantity" Type="int" />
+    <Property Name="Createdate" Type="datetime" />
+    <Property Name="modifieddate" Type="datetime" />
+    <Property Name="craeteduserID" Type="int" />
+    <Property Name="ModifieduserID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_issuevoucherdetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_issuevoucherdetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IssueorderId" Type="int" />
+    <Property Name="IssusevoucherName" Type="varchar" MaxLength="100" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Createddate" Type="datetime" />
+    <Property Name="Createdby" Type="int" />
+    <Property Name="Modifieddate" Type="datetime" />
+    <Property Name="Modifiedby" Type="int" />
+    <Property Name="Cat_ID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_loadtallydetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_loadtallydetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="loadtallyNumber" Type="nvarchar(max)" />
+    <Property Name="IssueorderId" Type="int" />
+    <Property Name="vechileNo" Type="nvarchar(max)" />
+    <Property Name="DriverName" Type="varchar" MaxLength="500" />
+    <Property Name="Rank" Type="varchar" MaxLength="200" />
+    <Property Name="UnitNo" Type="varchar" MaxLength="200" />
+    <Property Name="DateofGenration" Type="datetime" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Createdby" Type="int" />
+    <Property Name="Createddate" Type="datetime" />
+    <Property Name="Modifiedby" Type="int" />
+    <Property Name="Modifieddate" Type="datetime" />
+    <Property Name="Authority" Type="varchar" MaxLength="500" />
+    <Property Name="Through" Type="varchar" MaxLength="500" />
+    <Property Name="LoadtallyId" Type="int" />
+    <Property Name="Remarks" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_loadtaly' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_loadtaly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="loadtallyNumber" Type="nvarchar(max)" />
+    <Property Name="IssueorderId" Type="int" />
+    <Property Name="vechileNo" Type="nvarchar(max)" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Createdby" Type="int" />
+    <Property Name="Createddate" Type="datetime" />
+    <Property Name="Modifiedby" Type="int" />
+    <Property Name="Modifieddate" Type="datetime" />
+    <Property Name="loadtally_status" Type="int" />
+    <Property Name="Remarks" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_ProductIDT_Quantity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_ProductIDT_Quantity">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PID" Type="int" />
+    <Property Name="Product_Name" Type="varchar" MaxLength="200" />
+    <Property Name="Dipu" Type="varchar" MaxLength="200" />
+    <Property Name="Dipuprd_IDTqty" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="createddate" Type="datetime" />
+    <Property Name="modifieddate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_QuarterRange' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_QuarterRange">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuarterRangeValue" Type="int" />
+    <Property Name="QuarterRange" Type="varchar" MaxLength="500" />
+    <Property Name="FYID" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_vechileMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_vechileMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Through" Type="varchar" MaxLength="500" />
+    <Property Name="VechileNumber" Type="varchar" MaxLength="500" />
+    <Property Name="DriverName" Type="varchar" MaxLength="500" />
+    <Property Name="Rank" Type="varchar" MaxLength="500" />
+    <Property Name="IsActive" Type="int" />
+    <Property Name="Createddate" Type="datetime" />
+    <Property Name="CreateduserId" Type="int" />
+    <Property Name="Modifieddate" Type="datetime" />
+    <Property Name="Modifieduserid" Type="int" />
+    <Property Name="loadtallystatus" Type="int" />
+    <Property Name="ArmyNo" Type="varchar" MaxLength="500" />
+    <Property Name="vechileType" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SamrthDb.dbo.tbl_vechileMaster_Type' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tbl_vechileMaster_Type">
+    <Key>
+      <PropertyRef Name="VtypeId" />
+    </Key>
+    <Property Name="VtypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vtypename" Type="varchar" MaxLength="500" />
+    <Property Name="Isactive" Type="int" />
+    <Property Name="Createddate" Type="datetime" />
+    <Property Name="Modifieddate" Type="datetime" />
+    <Property Name="Createduserid" Type="int" />
+    <Property Name="ModifieduserId" Type="int" />
+  </EntityType>
+  <EntityType Name="tblExpensePMContainer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExpenseVoucherNo" Type="varchar(max)" Nullable="false" />
+    <Property Name="PMContainerId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="decimal" Precision="36" Scale="3" />
+    <Property Name="IsSentfromCP" Type="bit" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="Remarks" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="tblIssueVoucherDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IssueOrderId" Type="varchar" MaxLength="50" />
+    <Property Name="IssueVoucherName" Type="varchar" MaxLength="50" />
+    <Property Name="DateOfGeneratation" Type="datetime" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="tblIssueVoucherVehicleDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IssueVoucherId" Type="varchar" MaxLength="500" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="VehicleNo" Type="varchar" MaxLength="50" />
+    <Property Name="PMQuantity" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="StockQuantity" Type="decimal" Precision="36" Scale="11" />
+    <Property Name="VoucherRemarks" Type="varchar(max)" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="dateofgenration" Type="datetime" />
+    <Property Name="Through" Type="varchar" MaxLength="200" />
+    <Property Name="issueVoucher_status" Type="int" />
+    <Property Name="Cat_ID" Type="int" />
+    <Property Name="issueorderID" Type="int" />
+    <Property Name="batchno" Type="varchar" MaxLength="500" />
+    <Property Name="FormatFull" Type="varchar(max)" />
+    <Property Name="FormatLoose" Type="varchar(max)" />
+    <Property Name="BID" Type="int" />
+    <Property Name="FullOccupied" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblLPCP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsATNo" Type="bit" Nullable="false" />
+    <Property Name="IsSONo" Type="bit" Nullable="false" />
+    <Property Name="ATSONo" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="SupplierContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="TenderDate" Type="datetime" Nullable="false" />
+    <Property Name="LDPer" Type="decimal" Precision="36" Scale="2" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="decimal" Precision="36" Scale="18" Nullable="false" />
+    <Property Name="OriginalMfgID" Type="int" Nullable="false" />
+    <Property Name="DeliveryDate" Type="datetime" Nullable="false" />
+    <Property Name="DeliveryTime" Type="datetime" Nullable="false" />
+    <Property Name="Rate" Type="decimal" Precision="36" Scale="18" Nullable="false" />
+    <Property Name="Value" Type="decimal" Precision="36" Scale="18" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Late" Type="bit" Nullable="false" />
+    <Property Name="Dispute" Type="bit" Nullable="false" />
+    <Property Name="Other" Type="bit" Nullable="false" />
+    <Property Name="AddedOn" Type="datetime" Nullable="false" />
+    <Property Name="AddedBy" Type="int" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="Remarks" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="tblQuarter">
+    <Key>
+      <PropertyRef Name="QuarterId" />
+    </Key>
+    <Property Name="QuarterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuarterName" Type="varchar" MaxLength="50" />
+    <Property Name="QuarterYear" Type="int" />
+    <Property Name="QuarterRank" Type="int" />
+    <Property Name="YearRange" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tblSection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Section" Type="varchar" MaxLength="500" />
+    <Property Name="SubSection" Type="varchar" MaxLength="500" />
+    <Property Name="IsParent" Type="int" />
+    <Property Name="Row" Type="int" />
+    <Property Name="Col" Type="int" />
+    <Property Name="Drawers" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="WarehouseID" Type="int" />
+  </EntityType>
+  <EntityType Name="tblStockOutMain">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuarterId" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="DepotId" Type="int" Nullable="false" />
+    <Property Name="TotalIDT" Type="decimal" Precision="36" Scale="3" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="Typeid" Type="int" />
+    <Property Name="yearvalue" Type="int" />
+  </EntityType>
+  <EntityType Name="tblWarehouse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WareHouseNo" Type="varchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="TypeOfOrder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="UnitMaster">
+    <Key>
+      <PropertyRef Name="Unit_Id" />
+    </Key>
+    <Property Name="Unit_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Depu_Id" Type="int" />
+    <Property Name="Unit_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Unit_Code" Type="varchar" MaxLength="50" />
+    <Property Name="Unit_Desc" Type="varchar(max)" />
+    <Property Name="AddedOn" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Command" Type="int" />
+    <Property Name="Formation" Type="int" />
+    <Property Name="UnitType" Type="int" />
+  </EntityType>
+  <EntityType Name="UnitType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserMaster">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="UserCode" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="User_Name" Type="varchar" MaxLength="50" />
+    <Property Name="RoleId" Type="int" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Country" Type="int" />
+    <Property Name="State" Type="int" />
+    <Property Name="City" Type="int" />
+    <Property Name="Address" Type="varchar" MaxLength="500" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Addedon" Type="datetime" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="Modifiedon" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ArmyNo" Type="varchar" MaxLength="50" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_AddPMContainer_CategoryMaster">
+    <End Role="CategoryMaster" Type="Self.CategoryMaster" Multiplicity="0..1" />
+    <End Role="AddPMContainer" Type="Self.AddPMContainer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AddPMContainer">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AddPMContainer_PMandContainerMaster">
+    <End Role="PMandContainerMaster" Type="Self.PMandContainerMaster" Multiplicity="0..1" />
+    <End Role="AddPMContainer" Type="Self.AddPMContainer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PMandContainerMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AddPMContainer">
+        <PropertyRef Name="PMID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BatchDepot_DepuMaster">
+    <End Role="DepuMaster" Type="Self.DepuMaster" Multiplicity="0..1" />
+    <End Role="BatchDepot" Type="Self.BatchDepot" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepuMaster">
+        <PropertyRef Name="Depu_Id" />
+      </Principal>
+      <Dependent Role="BatchDepot">
+        <PropertyRef Name="DepotId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BatchMaster_DepuMaster">
+    <End Role="DepuMaster" Type="Self.DepuMaster" Multiplicity="0..1" />
+    <End Role="BatchMaster" Type="Self.BatchMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepuMaster">
+        <PropertyRef Name="Depu_Id" />
+      </Principal>
+      <Dependent Role="BatchMaster">
+        <PropertyRef Name="DepotID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BatchMaster_ProductMaster">
+    <End Role="ProductMaster" Type="Self.ProductMaster" Multiplicity="0..1" />
+    <End Role="BatchMaster" Type="Self.BatchMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductMaster">
+        <PropertyRef Name="Product_ID" />
+      </Principal>
+      <Dependent Role="BatchMaster">
+        <PropertyRef Name="PID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoryMaster_CategoryType">
+    <End Role="CategoryType" Type="Self.CategoryType" Multiplicity="0..1" />
+    <End Role="CategoryMaster" Type="Self.CategoryMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CategoryMaster">
+        <PropertyRef Name="Category_TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CityMaster_StatesMaster">
+    <End Role="StatesMaster" Type="Self.StatesMaster" Multiplicity="1" />
+    <End Role="CityMaster" Type="Self.CityMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatesMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CityMaster">
+        <PropertyRef Name="StateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EslMaster_UnitMaster">
+    <End Role="UnitMaster" Type="Self.UnitMaster" Multiplicity="0..1" />
+    <End Role="EslMaster" Type="Self.EslMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnitMaster">
+        <PropertyRef Name="Unit_Id" />
+      </Principal>
+      <Dependent Role="EslMaster">
+        <PropertyRef Name="Unit_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExpenseVoucherMaster_BatchMaster">
+    <End Role="BatchMaster" Type="Self.BatchMaster" Multiplicity="0..1" />
+    <End Role="ExpenseVoucherMaster" Type="Self.ExpenseVoucherMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BatchMaster">
+        <PropertyRef Name="BID" />
+      </Principal>
+      <Dependent Role="ExpenseVoucherMaster">
+        <PropertyRef Name="BatchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExpenseVoucherMaster_CategoryMaster">
+    <End Role="CategoryMaster" Type="Self.CategoryMaster" Multiplicity="0..1" />
+    <End Role="ExpenseVoucherMaster" Type="Self.ExpenseVoucherMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ExpenseVoucherMaster">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExpenseVoucherMaster_ProductMaster">
+    <End Role="ProductMaster" Type="Self.ProductMaster" Multiplicity="0..1" />
+    <End Role="ExpenseVoucherMaster" Type="Self.ExpenseVoucherMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductMaster">
+        <PropertyRef Name="Product_ID" />
+      </Principal>
+      <Dependent Role="ExpenseVoucherMaster">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Formation_CommandMaster">
+    <End Role="CommandMaster" Type="Self.CommandMaster" Multiplicity="0..1" />
+    <End Role="Formation" Type="Self.Formation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CommandMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Formation">
+        <PropertyRef Name="CommandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IssueVoucher_IDT">
+    <End Role="IDT" Type="Self.IDT" Multiplicity="0..1" />
+    <End Role="IssueVoucher" Type="Self.IssueVoucher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IDT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IssueVoucher">
+        <PropertyRef Name="IdtId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IssueVoucher_IssueVoucher">
+    <End Role="IssueVoucher" Type="Self.IssueVoucher" Multiplicity="1" />
+    <End Role="IssueVoucher1" Type="Self.IssueVoucher" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="IssueVoucher">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IssueVoucher1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductMaster_CategoryMaster">
+    <End Role="CategoryMaster" Type="Self.CategoryMaster" Multiplicity="0..1" />
+    <End Role="ProductMaster" Type="Self.ProductMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProductMaster">
+        <PropertyRef Name="Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleMaster_DeptMaster">
+    <End Role="DeptMaster" Type="Self.DeptMaster" Multiplicity="0..1" />
+    <End Role="RoleMaster" Type="Self.RoleMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeptMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RoleMaster">
+        <PropertyRef Name="DeptId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatesMaster_CountryMaster">
+    <End Role="CountryMaster" Type="Self.CountryMaster" Multiplicity="0..1" />
+    <End Role="StatesMaster" Type="Self.StatesMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StatesMaster">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockMaster_ProductMaster">
+    <End Role="ProductMaster" Type="Self.ProductMaster" Multiplicity="0..1" />
+    <End Role="StockMaster" Type="Self.StockMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductMaster">
+        <PropertyRef Name="Product_ID" />
+      </Principal>
+      <Dependent Role="StockMaster">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockTransfer_CategoryMaster">
+    <End Role="CategoryMaster" Type="Self.CategoryMaster" Multiplicity="0..1" />
+    <End Role="StockTransfer" Type="Self.StockTransfer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StockTransfer">
+        <PropertyRef Name="CategoryMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockTransfer_DepuMaster">
+    <End Role="DepuMaster" Type="Self.DepuMaster" Multiplicity="0..1" />
+    <End Role="StockTransfer" Type="Self.StockTransfer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepuMaster">
+        <PropertyRef Name="Depu_Id" />
+      </Principal>
+      <Dependent Role="StockTransfer">
+        <PropertyRef Name="DepuMasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockTransfer_Indent">
+    <End Role="IDT" Type="Self.IDT" Multiplicity="0..1" />
+    <End Role="StockTransfer" Type="Self.StockTransfer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IDT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="StockTransfer">
+        <PropertyRef Name="IndentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockTransfer_StockTransfer">
+    <End Role="TypeOfOrder" Type="Self.TypeOfOrder" Multiplicity="0..1" />
+    <End Role="StockTransfer" Type="Self.StockTransfer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeOfOrder">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StockTransfer">
+        <PropertyRef Name="TypeOfOrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblExpensePMContainer_AddPMContainer">
+    <End Role="AddPMContainer" Type="Self.AddPMContainer" Multiplicity="1" />
+    <End Role="tblExpensePMContainer" Type="Self.tblExpensePMContainer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AddPMContainer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblExpensePMContainer">
+        <PropertyRef Name="PMContainerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblLPCP_OriginalManufacture ">
+    <End Role="OriginalManufacture " Type="Self.OriginalManufacture " Multiplicity="1" />
+    <End Role="tblLPCP" Type="Self.tblLPCP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OriginalManufacture ">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblLPCP">
+        <PropertyRef Name="OriginalMfgID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblLPCP_ProductMaster">
+    <End Role="ProductMaster" Type="Self.ProductMaster" Multiplicity="1" />
+    <End Role="tblLPCP" Type="Self.tblLPCP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductMaster">
+        <PropertyRef Name="Product_ID" />
+      </Principal>
+      <Dependent Role="tblLPCP">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblLPCP_supplier">
+    <End Role="supplier" Type="Self.supplier" Multiplicity="1" />
+    <End Role="tblLPCP" Type="Self.tblLPCP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="supplier">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblLPCP">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSection_tblSection">
+    <End Role="tblWarehouse" Type="Self.tblWarehouse" Multiplicity="0..1" />
+    <End Role="tblSection" Type="Self.tblSection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblWarehouse">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblSection">
+        <PropertyRef Name="WarehouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSection_tblSection1">
+    <End Role="tblSection" Type="Self.tblSection" Multiplicity="0..1" />
+    <End Role="tblSection1" Type="Self.tblSection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSection">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblSection1">
+        <PropertyRef Name="IsParent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UnitMaster_DepuMaster">
+    <End Role="DepuMaster" Type="Self.DepuMaster" Multiplicity="0..1" />
+    <End Role="UnitMaster" Type="Self.UnitMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepuMaster">
+        <PropertyRef Name="Depu_Id" />
+      </Principal>
+      <Dependent Role="UnitMaster">
+        <PropertyRef Name="Depu_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UnitMaster_UnitMaster">
+    <End Role="UnitMaster" Type="Self.UnitMaster" Multiplicity="1" />
+    <End Role="UnitMaster1" Type="Self.UnitMaster" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UnitMaster">
+        <PropertyRef Name="Unit_Id" />
+      </Principal>
+      <Dependent Role="UnitMaster1">
+        <PropertyRef Name="Unit_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMaster_RoleMaster">
+    <End Role="RoleMaster" Type="Self.RoleMaster" Multiplicity="0..1" />
+    <End Role="UserMaster" Type="Self.UserMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoleMaster">
+        <PropertyRef Name="Role_ID" />
+      </Principal>
+      <Dependent Role="UserMaster">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="managecommand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="Name" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Descripition" Type="varchar(max)" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="Addedby" Type="int" Mode="In" />
+    <Parameter Name="Addedon" Type="datetime" Mode="In" />
+    <Parameter Name="Updatedby" Type="int" Mode="In" />
+    <Parameter Name="UndatedOn" Type="datetime" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="proc_getSeedNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SeedNum" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="output" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_Gat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="IsLoadIn" Type="bit" Mode="In" />
+    <Parameter Name="Recievedfrom" Type="varchar" Mode="In" />
+    <Parameter Name="vehbano" Type="varchar" Mode="In" />
+    <Parameter Name="franchiseeno" Type="varchar" Mode="In" />
+    <Parameter Name="ArmyNo" Type="varchar" Mode="In" />
+    <Parameter Name="rank" Type="varchar" Mode="In" />
+    <Parameter Name="name" Type="varchar" Mode="In" />
+    <Parameter Name="timein" Type="datetime" Mode="In" />
+    <Parameter Name="typeofvehicle" Type="varchar" Mode="In" />
+    <Parameter Name="unitQuantityTypeId" Type="varchar" Mode="In" />
+    <Parameter Name="loadin" Type="varchar" Mode="In" />
+    <Parameter Name="IdtId" Type="varchar" Mode="In" />
+    <Parameter Name="timeout" Type="datetime" Mode="In" />
+    <Parameter Name="loadout" Type="varchar" Mode="In" />
+    <Parameter Name="stationDepuID" Type="varchar" Mode="In" />
+    <Parameter Name="stationUnitId" Type="varchar" Mode="In" />
+    <Parameter Name="fuelintankIn" Type="varchar" Mode="In" />
+    <Parameter Name="fuelintankOut" Type="varchar" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="from" Type="datetime" Mode="In" />
+    <Parameter Name="to" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_GateInOut" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="vehbano" Type="varchar" Mode="In" />
+    <Parameter Name="franchiseeno" Type="varchar" Mode="In" />
+    <Parameter Name="ArmyNo" Type="varchar" Mode="In" />
+    <Parameter Name="rank" Type="varchar" Mode="In" />
+    <Parameter Name="name" Type="varchar" Mode="In" />
+    <Parameter Name="timein" Type="datetime" Mode="In" />
+    <Parameter Name="typeofvehicle" Type="varchar" Mode="In" />
+    <Parameter Name="unitQuantityTypeId" Type="int" Mode="In" />
+    <Parameter Name="loadin" Type="varchar" Mode="In" />
+    <Parameter Name="IdtId" Type="int" Mode="In" />
+    <Parameter Name="timeout" Type="datetime" Mode="In" />
+    <Parameter Name="loadout" Type="varchar" Mode="In" />
+    <Parameter Name="stationDepuID" Type="int" Mode="In" />
+    <Parameter Name="stationUnitId" Type="int" Mode="In" />
+    <Parameter Name="fuelintankIn" Type="varchar" Mode="In" />
+    <Parameter Name="fuelintankOut" Type="varchar" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="int" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_IssueVoucher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="IdtId" Type="int" Mode="In" />
+    <Parameter Name="ToDepuId" Type="int" Mode="In" />
+    <Parameter Name="ToUnitId" Type="int" Mode="In" />
+    <Parameter Name="VechileNo" Type="varchar" Mode="In" />
+    <Parameter Name="Authority" Type="varchar" Mode="In" />
+    <Parameter Name="Through" Type="varchar" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+    <Parameter Name="from" Type="datetime" Mode="In" />
+    <Parameter Name="to" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_ManageTallySheet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="IdtId" Type="int" Mode="In" />
+    <Parameter Name="DepuIdFrom" Type="int" Mode="In" />
+    <Parameter Name="UnitIdFrom" Type="int" Mode="In" />
+    <Parameter Name="ToDepuId" Type="int" Mode="In" />
+    <Parameter Name="ToUnitId" Type="int" Mode="In" />
+    <Parameter Name="Authority" Type="varchar" Mode="In" />
+    <Parameter Name="Through" Type="varchar" Mode="In" />
+    <Parameter Name="VehBaNo" Type="varchar" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+    <Parameter Name="from" Type="datetime" Mode="In" />
+    <Parameter Name="to" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_OrderType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_StockTransfer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="DepuMasterId" Type="int" Mode="In" />
+    <Parameter Name="IsUnit" Type="bit" Mode="In" />
+    <Parameter Name="UnitMasterId" Type="int" Mode="In" />
+    <Parameter Name="CategoryMasterId" Type="int" Mode="In" />
+    <Parameter Name="ProductMasterId" Type="int" Mode="In" />
+    <Parameter Name="TypeOfOrderId" Type="int" Mode="In" />
+    <Parameter Name="QtyIssued" Type="int" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Depu_Id" Type="int" Mode="In" />
+    <Parameter Name="Product_Id" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="CategoryTypeId" Type="int" Mode="In" />
+    <Parameter Name="Category_TypeId" Type="int" Mode="In" />
+    <Parameter Name="IndentId" Type="int" Mode="In" />
+    <Parameter Name="XMLData" Type="xml" Mode="In" />
+    <Parameter Name="StockQty" Type="float" Mode="In" />
+    <Parameter Name="IssueQty" Type="float" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="BID" Type="int" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spcategorymaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="Category_Code" Type="varchar" Mode="In" />
+    <Parameter Name="Category_Name" Type="varchar" Mode="In" />
+    <Parameter Name="Category_TypeId" Type="int" Mode="In" />
+    <Parameter Name="Category_Desc" Type="varchar" Mode="In" />
+    <Parameter Name="ParentCategory_Id" Type="int" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spcategorytype" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="varchar" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+    <Parameter Name="chkIsActive" Type="bit" Mode="In" />
+    <Parameter Name="chkType" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="DeptName" Type="varchar" Mode="In" />
+    <Parameter Name="DeptCode" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="varchar" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="Modifiedby" Type="int" Mode="In" />
+    <Parameter Name="IsActive" Type="int" Mode="In" />
+    <Parameter Name="RoleID" Type="int" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spDepu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Depu_Id" Type="int" Mode="In" />
+    <Parameter Name="Depu_Name" Type="varchar" Mode="In" />
+    <Parameter Name="Depu_Location" Type="varchar" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="Depot_Code" Type="varchar" Mode="In" />
+    <Parameter Name="IsParent" Type="bit" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+    <Parameter Name="status" Type="varchar" Mode="In" />
+    <Parameter Name="uid" Type="int" Mode="In" />
+    <Parameter Name="uidbool" Type="bit" Mode="In" />
+    <Parameter Name="chkIsParent" Type="bit" Mode="In" />
+    <Parameter Name="chkDepu_Name" Type="varchar" Mode="In" />
+    <Parameter Name="CommandId" Type="int" Mode="In" />
+    <Parameter Name="FormationId" Type="int" Mode="In" />
+    <Parameter Name="Corp" Type="varchar" Mode="In" />
+    <Parameter Name="DepotNo" Type="varchar" Mode="In" />
+    <Parameter Name="UnitName" Type="varchar" Mode="In" />
+    <Parameter Name="IDT" Type="varchar" Mode="In" />
+    <Parameter Name="ICT" Type="varchar" Mode="In" />
+    <Parameter Name="AWS" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spESLIssue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EslID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="IssueTo" Type="varchar" Mode="In" />
+    <Parameter Name="Quantitytype" Type="varchar" Mode="In" />
+    <Parameter Name="Quantity" Type="varchar" Mode="In" />
+    <Parameter Name="StatusID" Type="int" Mode="In" />
+    <Parameter Name="RemarksBynurGP" Type="varchar" Mode="In" />
+    <Parameter Name="RemarksByjcoiGP" Type="varchar" Mode="In" />
+    <Parameter Name="RemarksByjDSO" Type="varchar" Mode="In" />
+    <Parameter Name="OverallRemarks" Type="varchar" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+    <Parameter Name="SentOn" Type="datetime" Mode="In" />
+    <Parameter Name="RecievedDate" Type="datetime" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="PID" Type="int" Mode="In" />
+    <Parameter Name="SID" Type="int" Mode="In" />
+    <Parameter Name="Stockqty" Type="numeric" Mode="In" />
+    <Parameter Name="IsProductStatus" Type="varchar" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="todate" Type="datetime" Mode="In" />
+    <Parameter Name="IsSentto" Type="bit" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+    <Parameter Name="ApprovedId" Type="varchar" Mode="In" />
+    <Parameter Name="Bid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="speslstatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spExpenseVoucherList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="BID" Type="int" Mode="In" />
+    <Parameter Name="IDs" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spExpenseVoucherSummary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetBatchByProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpGetIDTRecord" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="IDT" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetIssuedIDT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pID" Type="int" Mode="In" />
+    <Parameter Name="dID" Type="int" Mode="In" />
+    <Parameter Name="qID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetWareHouseSections" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spIDTStockTranfer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SID" Type="int" Mode="In" />
+    <Parameter Name="BatchId" Type="int" Mode="In" />
+    <Parameter Name="IDTId" Type="int" Mode="In" />
+    <Parameter Name="PackingType" Type="varchar" Mode="In" />
+    <Parameter Name="Quantity" Type="decimal" Mode="In" />
+    <Parameter Name="Format" Type="varchar" Mode="In" />
+    <Parameter Name="ToLooseCount" Type="int" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="SPINDENT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="IndentName" Type="varchar" Mode="In" />
+    <Parameter Name="IsApproved" Type="bit" Mode="In" />
+    <Parameter Name="IsIssueVoucherId" Type="bit" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="int" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+    <Parameter Name="indentid" Type="int" Mode="In" />
+    <Parameter Name="idt" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spIssueVoucherVehicleUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IssueVoucherId" Type="varchar" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="VehicleNo" Type="varchar" Mode="In" />
+    <Parameter Name="StockQuantity" Type="decimal" Mode="In" />
+    <Parameter Name="FormatFull" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FormatLoose" Type="varchar(max)" Mode="In" />
+    <Parameter Name="BatchNo" Type="varchar" Mode="In" />
+    <Parameter Name="issueorderid" Type="int" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="intResult" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="Split" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="String" Type="nvarchar" Mode="In" />
+    <Parameter Name="Delimiter" Type="char" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Items" Type="nvarchar" MaxLength="4000" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="spLPCPList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="IsATNo" Type="int" Mode="In" />
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="Status" Type="int" Mode="In" />
+    <Parameter Name="Tender" Type="int" Mode="In" />
+    <Parameter Name="FromDate" Type="datetime" Mode="In" />
+    <Parameter Name="ToDate" Type="datetime" Mode="In" />
+    <Parameter Name="Late" Type="int" Mode="In" />
+    <Parameter Name="Dispute" Type="int" Mode="In" />
+    <Parameter Name="ATNO" Type="varchar" Mode="In" />
+    <Parameter Name="SONO" Type="varchar" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spManageBatch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spManageStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BID" Type="int" Mode="In" />
+    <Parameter Name="PID" Type="int" Mode="In" />
+    <Parameter Name="SID" Type="int" Mode="In" />
+    <Parameter Name="DepotID" Type="int" Mode="In" />
+    <Parameter Name="MFGDate" Type="datetime" Mode="In" />
+    <Parameter Name="EXPDate" Type="datetime" Mode="In" />
+    <Parameter Name="RecievedFrom" Type="varchar" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="IsStockIn" Type="bit" Mode="In" />
+    <Parameter Name="IsDeleted" Type="bit" Mode="In" />
+    <Parameter Name="MinQuantity" Type="varchar" Mode="In" />
+    <Parameter Name="Quantitytype" Type="varchar" Mode="In" />
+    <Parameter Name="Quantity" Type="varchar(max)" Mode="In" />
+    <Parameter Name="BatchName" Type="varchar" Mode="In" />
+    <Parameter Name="BatchCode" Type="varchar" Mode="In" />
+    <Parameter Name="BatchDesc" Type="varchar(max)" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="ESL" Type="datetime" Mode="In" />
+    <Parameter Name="BatchNo" Type="varchar" Mode="In" />
+    <Parameter Name="ATNo" Type="varchar" Mode="In" />
+    <Parameter Name="VechicleNo" Type="varchar" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+    <Parameter Name="Stockqty" Type="numeric" Mode="In" />
+    <Parameter Name="IsProductStatus" Type="varchar" Mode="In" />
+    <Parameter Name="IsSentto" Type="bit" Mode="In" />
+    <Parameter Name="Productname" Type="varchar" Mode="In" />
+    <Parameter Name="Stockqtyrem" Type="numeric" Mode="In" />
+    <Parameter Name="SupplierId" Type="int" Mode="In" />
+    <Parameter Name="GenericName" Type="varchar" Mode="In" />
+    <Parameter Name="OriginalManf" Type="varchar" Mode="In" />
+    <Parameter Name="SentQty" Type="numeric" Mode="In" />
+    <Parameter Name="RecievedOn" Type="datetime" Mode="In" />
+    <Parameter Name="DriverName" Type="varchar" Mode="In" />
+    <Parameter Name="InterTransferId" Type="int" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ChallanOrIrNo" Type="varchar" Mode="In" />
+    <Parameter Name="IsChallanNo" Type="bit" Mode="In" />
+    <Parameter Name="IsIrNo" Type="bit" Mode="In" />
+    <Parameter Name="PackingMaterial" Type="varchar" Mode="In" />
+    <Parameter Name="IsSampleSent" Type="int" Mode="In" />
+    <Parameter Name="UnitInfo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Product_ID" Type="int" Mode="In" />
+    <Parameter Name="Product_Name" Type="varchar" Mode="In" />
+    <Parameter Name="Product_Desc" Type="varchar" Mode="In" />
+    <Parameter Name="Short_Product_Desc" Type="varchar" Mode="In" />
+    <Parameter Name="Admin_remarks" Type="varchar" Mode="In" />
+    <Parameter Name="Product_Cost" Type="int" Mode="In" />
+    <Parameter Name="Product_Code" Type="varchar" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="StockQty" Type="numeric" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+    <Parameter Name="cat" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ProductUnit" Type="varchar" Mode="In" />
+    <Parameter Name="GSServe" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="spRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Role_Id" Type="int" Mode="In" />
+    <Parameter Name="Role_Code" Type="varchar" Mode="In" />
+    <Parameter Name="Role" Type="varchar" Mode="In" />
+    <Parameter Name="Role_Desc" Type="varchar" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="DeptId" Type="int" Mode="In" />
+    <Parameter Name="Rank" Type="int" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spselectcrv" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="todate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spSelectTranfer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="IssuOrderID" Type="int" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="BatchNo" Type="varchar" Mode="In" />
+    <Parameter Name="CatID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="IDs" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SID" Type="int" Mode="In" />
+    <Parameter Name="IsChallanNo" Type="int" Mode="In" />
+    <Parameter Name="IsIrNo" Type="int" Mode="In" />
+    <Parameter Name="Weight" Type="decimal" Mode="In" />
+    <Parameter Name="ATNo" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SupplierNo" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CRVNo" Type="varchar(max)" Mode="In" />
+    <Parameter Name="RecievedFrom" Type="varchar" Mode="In" />
+    <Parameter Name="PMGradeId" Type="int" Mode="In" />
+    <Parameter Name="PMCapacityId" Type="int" Mode="In" />
+    <Parameter Name="PMConditionId" Type="int" Mode="In" />
+    <Parameter Name="OtherSupplier" Type="varchar" Mode="In" />
+    <Parameter Name="TransferedBy" Type="varchar" Mode="In" />
+    <Parameter Name="SampleSent" Type="bit" Mode="In" />
+    <Parameter Name="ContactNo" Type="varchar" Mode="In" />
+    <Parameter Name="ChallanOrIR" Type="varchar" Mode="In" />
+    <Parameter Name="ChallanOrIRNo" Type="varchar" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="OriginalMfg" Type="varchar" Mode="In" />
+    <Parameter Name="GenericName" Type="varchar" Mode="In" />
+    <Parameter Name="CostOfParticular" Type="decimal" Mode="In" />
+    <Parameter Name="RecievedDate" Type="datetime" Mode="In" />
+    <Parameter Name="PackagingMaterialName" Type="varchar(max)" Mode="In" />
+    <Parameter Name="PackagingMaterialShape" Type="varchar" Mode="In" />
+    <Parameter Name="PackagingMaterialSize" Type="varchar" Mode="In" />
+    <Parameter Name="PackagingMaterialFormatLevel" Type="decimal" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="Session" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="PackingMaterialFormat" Type="varchar(max)" Mode="In" />
+    <Parameter Name="WeigthUnit" Type="varchar" Mode="In" />
+    <Parameter Name="ShapeUnit" Type="varchar" Mode="In" />
+    <Parameter Name="IsEmptyPM" Type="bit" Mode="In" />
+    <Parameter Name="IsWithoutPacking" Type="int" Mode="In" />
+    <Parameter Name="IsSubPacking" Type="bit" Mode="In" />
+    <Parameter Name="IsDW" Type="bit" Mode="In" />
+    <Parameter Name="SubPMName" Type="varchar(max)" Mode="In" />
+    <Parameter Name="SubPMGradeId" Type="int" Mode="In" />
+    <Parameter Name="SubPMCapacityId" Type="int" Mode="In" />
+    <Parameter Name="SubPMConditionId" Type="int" Mode="In" />
+    <Parameter Name="SubPMShape" Type="varchar" Mode="In" />
+    <Parameter Name="SubPMSize" Type="varchar" Mode="In" />
+    <Parameter Name="SubWeight" Type="decimal" Mode="In" />
+    <Parameter Name="SubWeightUnit" Type="varchar" Mode="In" />
+    <Parameter Name="SubShapeUnit" Type="varchar" Mode="In" />
+    <Parameter Name="BID" Type="int" Mode="In" />
+    <Parameter Name="StockId" Type="int" Mode="In" />
+    <Parameter Name="BatchNo" Type="varchar" Mode="In" />
+    <Parameter Name="WarehouseNo" Type="varchar" Mode="In" />
+    <Parameter Name="MfgDate" Type="datetime" Mode="In" />
+    <Parameter Name="ExpiryDate" Type="datetime" Mode="In" />
+    <Parameter Name="ESLDate" Type="datetime" Mode="In" />
+    <Parameter Name="Cost" Type="decimal" Mode="In" />
+    <Parameter Name="SampleSentQty" Type="decimal" Mode="In" />
+    <Parameter Name="BWeight" Type="decimal" Mode="In" />
+    <Parameter Name="WeightofParticular" Type="decimal" Mode="In" />
+    <Parameter Name="WeightUnit" Type="varchar" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="SectionID" Type="int" Mode="In" />
+    <Parameter Name="SectionRows" Type="int" Mode="In" />
+    <Parameter Name="SectionCol" Type="int" Mode="In" />
+    <Parameter Name="DriverName" Type="varchar" Mode="In" />
+    <Parameter Name="VehicleNo" Type="varchar" Mode="In" />
+    <Parameter Name="StockBatchId" Type="int" Mode="In" />
+    <Parameter Name="SentQty" Type="decimal" Mode="In" />
+    <Parameter Name="RecievedQty" Type="decimal" Mode="In" />
+    <Parameter Name="ChallanNo" Type="varchar" Mode="In" />
+    <Parameter Name="IsDDOrCHT" Type="varchar" Mode="In" />
+    <Parameter Name="SpilledQty" Type="decimal" Mode="In" />
+    <Parameter Name="DamagedBoxes" Type="decimal" Mode="In" />
+    <Parameter Name="SpillageAffected" Type="decimal" Mode="In" />
+    <Parameter Name="SampleAffected" Type="decimal" Mode="In" />
+    <Parameter Name="BothAffected" Type="decimal" Mode="In" />
+    <Parameter Name="PackagingType" Type="varchar" Mode="In" />
+    <Parameter Name="RemainingQty" Type="decimal" Mode="In" />
+    <Parameter Name="Format" Type="varchar" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spUnit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Unit_id" Type="int" Mode="In" />
+    <Parameter Name="Depu_id" Type="int" Mode="In" />
+    <Parameter Name="Unit_name" Type="varchar" Mode="In" />
+    <Parameter Name="Unit_Desc" Type="varchar(max)" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="Unit_Code" Type="varchar" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+    <Parameter Name="Command" Type="int" Mode="In" />
+    <Parameter Name="Formation" Type="int" Mode="In" />
+    <Parameter Name="UnitType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spUnitById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Action" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Unit_name" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spUpdateStockOnIDTDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SID" Type="int" Mode="In" />
+    <Parameter Name="idtID" Type="int" Mode="In" />
+    <Parameter Name="Quantity" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="spUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="User_Id" Type="int" Mode="In" />
+    <Parameter Name="FirstName" Type="varchar" Mode="In" />
+    <Parameter Name="UserCode" Type="varchar" Mode="In" />
+    <Parameter Name="LastName" Type="varchar" Mode="In" />
+    <Parameter Name="User_name" Type="varchar" Mode="In" />
+    <Parameter Name="RoleId" Type="int" Mode="In" />
+    <Parameter Name="Country" Type="int" Mode="In" />
+    <Parameter Name="State" Type="int" Mode="In" />
+    <Parameter Name="City" Type="int" Mode="In" />
+    <Parameter Name="Address" Type="varchar" Mode="In" />
+    <Parameter Name="ContactNo" Type="varchar" Mode="In" />
+    <Parameter Name="Password" Type="varchar" Mode="In" />
+    <Parameter Name="IsActive" Type="int" Mode="In" />
+    <Parameter Name="AddedOn" Type="datetime" Mode="In" />
+    <Parameter Name="AddedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedOn" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="Output" Type="int" Mode="InOut" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+    <Parameter Name="ArmyNo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_add_update_Authority" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Auid" Type="int" Mode="In" />
+    <Parameter Name="Auname" Type="varchar" Mode="In" />
+    <Parameter Name="userId" Type="int" Mode="In" />
+    <Parameter Name="active" Type="bit" Mode="In" />
+    <Parameter Name="Fyear" Type="int" Mode="In" />
+    <Parameter Name="OrderType" Type="int" Mode="In" />
+    <Parameter Name="Qid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_Autogenrate_LoadTallyNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vechileNo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="IssueorderId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_creareIssueVoucherNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IssueorderId" Type="int" Mode="In" />
+    <Parameter Name="CatId" Type="int" Mode="In" />
+    <Parameter Name="ivNo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_createIssueOrderNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intResult" Type="nvarchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="usp_DeleteIssuedVehicle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="Case" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_Dropdowngetcategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_DUMMYgrdbachwithproductqty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_GenrateIssueVoucher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catId" Type="int" Mode="In" />
+    <Parameter Name="IssueVoucherNumber" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="usp_GenrateLoadTally" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="issueorderID" Type="int" Mode="In" />
+    <Parameter Name="vechileNo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Authority" Type="varchar" Mode="In" />
+    <Parameter Name="through" Type="varchar" Mode="In" />
+    <Parameter Name="loadtallyNo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="driverName" Type="varchar" Mode="In" />
+    <Parameter Name="rank" Type="varchar" Mode="In" />
+    <Parameter Name="UnitNo" Type="varchar" Mode="In" />
+    <Parameter Name="Userid" Type="int" Mode="In" />
+    <Parameter Name="dateofgenration" Type="datetime" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="usp_get_Authority" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_get_issueorder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getAllloadtallyDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="loadtallyNumberValue" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="usp_getattributeby_financialyear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_GetAttributeName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Typeid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getAuthorityDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AuthorityId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getBatch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Action" Type="varchar" Mode="In" />
+    <Parameter Name="prdid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_GetBatchquantity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productID" Type="int" Mode="In" />
+    <Parameter Name="issueorderid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getcategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_getcount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productid" Type="int" Mode="In" />
+    <Parameter Name="catID" Type="int" Mode="In" />
+    <Parameter Name="issueorderid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getcount_satus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productid" Type="int" Mode="In" />
+    <Parameter Name="issueorderNumber" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="usp_getdeatilIssuevoucher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catid" Type="int" Mode="In" />
+    <Parameter Name="issueorderid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getDepuName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="depuid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_GetFinancialyear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_GetIdtqty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="depuId" Type="int" Mode="In" />
+    <Parameter Name="productId" Type="int" Mode="In" />
+    <Parameter Name="QuaterID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getIssueIdtdetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_getissuevoucherdetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catid" Type="int" Mode="In" />
+    <Parameter Name="issueorderid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getIssueVoucherList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_getissuevoucherNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="issueorderid" Type="int" Mode="In" />
+    <Parameter Name="CatId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_GetIssueVoucherProductByVehicle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_GetIssuevoucherQuantity_Batchwise" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productID" Type="int" Mode="In" />
+    <Parameter Name="issueorderid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_GetIssueVoucherToPrint" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_GetIssueVoucherVehicle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getIssuOrderby_BatchIDT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Qid" Type="int" Mode="In" />
+    <Parameter Name="Did" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getisuueorder_forIssueVoucher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catID" Type="int" Mode="In" />
+    <Parameter Name="issueorderid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_GetLoadTallyData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LTId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getLoadtallydetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vechileNo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="issueorderId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getLoadTallyList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_getLoadTallyNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VechileNo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="issueorderid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_GetLoadTallyToPrint" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoadtallyNumber" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="usp_GetOrderDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Depuid" Type="int" Mode="In" />
+    <Parameter Name="productId" Type="int" Mode="In" />
+    <Parameter Name="QuaterId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getprdDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prdID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getproductData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_getRemainingIDT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productId" Type="int" Mode="In" />
+    <Parameter Name="depuID" Type="int" Mode="In" />
+    <Parameter Name="TypeId" Type="int" Mode="In" />
+    <Parameter Name="quaterID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_getStockQuantity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prdID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_GetVechile_Detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Todaysdate" Type="varchar" Mode="In" />
+    <Parameter Name="VehicleNos" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="usp_getVechile_prdquantity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_getvechileAutocompete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SearchText" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_getvechiledetailbatchwise" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="issueorderid" Type="int" Mode="In" />
+    <Parameter Name="productid" Type="int" Mode="In" />
+    <Parameter Name="batchno" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_getvechileDetailforLoadtally" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VechileNo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="usp_getVechiledetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="productID" Type="int" Mode="In" />
+    <Parameter Name="issueorderid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_grdbachwithproductqty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BatchCode" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_idtQty_Quarter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prdName" Type="varchar" Mode="In" />
+    <Parameter Name="Dipuname" Type="varchar" Mode="In" />
+    <Parameter Name="DipuIdtQty" Type="int" Mode="In" />
+    <Parameter Name="QuarterRange" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_Insert_IssueOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="issueorderNo" Type="varchar" Mode="In" />
+    <Parameter Name="issueorderdate" Type="datetime" Mode="In" />
+    <Parameter Name="authority" Type="varchar" Mode="In" />
+    <Parameter Name="depoid" Type="int" Mode="In" />
+    <Parameter Name="qid" Type="int" Mode="In" />
+    <Parameter Name="productid" Type="int" Mode="In" />
+    <Parameter Name="issuequantity" Type="int" Mode="In" />
+    <Parameter Name="userid" Type="int" Mode="In" />
+    <Parameter Name="IDTICTAWS" Type="varchar" Mode="In" />
+    <Parameter Name="intResult" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="usp_InsertBatchIDT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BatchName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="issueqty" Type="numeric" Mode="In" />
+    <Parameter Name="depuID" Type="varchar" Mode="In" />
+    <Parameter Name="productID" Type="varchar" Mode="In" />
+    <Parameter Name="QuaterID" Type="int" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar(max)" Mode="In" />
+    <Parameter Name="intResult" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="usp_InsertPrdIdt_QTY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prdName" Type="varchar" Mode="In" />
+    <Parameter Name="Dipuname" Type="varchar" Mode="In" />
+    <Parameter Name="DipuIdtQty" Type="int" Mode="In" />
+    <Parameter Name="intResult" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="usp_InsertQuarter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="noofMonth" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_IssueVoucherDetail_AddUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="IssueOrderId" Type="int" Mode="In" />
+    <Parameter Name="IssueVoucherName" Type="varchar" Mode="In" />
+    <Parameter Name="DateOfGeneratation" Type="datetime" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_IssueVoucherVehicleDetail_AddUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IssueVoucherId" Type="varchar" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="BatchNo" Type="varchar" Mode="In" />
+    <Parameter Name="VehicleNo" Type="varchar" Mode="In" />
+    <Parameter Name="PMQuantity" Type="decimal" Mode="In" />
+    <Parameter Name="StockQuantity" Type="decimal" Mode="In" />
+    <Parameter Name="VoucherRemarks" Type="varchar(max)" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="dateofgenration" Type="datetime" Mode="In" />
+    <Parameter Name="Through" Type="varchar" Mode="In" />
+    <Parameter Name="authority" Type="varchar" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+    <Parameter Name="issueorderid" Type="int" Mode="In" />
+    <Parameter Name="FormatFull" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FormatLoose" Type="varchar(max)" Mode="In" />
+    <Parameter Name="LeftFormatFull" Type="varchar(max)" Mode="In" />
+    <Parameter Name="LeftFormatLoose" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FullQty" Type="numeric" Mode="In" />
+    <Parameter Name="Case" Type="int" Mode="In" />
+    <Parameter Name="FullOccupied" Type="int" Mode="In" />
+    <Parameter Name="intResult" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="usp_StockOutMain_AddUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="QuarterId" Type="int" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="DepotId" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="IDT" Type="decimal" Mode="In" />
+    <Parameter Name="IDTUpdate" Type="bit" Mode="In" />
+    <Parameter Name="TypeId" Type="int" Mode="In" />
+    <Parameter Name="Yearvalue" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_StockOutMain_Depot_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="QuarterId" Type="int" Mode="In" />
+    <Parameter Name="DepotId" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="TypeId" Type="int" Mode="In" />
+    <Parameter Name="Yearvalue" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_StockOutMain_GetDatabyQuarter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="QuarterId" Type="int" Mode="In" />
+    <Parameter Name="TypeId" Type="int" Mode="In" />
+    <Parameter Name="Yearvalue" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_StockOutMain_GetDepots" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="QuarterId" Type="int" Mode="In" />
+    <Parameter Name="DepotId" Type="int" Mode="In" />
+    <Parameter Name="NewDepot" Type="bit" Mode="In" />
+    <Parameter Name="IsParent" Type="bit" Mode="In" />
+    <Parameter Name="Typeid" Type="int" Mode="In" />
+    <Parameter Name="Yearvalue" Type="int" Mode="In" />
+    <Parameter Name="type" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_StockOutMain_Product_Add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="QuarterId" Type="int" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="TypeId" Type="int" Mode="In" />
+    <Parameter Name="Yearvalue" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_StockOutMain_Products_Get" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="QuarterId" Type="int" Mode="In" />
+    <Parameter Name="TypeId" Type="int" Mode="In" />
+    <Parameter Name="Yearvalue" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_StockOutMain_QuarterData_AutoAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="QuarterId" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_StockOutMain_Quarters_Get" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="yearvalue" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_UpdateIdtQty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prdid" Type="int" Mode="In" />
+    <Parameter Name="dipuID" Type="int" Mode="In" />
+    <Parameter Name="currentQTY" Type="int" Mode="In" />
+    <Parameter Name="Refrenceletter" Type="varchar" Mode="In" />
+    <Parameter Name="RefrenceletterDate" Type="datetime" Mode="In" />
+    <Parameter Name="remarks" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="QuaterID" Type="int" Mode="In" />
+    <Parameter Name="TypeId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_VechileMaster_AddUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Through" Type="varchar" Mode="In" />
+    <Parameter Name="VechileNumber" Type="varchar" Mode="In" />
+    <Parameter Name="DriverName" Type="varchar" Mode="In" />
+    <Parameter Name="Rank" Type="varchar" Mode="In" />
+    <Parameter Name="ArmyNo" Type="varchar" Mode="In" />
+    <Parameter Name="vechileType" Type="varchar" Mode="In" />
+    <Parameter Name="userId" Type="int" Mode="In" />
+    <Parameter Name="intResult" Type="int" Mode="InOut" />
+  </Function>
+  <EntityContainer Name="SamrthDbModelStoreContainer">
+    <EntitySet Name="AddPMContainer" EntityType="Self.AddPMContainer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BatchDepot" EntityType="Self.BatchDepot" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BatchMaster" EntityType="Self.BatchMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CategoryMaster" EntityType="Self.CategoryMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CategoryType" EntityType="Self.CategoryType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CityMaster" EntityType="Self.CityMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommandMaster" EntityType="Self.CommandMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CountryMaster" EntityType="Self.CountryMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DeptMaster" EntityType="Self.DeptMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DepuMaster" EntityType="Self.DepuMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESLIssue" EntityType="Self.ESLIssue" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EslMaster" EntityType="Self.EslMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExpenseVoucherMaster" EntityType="Self.ExpenseVoucherMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Formation" EntityType="Self.Formation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GateInout" EntityType="Self.GateInout" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GatInOut" EntityType="Self.GatInOut" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IDT" EntityType="Self.IDT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IDTStockTransfer" EntityType="Self.IDTStockTransfer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IssueVoucher" EntityType="Self.IssueVoucher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ManuMgmt" EntityType="Self.ManuMgmt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OriginalManufacture " EntityType="Self.OriginalManufacture " Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PMandContainerMaster" EntityType="Self.PMandContainerMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PMCapacity" EntityType="Self.PMCapacity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PMCondition" EntityType="Self.PMCondition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PMGrade" EntityType="Self.PMGrade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PMNames" EntityType="Self.PMNames" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductMaster" EntityType="Self.ProductMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuantityType" EntityType="Self.QuantityType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RecievedFrom" EntityType="Self.RecievedFrom" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoleMaster" EntityType="Self.RoleMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatesMaster" EntityType="Self.StatesMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusMaster" EntityType="Self.StatusMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockMaster" EntityType="Self.StockMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockPakaging" EntityType="Self.StockPakaging" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockSpillage" EntityType="Self.StockSpillage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockTransfer" EntityType="Self.StockTransfer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockVehicle" EntityType="Self.StockVehicle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="supplier" EntityType="Self.supplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TallySheet" EntityType="Self.TallySheet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblExpensePMContainer" EntityType="Self.tblExpensePMContainer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblIssueVoucherDetail" EntityType="Self.tblIssueVoucherDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblIssueVoucherVehicleDetail" EntityType="Self.tblIssueVoucherVehicleDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLPCP" EntityType="Self.tblLPCP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblQuarter" EntityType="Self.tblQuarter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSection" EntityType="Self.tblSection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStockOutMain" EntityType="Self.tblStockOutMain" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblWarehouse" EntityType="Self.tblWarehouse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypeOfOrder" EntityType="Self.TypeOfOrder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UnitMaster" EntityType="Self.UnitMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UnitType" EntityType="Self.UnitType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserMaster" EntityType="Self.UserMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gh" EntityType="Self.gh" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [gh].[id] AS [id], 
+    [gh].[a] AS [a]
+    FROM [dbo].[gh] AS [gh]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_Atttribute" EntityType="Self.tbl_Atttribute" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_Atttribute].[TypeId] AS [TypeId], 
+    [tbl_Atttribute].[AttributeName] AS [AttributeName], 
+    [tbl_Atttribute].[Active] AS [Active], 
+    [tbl_Atttribute].[CreateduserId] AS [CreateduserId], 
+    [tbl_Atttribute].[Createddate] AS [Createddate], 
+    [tbl_Atttribute].[ModifieduserId] AS [ModifieduserId], 
+    [tbl_Atttribute].[Modifieddate] AS [Modifieddate]
+    FROM [dbo].[tbl_Atttribute] AS [tbl_Atttribute]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_Authority" EntityType="Self.tbl_Authority" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_Authority].[AuId] AS [AuId], 
+    [tbl_Authority].[AuthorityName] AS [AuthorityName], 
+    [tbl_Authority].[Active] AS [Active], 
+    [tbl_Authority].[Fyear] AS [Fyear], 
+    [tbl_Authority].[Qid] AS [Qid], 
+    [tbl_Authority].[OrderType] AS [OrderType], 
+    [tbl_Authority].[Createddate] AS [Createddate], 
+    [tbl_Authority].[modifieddate] AS [modifieddate], 
+    [tbl_Authority].[Createduserid] AS [Createduserid], 
+    [tbl_Authority].[modifieduserid] AS [modifieduserid]
+    FROM [dbo].[tbl_Authority] AS [tbl_Authority]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_batchIdt" EntityType="Self.tbl_batchIdt" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_batchIdt].[id] AS [id], 
+    [tbl_batchIdt].[BatchName] AS [BatchName], 
+    [tbl_batchIdt].[issueqty] AS [issueqty], 
+    [tbl_batchIdt].[DepuID] AS [DepuID], 
+    [tbl_batchIdt].[ProductID] AS [ProductID], 
+    [tbl_batchIdt].[Qid] AS [Qid], 
+    [tbl_batchIdt].[createddate] AS [createddate], 
+    [tbl_batchIdt].[issueorder_Status] AS [issueorder_Status], 
+    [tbl_batchIdt].[IssueOrderId] AS [IssueOrderId], 
+    [tbl_batchIdt].[BID] AS [BID], 
+    [tbl_batchIdt].[Remarks] AS [Remarks]
+    FROM [dbo].[tbl_batchIdt] AS [tbl_batchIdt]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_financialyear" EntityType="Self.tbl_financialyear" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_financialyear].[Id] AS [Id], 
+    [tbl_financialyear].[FYID] AS [FYID], 
+    [tbl_financialyear].[FyidRange] AS [FyidRange], 
+    [tbl_financialyear].[IsActive] AS [IsActive], 
+    [tbl_financialyear].[createddate] AS [createddate]
+    FROM [dbo].[tbl_financialyear] AS [tbl_financialyear]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_idtQty_Quarter" EntityType="Self.tbl_idtQty_Quarter" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_idtQty_Quarter].[id] AS [id], 
+    [tbl_idtQty_Quarter].[pid] AS [pid], 
+    [tbl_idtQty_Quarter].[Product_Name] AS [Product_Name], 
+    [tbl_idtQty_Quarter].[Qid] AS [Qid], 
+    [tbl_idtQty_Quarter].[QuarterRange] AS [QuarterRange], 
+    [tbl_idtQty_Quarter].[dipu] AS [dipu], 
+    [tbl_idtQty_Quarter].[dipuid] AS [dipuid], 
+    [tbl_idtQty_Quarter].[IDTqty] AS [IDTqty], 
+    [tbl_idtQty_Quarter].[left_IDTqty] AS [left_IDTqty], 
+    [tbl_idtQty_Quarter].[fyid] AS [fyid], 
+    [tbl_idtQty_Quarter].[Isactive] AS [Isactive], 
+    [tbl_idtQty_Quarter].[createddate] AS [createddate], 
+    [tbl_idtQty_Quarter].[modifieddate] AS [modifieddate]
+    FROM [dbo].[tbl_idtQty_Quarter] AS [tbl_idtQty_Quarter]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_IDTrefrence" EntityType="Self.tbl_IDTrefrence" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_IDTrefrence].[id] AS [id], 
+    [tbl_IDTrefrence].[ProductID] AS [ProductID], 
+    [tbl_IDTrefrence].[depuid] AS [depuid], 
+    [tbl_IDTrefrence].[refrence_letterNo] AS [refrence_letterNo], 
+    [tbl_IDTrefrence].[refrenceDate] AS [refrenceDate], 
+    [tbl_IDTrefrence].[Remarks] AS [Remarks], 
+    [tbl_IDTrefrence].[Createddate] AS [Createddate], 
+    [tbl_IDTrefrence].[Qid] AS [Qid]
+    FROM [dbo].[tbl_IDTrefrence] AS [tbl_IDTrefrence]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_IssueOrder" EntityType="Self.tbl_IssueOrder" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_IssueOrder].[ID] AS [ID], 
+    [tbl_IssueOrder].[IssueOrderId] AS [IssueOrderId], 
+    [tbl_IssueOrder].[IssueOrderNo] AS [IssueOrderNo], 
+    [tbl_IssueOrder].[DepotId] AS [DepotId], 
+    [tbl_IssueOrder].[QuarterId] AS [QuarterId], 
+    [tbl_IssueOrder].[OrderStatusId] AS [OrderStatusId], 
+    [tbl_IssueOrder].[Active] AS [Active], 
+    [tbl_IssueOrder].[CreateDate] AS [CreateDate], 
+    [tbl_IssueOrder].[createduserid] AS [createduserid], 
+    [tbl_IssueOrder].[Authority] AS [Authority], 
+    [tbl_IssueOrder].[issueorder_date] AS [issueorder_date], 
+    [tbl_IssueOrder].[productID] AS [productID], 
+    [tbl_IssueOrder].[issuequantity] AS [issuequantity], 
+    [tbl_IssueOrder].[IDTICTAWS] AS [IDTICTAWS]
+    FROM [dbo].[tbl_IssueOrder] AS [tbl_IssueOrder]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_IssueVoucher" EntityType="Self.tbl_IssueVoucher" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_IssueVoucher].[ID] AS [ID], 
+    [tbl_IssueVoucher].[categoryID] AS [categoryID], 
+    [tbl_IssueVoucher].[Through] AS [Through], 
+    [tbl_IssueVoucher].[Authority] AS [Authority], 
+    [tbl_IssueVoucher].[PID] AS [PID], 
+    [tbl_IssueVoucher].[PMID] AS [PMID], 
+    [tbl_IssueVoucher].[PMquantity] AS [PMquantity], 
+    [tbl_IssueVoucher].[quantity] AS [quantity], 
+    [tbl_IssueVoucher].[VechileID] AS [VechileID], 
+    [tbl_IssueVoucher].[VechileName] AS [VechileName], 
+    [tbl_IssueVoucher].[IssueQuantity] AS [IssueQuantity], 
+    [tbl_IssueVoucher].[Createdate] AS [Createdate], 
+    [tbl_IssueVoucher].[modifieddate] AS [modifieddate], 
+    [tbl_IssueVoucher].[craeteduserID] AS [craeteduserID], 
+    [tbl_IssueVoucher].[ModifieduserID] AS [ModifieduserID]
+    FROM [dbo].[tbl_IssueVoucher] AS [tbl_IssueVoucher]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_issuevoucherdetail" EntityType="Self.tbl_issuevoucherdetail" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_issuevoucherdetail].[Id] AS [Id], 
+    [tbl_issuevoucherdetail].[IssueorderId] AS [IssueorderId], 
+    [tbl_issuevoucherdetail].[IssusevoucherName] AS [IssusevoucherName], 
+    [tbl_issuevoucherdetail].[Active] AS [Active], 
+    [tbl_issuevoucherdetail].[Createddate] AS [Createddate], 
+    [tbl_issuevoucherdetail].[Createdby] AS [Createdby], 
+    [tbl_issuevoucherdetail].[Modifieddate] AS [Modifieddate], 
+    [tbl_issuevoucherdetail].[Modifiedby] AS [Modifiedby], 
+    [tbl_issuevoucherdetail].[Cat_ID] AS [Cat_ID]
+    FROM [dbo].[tbl_issuevoucherdetail] AS [tbl_issuevoucherdetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_loadtallydetail" EntityType="Self.tbl_loadtallydetail" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_loadtallydetail].[Id] AS [Id], 
+    [tbl_loadtallydetail].[loadtallyNumber] AS [loadtallyNumber], 
+    [tbl_loadtallydetail].[IssueorderId] AS [IssueorderId], 
+    [tbl_loadtallydetail].[vechileNo] AS [vechileNo], 
+    [tbl_loadtallydetail].[DriverName] AS [DriverName], 
+    [tbl_loadtallydetail].[Rank] AS [Rank], 
+    [tbl_loadtallydetail].[UnitNo] AS [UnitNo], 
+    [tbl_loadtallydetail].[DateofGenration] AS [DateofGenration], 
+    [tbl_loadtallydetail].[Active] AS [Active], 
+    [tbl_loadtallydetail].[Createdby] AS [Createdby], 
+    [tbl_loadtallydetail].[Createddate] AS [Createddate], 
+    [tbl_loadtallydetail].[Modifiedby] AS [Modifiedby], 
+    [tbl_loadtallydetail].[Modifieddate] AS [Modifieddate], 
+    [tbl_loadtallydetail].[Authority] AS [Authority], 
+    [tbl_loadtallydetail].[Through] AS [Through], 
+    [tbl_loadtallydetail].[LoadtallyId] AS [LoadtallyId], 
+    [tbl_loadtallydetail].[Remarks] AS [Remarks]
+    FROM [dbo].[tbl_loadtallydetail] AS [tbl_loadtallydetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_loadtaly" EntityType="Self.tbl_loadtaly" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_loadtaly].[Id] AS [Id], 
+    [tbl_loadtaly].[loadtallyNumber] AS [loadtallyNumber], 
+    [tbl_loadtaly].[IssueorderId] AS [IssueorderId], 
+    [tbl_loadtaly].[vechileNo] AS [vechileNo], 
+    [tbl_loadtaly].[Active] AS [Active], 
+    [tbl_loadtaly].[Createdby] AS [Createdby], 
+    [tbl_loadtaly].[Createddate] AS [Createddate], 
+    [tbl_loadtaly].[Modifiedby] AS [Modifiedby], 
+    [tbl_loadtaly].[Modifieddate] AS [Modifieddate], 
+    [tbl_loadtaly].[loadtally_status] AS [loadtally_status], 
+    [tbl_loadtaly].[Remarks] AS [Remarks]
+    FROM [dbo].[tbl_loadtaly] AS [tbl_loadtaly]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_ProductIDT_Quantity" EntityType="Self.tbl_ProductIDT_Quantity" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_ProductIDT_Quantity].[id] AS [id], 
+    [tbl_ProductIDT_Quantity].[PID] AS [PID], 
+    [tbl_ProductIDT_Quantity].[Product_Name] AS [Product_Name], 
+    [tbl_ProductIDT_Quantity].[Dipu] AS [Dipu], 
+    [tbl_ProductIDT_Quantity].[Dipuprd_IDTqty] AS [Dipuprd_IDTqty], 
+    [tbl_ProductIDT_Quantity].[IsActive] AS [IsActive], 
+    [tbl_ProductIDT_Quantity].[createddate] AS [createddate], 
+    [tbl_ProductIDT_Quantity].[modifieddate] AS [modifieddate]
+    FROM [dbo].[tbl_ProductIDT_Quantity] AS [tbl_ProductIDT_Quantity]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_QuarterRange" EntityType="Self.tbl_QuarterRange" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_QuarterRange].[ID] AS [ID], 
+    [tbl_QuarterRange].[QuarterRangeValue] AS [QuarterRangeValue], 
+    [tbl_QuarterRange].[QuarterRange] AS [QuarterRange], 
+    [tbl_QuarterRange].[FYID] AS [FYID], 
+    [tbl_QuarterRange].[IsActive] AS [IsActive], 
+    [tbl_QuarterRange].[CreatedDate] AS [CreatedDate]
+    FROM [dbo].[tbl_QuarterRange] AS [tbl_QuarterRange]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_vechileMaster" EntityType="Self.tbl_vechileMaster" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_vechileMaster].[Id] AS [Id], 
+    [tbl_vechileMaster].[Through] AS [Through], 
+    [tbl_vechileMaster].[VechileNumber] AS [VechileNumber], 
+    [tbl_vechileMaster].[DriverName] AS [DriverName], 
+    [tbl_vechileMaster].[Rank] AS [Rank], 
+    [tbl_vechileMaster].[IsActive] AS [IsActive], 
+    [tbl_vechileMaster].[Createddate] AS [Createddate], 
+    [tbl_vechileMaster].[CreateduserId] AS [CreateduserId], 
+    [tbl_vechileMaster].[Modifieddate] AS [Modifieddate], 
+    [tbl_vechileMaster].[Modifieduserid] AS [Modifieduserid], 
+    [tbl_vechileMaster].[loadtallystatus] AS [loadtallystatus], 
+    [tbl_vechileMaster].[ArmyNo] AS [ArmyNo], 
+    [tbl_vechileMaster].[vechileType] AS [vechileType]
+    FROM [dbo].[tbl_vechileMaster] AS [tbl_vechileMaster]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tbl_vechileMaster_Type" EntityType="Self.tbl_vechileMaster_Type" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_vechileMaster_Type].[VtypeId] AS [VtypeId], 
+    [tbl_vechileMaster_Type].[Vtypename] AS [Vtypename], 
+    [tbl_vechileMaster_Type].[Isactive] AS [Isactive], 
+    [tbl_vechileMaster_Type].[Createddate] AS [Createddate], 
+    [tbl_vechileMaster_Type].[Modifieddate] AS [Modifieddate], 
+    [tbl_vechileMaster_Type].[Createduserid] AS [Createduserid], 
+    [tbl_vechileMaster_Type].[ModifieduserId] AS [ModifieduserId]
+    FROM [dbo].[tbl_vechileMaster_Type] AS [tbl_vechileMaster_Type]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AddPMContainer_CategoryMaster" Association="Self.FK_AddPMContainer_CategoryMaster">
+      <End Role="CategoryMaster" EntitySet="CategoryMaster" />
+      <End Role="AddPMContainer" EntitySet="AddPMContainer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AddPMContainer_PMandContainerMaster" Association="Self.FK_AddPMContainer_PMandContainerMaster">
+      <End Role="PMandContainerMaster" EntitySet="PMandContainerMaster" />
+      <End Role="AddPMContainer" EntitySet="AddPMContainer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BatchDepot_DepuMaster" Association="Self.FK_BatchDepot_DepuMaster">
+      <End Role="DepuMaster" EntitySet="DepuMaster" />
+      <End Role="BatchDepot" EntitySet="BatchDepot" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BatchMaster_DepuMaster" Association="Self.FK_BatchMaster_DepuMaster">
+      <End Role="DepuMaster" EntitySet="DepuMaster" />
+      <End Role="BatchMaster" EntitySet="BatchMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BatchMaster_ProductMaster" Association="Self.FK_BatchMaster_ProductMaster">
+      <End Role="ProductMaster" EntitySet="ProductMaster" />
+      <End Role="BatchMaster" EntitySet="BatchMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoryMaster_CategoryType" Association="Self.FK_CategoryMaster_CategoryType">
+      <End Role="CategoryType" EntitySet="CategoryType" />
+      <End Role="CategoryMaster" EntitySet="CategoryMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CityMaster_StatesMaster" Association="Self.FK_CityMaster_StatesMaster">
+      <End Role="StatesMaster" EntitySet="StatesMaster" />
+      <End Role="CityMaster" EntitySet="CityMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EslMaster_UnitMaster" Association="Self.FK_EslMaster_UnitMaster">
+      <End Role="UnitMaster" EntitySet="UnitMaster" />
+      <End Role="EslMaster" EntitySet="EslMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExpenseVoucherMaster_BatchMaster" Association="Self.FK_ExpenseVoucherMaster_BatchMaster">
+      <End Role="BatchMaster" EntitySet="BatchMaster" />
+      <End Role="ExpenseVoucherMaster" EntitySet="ExpenseVoucherMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExpenseVoucherMaster_CategoryMaster" Association="Self.FK_ExpenseVoucherMaster_CategoryMaster">
+      <End Role="CategoryMaster" EntitySet="CategoryMaster" />
+      <End Role="ExpenseVoucherMaster" EntitySet="ExpenseVoucherMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExpenseVoucherMaster_ProductMaster" Association="Self.FK_ExpenseVoucherMaster_ProductMaster">
+      <End Role="ProductMaster" EntitySet="ProductMaster" />
+      <End Role="ExpenseVoucherMaster" EntitySet="ExpenseVoucherMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Formation_CommandMaster" Association="Self.FK_Formation_CommandMaster">
+      <End Role="CommandMaster" EntitySet="CommandMaster" />
+      <End Role="Formation" EntitySet="Formation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IssueVoucher_IDT" Association="Self.FK_IssueVoucher_IDT">
+      <End Role="IDT" EntitySet="IDT" />
+      <End Role="IssueVoucher" EntitySet="IssueVoucher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IssueVoucher_IssueVoucher" Association="Self.FK_IssueVoucher_IssueVoucher">
+      <End Role="IssueVoucher" EntitySet="IssueVoucher" />
+      <End Role="IssueVoucher1" EntitySet="IssueVoucher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductMaster_CategoryMaster" Association="Self.FK_ProductMaster_CategoryMaster">
+      <End Role="CategoryMaster" EntitySet="CategoryMaster" />
+      <End Role="ProductMaster" EntitySet="ProductMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleMaster_DeptMaster" Association="Self.FK_RoleMaster_DeptMaster">
+      <End Role="DeptMaster" EntitySet="DeptMaster" />
+      <End Role="RoleMaster" EntitySet="RoleMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatesMaster_CountryMaster" Association="Self.FK_StatesMaster_CountryMaster">
+      <End Role="CountryMaster" EntitySet="CountryMaster" />
+      <End Role="StatesMaster" EntitySet="StatesMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockMaster_ProductMaster" Association="Self.FK_StockMaster_ProductMaster">
+      <End Role="ProductMaster" EntitySet="ProductMaster" />
+      <End Role="StockMaster" EntitySet="StockMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockTransfer_CategoryMaster" Association="Self.FK_StockTransfer_CategoryMaster">
+      <End Role="CategoryMaster" EntitySet="CategoryMaster" />
+      <End Role="StockTransfer" EntitySet="StockTransfer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockTransfer_DepuMaster" Association="Self.FK_StockTransfer_DepuMaster">
+      <End Role="DepuMaster" EntitySet="DepuMaster" />
+      <End Role="StockTransfer" EntitySet="StockTransfer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockTransfer_Indent" Association="Self.FK_StockTransfer_Indent">
+      <End Role="IDT" EntitySet="IDT" />
+      <End Role="StockTransfer" EntitySet="StockTransfer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockTransfer_StockTransfer" Association="Self.FK_StockTransfer_StockTransfer">
+      <End Role="TypeOfOrder" EntitySet="TypeOfOrder" />
+      <End Role="StockTransfer" EntitySet="StockTransfer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblExpensePMContainer_AddPMContainer" Association="Self.FK_tblExpensePMContainer_AddPMContainer">
+      <End Role="AddPMContainer" EntitySet="AddPMContainer" />
+      <End Role="tblExpensePMContainer" EntitySet="tblExpensePMContainer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblLPCP_OriginalManufacture " Association="Self.FK_tblLPCP_OriginalManufacture ">
+      <End Role="OriginalManufacture " EntitySet="OriginalManufacture " />
+      <End Role="tblLPCP" EntitySet="tblLPCP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblLPCP_ProductMaster" Association="Self.FK_tblLPCP_ProductMaster">
+      <End Role="ProductMaster" EntitySet="ProductMaster" />
+      <End Role="tblLPCP" EntitySet="tblLPCP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblLPCP_supplier" Association="Self.FK_tblLPCP_supplier">
+      <End Role="supplier" EntitySet="supplier" />
+      <End Role="tblLPCP" EntitySet="tblLPCP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSection_tblSection" Association="Self.FK_tblSection_tblSection">
+      <End Role="tblWarehouse" EntitySet="tblWarehouse" />
+      <End Role="tblSection" EntitySet="tblSection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSection_tblSection1" Association="Self.FK_tblSection_tblSection1">
+      <End Role="tblSection" EntitySet="tblSection" />
+      <End Role="tblSection1" EntitySet="tblSection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UnitMaster_DepuMaster" Association="Self.FK_UnitMaster_DepuMaster">
+      <End Role="DepuMaster" EntitySet="DepuMaster" />
+      <End Role="UnitMaster" EntitySet="UnitMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UnitMaster_UnitMaster" Association="Self.FK_UnitMaster_UnitMaster">
+      <End Role="UnitMaster" EntitySet="UnitMaster" />
+      <End Role="UnitMaster1" EntitySet="UnitMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMaster_RoleMaster" Association="Self.FK_UserMaster_RoleMaster">
+      <End Role="RoleMaster" EntitySet="RoleMaster" />
+      <End Role="UserMaster" EntitySet="UserMaster" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cf91268adb3c40ff84455e4c1bf014c7" Name="Diagram1">
+        <EntityTypeShape EntityType="SamrthDbModel.AddPMContainer" Width="1.5" PointX="5.25" PointY="23.125" />
+        <EntityTypeShape EntityType="SamrthDbModel.BatchDepot" Width="1.5" PointX="8.25" PointY="5.5" />
+        <EntityTypeShape EntityType="SamrthDbModel.BatchMaster" Width="1.5" PointX="10.5" PointY="36.5" />
+        <EntityTypeShape EntityType="SamrthDbModel.CategoryMaster" Width="1.5" PointX="3" PointY="22.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.CategoryType" Width="1.5" PointX="0.75" PointY="23.375" />
+        <EntityTypeShape EntityType="SamrthDbModel.CityMaster" Width="1.5" PointX="10.25" PointY="1.125" />
+        <EntityTypeShape EntityType="SamrthDbModel.CommandMaster" Width="1.5" PointX="12.75" PointY="8.125" />
+        <EntityTypeShape EntityType="SamrthDbModel.CountryMaster" Width="1.5" PointX="5.75" PointY="1.125" />
+        <EntityTypeShape EntityType="SamrthDbModel.DeptMaster" Width="1.5" PointX="12.75" PointY="2.125" />
+        <EntityTypeShape EntityType="SamrthDbModel.DepuMaster" Width="1.5" PointX="6" PointY="6.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.ESLIssue" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.EslMaster" Width="1.5" PointX="10.5" PointY="9.875" />
+        <EntityTypeShape EntityType="SamrthDbModel.ExpenseVoucherMaster" Width="1.5" PointX="10.5" PointY="30.375" />
+        <EntityTypeShape EntityType="SamrthDbModel.Formation" Width="1.5" PointX="15" PointY="8" />
+        <EntityTypeShape EntityType="SamrthDbModel.ForwardNoteMaster" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.GateInout" Width="1.5" PointX="12.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.GatInOut" Width="1.5" PointX="14.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.IDT" Width="1.5" PointX="6" PointY="13.5" />
+        <EntityTypeShape EntityType="SamrthDbModel.IDTStockTransfer" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.IssueVoucher" Width="1.5" PointX="8.25" PointY="14.25" />
+        <EntityTypeShape EntityType="SamrthDbModel.ManuMgmt" Width="1.5" PointX="2.75" PointY="14.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.OriginalManufacture_" Width="1.5" PointX="11.25" PointY="49" />
+        <EntityTypeShape EntityType="SamrthDbModel.PMandContainerMaster" Width="1.5" PointX="3" PointY="18.25" />
+        <EntityTypeShape EntityType="SamrthDbModel.PMCapacity" Width="1.5" PointX="16.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.PMCondition" Width="1.5" PointX="16.75" PointY="14.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.PMGrade" Width="1.5" PointX="17.75" PointY="7.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.PMName" Width="1.5" PointX="10.75" PointY="17.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.ProductMaster" Width="1.5" PointX="5.25" PointY="36.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.QuantityType" Width="1.5" PointX="16.75" PointY="17.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.RecievedFrom" Width="1.5" PointX="18.75" PointY="10.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.RoleMaster" Width="1.5" PointX="15" PointY="1.875" />
+        <EntityTypeShape EntityType="SamrthDbModel.StatesMaster" Width="1.5" PointX="8" PointY="1" />
+        <EntityTypeShape EntityType="SamrthDbModel.StatusMaster" Width="1.5" PointX="12.75" PointY="18.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.StockMaster" Width="1.5" PointX="7.5" PointY="33.375" />
+        <EntityTypeShape EntityType="SamrthDbModel.StockPakaging" Width="1.5" PointX="18.75" PointY="14.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.StockSpillage" Width="1.5" PointX="18.75" PointY="17.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.StockTransfer" Width="1.5" PointX="8.25" PointY="22.375" />
+        <EntityTypeShape EntityType="SamrthDbModel.StockVehicle" Width="1.5" PointX="19.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.supplier" Width="1.5" PointX="11.25" PointY="46.125" />
+        <EntityTypeShape EntityType="SamrthDbModel.TallySheet" Width="1.5" PointX="19.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tblExpensePMContainer" Width="1.5" PointX="7.5" PointY="28.25" />
+        <EntityTypeShape EntityType="SamrthDbModel.tblIssueVoucherDetail" Width="1.5" PointX="20.75" PointY="9.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tblIssueVoucherVehicleDetail" Width="1.5" PointX="20.75" PointY="13.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tblLPCP" Width="1.5" PointX="13.5" PointY="36.625" />
+        <EntityTypeShape EntityType="SamrthDbModel.tblQuarter" Width="1.5" PointX="20.75" PointY="20.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tblSection" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="SamrthDbModel.tblStockOutMain" Width="1.5" PointX="21.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tblWarehouse" Width="1.5" PointX="0.75" PointY="1.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.TypeOfOrder" Width="1.5" PointX="6" PointY="18.5" />
+        <EntityTypeShape EntityType="SamrthDbModel.UnitMaster" Width="1.5" PointX="8.25" PointY="9" />
+        <EntityTypeShape EntityType="SamrthDbModel.UnitType" Width="1.5" PointX="21.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.UserMaster" Width="1.5" PointX="17.25" PointY="1.125" />
+        <EntityTypeShape EntityType="SamrthDbModel.gh" Width="1.5" PointX="10.75" PointY="21.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_Atttribute" Width="1.5" PointX="12.75" PointY="21.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_Authority" Width="1.5" PointX="14.75" PointY="21.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_batchIdt" Width="1.5" PointX="16.75" PointY="21.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_financialyear" Width="1.5" PointX="22.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_idtQty_Quarter" Width="1.5" PointX="22.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_IDTrefrence" Width="1.5" PointX="22.75" PointY="16.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_IssueOrder" Width="1.5" PointX="22.75" PointY="20.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_IssueVoucher" Width="1.5" PointX="23.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_issuevoucherdetail" Width="1.5" PointX="18.75" PointY="23.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_loadtallydetail" Width="1.5" PointX="24.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_loadtaly" Width="1.5" PointX="24.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_ProductIDT_Quantity" Width="1.5" PointX="24.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_QuarterRange" Width="1.5" PointX="24.75" PointY="19.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_vechileMaster" Width="1.5" PointX="24.75" PointY="22.75" />
+        <EntityTypeShape EntityType="SamrthDbModel.tbl_vechileMaster_Type" Width="1.5" PointX="25.75" PointY="0.75" />
+        <AssociationConnector Association="SamrthDbModel.FK_AddPMContainer_CategoryMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_AddPMContainer_PMandContainerMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_tblExpensePMContainer_AddPMContainer" />
+        <AssociationConnector Association="SamrthDbModel.FK_BatchDepot_DepuMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_BatchMaster_DepuMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_BatchMaster_ProductMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_ExpenseVoucherMaster_BatchMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_CategoryMaster_CategoryType" />
+        <AssociationConnector Association="SamrthDbModel.FK_ExpenseVoucherMaster_CategoryMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_ProductMaster_CategoryMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_StockTransfer_CategoryMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_CityMaster_StatesMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_Formation_CommandMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_StatesMaster_CountryMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_RoleMaster_DeptMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_StockTransfer_DepuMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_UnitMaster_DepuMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_EslMaster_UnitMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_ExpenseVoucherMaster_ProductMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_IssueVoucher_IDT" />
+        <AssociationConnector Association="SamrthDbModel.FK_StockTransfer_Indent" />
+        <AssociationConnector Association="SamrthDbModel.FK_IssueVoucher_IssueVoucher" />
+        <AssociationConnector Association="SamrthDbModel.FK_tblLPCP_OriginalManufacture_" />
+        <AssociationConnector Association="SamrthDbModel.FK_StockMaster_ProductMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_tblLPCP_ProductMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_UserMaster_RoleMaster" />
+        <AssociationConnector Association="SamrthDbModel.FK_StockTransfer_StockTransfer" />
+        <AssociationConnector Association="SamrthDbModel.FK_tblLPCP_supplier" />
+        <AssociationConnector Association="SamrthDbModel.FK_tblSection_tblSection" />
+        <AssociationConnector Association="SamrthDbModel.FK_tblSection_tblSection1" />
+        <AssociationConnector Association="SamrthDbModel.FK_UnitMaster_UnitMaster" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
