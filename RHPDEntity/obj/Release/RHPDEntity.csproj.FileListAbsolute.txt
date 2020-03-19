@@ -68,3 +68,9 @@ C:\Users\HP\Downloads\Code to Vipan\Code to Vipan\FullCode\RHPDEntity\bin\Releas
 C:\Users\HP\Downloads\Code to Vipan\Code to Vipan\FullCode\RHPDEntity\obj\Release\RHPDEntity.csprojAssemblyReference.cache
 C:\Users\HP\Downloads\Code to Vipan\Code to Vipan\FullCode\RHPDEntity\obj\Release\RHPDEntity.dll
 C:\Users\HP\Downloads\Code to Vipan\Code to Vipan\FullCode\RHPDEntity\obj\Release\RHPDEntity.pdb
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDEntity\bin\Release\RHPDEntity.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDEntity\bin\Release\RHPDEntity.pdb
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDEntity\obj\Release\RHPDEntity.csprojAssemblyReference.cache
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDEntity\obj\Release\RHPDEntity.csproj.CoreCompileInputs.cache
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDEntity\obj\Release\RHPDEntity.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDEntity\obj\Release\RHPDEntity.pdb

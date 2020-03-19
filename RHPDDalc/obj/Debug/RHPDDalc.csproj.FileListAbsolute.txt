@@ -155,3 +155,12 @@ D:\Project\Code to Vipan\Code to Vipan\FullCode\RHPDDalc\obj\Debug\RHPDDalc.cspr
 D:\Project\Code to Vipan\Code to Vipan\FullCode\RHPDDalc\obj\Debug\RHPDDalc.csproj.CopyComplete
 D:\Project\Code to Vipan\Code to Vipan\FullCode\RHPDDalc\obj\Debug\RHPDDalc.dll
 D:\Project\Code to Vipan\Code to Vipan\FullCode\RHPDDalc\obj\Debug\RHPDDalc.pdb
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDDalc\bin\Debug\RHPDDalc.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDDalc\bin\Debug\RHPDDalc.pdb
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDDalc\bin\Debug\RHPDEntity.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDDalc\bin\Debug\RHPDEntity.pdb
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDDalc\obj\Debug\RHPDDalc.csprojAssemblyReference.cache
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDDalc\obj\Debug\RHPDDalc.csproj.CoreCompileInputs.cache
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDDalc\obj\Debug\RHPDDalc.csproj.CopyComplete
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDDalc\obj\Debug\RHPDDalc.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDDalc\obj\Debug\RHPDDalc.pdb

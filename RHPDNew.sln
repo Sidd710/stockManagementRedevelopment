@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29806.167
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RHPDNew", "RHPDNew\RHPDNew.csproj", "{CCC89950-900B-46FB-8414-17640A64C918}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -18,8 +18,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RHPDDalc", "RHPDDalc\RHPDDa
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RHPDEntity", "RHPDEntity\RHPDEntity.csproj", "{348D3C3A-26B1-42A8-AC81-B99120A2F808}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API Project", "API Project\API Project.csproj", "{BCF65047-98FB-4180-A4FE-F0B56EA0D7C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,10 +41,6 @@ Global
 		{348D3C3A-26B1-42A8-AC81-B99120A2F808}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{348D3C3A-26B1-42A8-AC81-B99120A2F808}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{348D3C3A-26B1-42A8-AC81-B99120A2F808}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BCF65047-98FB-4180-A4FE-F0B56EA0D7C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BCF65047-98FB-4180-A4FE-F0B56EA0D7C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BCF65047-98FB-4180-A4FE-F0B56EA0D7C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BCF65047-98FB-4180-A4FE-F0B56EA0D7C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

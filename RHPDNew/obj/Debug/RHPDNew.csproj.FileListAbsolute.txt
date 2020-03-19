@@ -291,3 +291,24 @@ D:\Project\Code to Vipan\Code to Vipan\FullCode\RHPDNew\obj\Debug\RHPDNew.dll
 D:\Project\Code to Vipan\Code to Vipan\FullCode\RHPDNew\obj\Debug\RHPDNew.pdb
 D:\Project\Code to Vipan\Code to Vipan\FullCode\RHPDNew\bin\Newtonsoft.Json.dll
 D:\Project\Code to Vipan\Code to Vipan\FullCode\RHPDNew\bin\Newtonsoft.Json.xml
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\RHPDNew.dll.config
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\RHPDNew.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\RHPDNew.pdb
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\EntityFramework.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\EntityFramework.SqlServer.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\Newtonsoft.Json.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\RHPDComponent.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\RHPDDalc.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\RHPDEntity.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\Microsoft.ApplicationBlocks.Data.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\EntityFramework.xml
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\EntityFramework.SqlServer.xml
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\Newtonsoft.Json.xml
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\RHPDComponent.pdb
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\RHPDDalc.pdb
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\bin\RHPDEntity.pdb
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\obj\Debug\RHPDNew.csprojAssemblyReference.cache
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\obj\Debug\RHPDNew.csproj.CoreCompileInputs.cache
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\obj\Debug\RHPDNew.csproj.CopyComplete
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\obj\Debug\RHPDNew.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDNew\obj\Debug\RHPDNew.pdb

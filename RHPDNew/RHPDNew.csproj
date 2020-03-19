@@ -274,7 +274,9 @@
     <Content Include="Forms\printesl.aspx" />
     <Content Include="Forms\PrintStockInCRV.aspx" />
     <Content Include="Forms\Stock.aspx" />
+    <Content Include="Forms\StockInMonitor.aspx" />
     <Content Include="Forms\StockManagement.aspx" />
+    <Content Include="Forms\StockOutMonitor.aspx" />
     <Content Include="Forms\StockTransformation.aspx" />
     <Content Include="Forms\StockView.aspx" />
     <Content Include="Forms\SupplierMgmt.aspx" />
@@ -778,12 +780,26 @@
     <Compile Include="Forms\Stock.aspx.designer.cs">
       <DependentUpon>Stock.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\StockInMonitor.aspx.cs">
+      <DependentUpon>StockInMonitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\StockInMonitor.aspx.designer.cs">
+      <DependentUpon>StockInMonitor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\StockManagement.aspx.cs">
       <DependentUpon>StockManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Forms\StockManagement.aspx.designer.cs">
       <DependentUpon>StockManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StockOutMonitor.aspx.cs">
+      <DependentUpon>StockOutMonitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\StockOutMonitor.aspx.designer.cs">
+      <DependentUpon>StockOutMonitor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\StockTransformation.aspx.cs">
       <DependentUpon>StockTransformation.aspx</DependentUpon>
@@ -1396,6 +1412,7 @@
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="RHPD.Master" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\RHPD.pubxml" />
     <EntityDeploy Include="rhpdDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

@@ -161,3 +161,15 @@ D:\Project\Code to Vipan\Code to Vipan\FullCode\RHPDComponent\obj\Release\RHPDCo
 D:\Project\Code to Vipan\Code to Vipan\FullCode\RHPDComponent\obj\Release\RHPDComponent.csproj.CopyComplete
 D:\Project\Code to Vipan\Code to Vipan\FullCode\RHPDComponent\obj\Release\RHPDComponent.dll
 D:\Project\Code to Vipan\Code to Vipan\FullCode\RHPDComponent\obj\Release\RHPDComponent.pdb
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDComponent\bin\Release\RHPDComponent.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDComponent\bin\Release\RHPDComponent.pdb
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDComponent\bin\Release\RHPDDalc.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDComponent\bin\Release\RHPDEntity.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDComponent\bin\Release\StarMethods.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDComponent\bin\Release\RHPDDalc.pdb
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDComponent\bin\Release\RHPDEntity.pdb
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDComponent\obj\Release\RHPDComponent.csprojAssemblyReference.cache
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDComponent\obj\Release\RHPDComponent.csproj.CoreCompileInputs.cache
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDComponent\obj\Release\RHPDComponent.csproj.CopyComplete
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDComponent\obj\Release\RHPDComponent.dll
+H:\Svn Projects\stockmanagementred\stockManagementRedevelopment\RHPDComponent\obj\Release\RHPDComponent.pdb

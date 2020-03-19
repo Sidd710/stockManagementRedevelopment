@@ -76,6 +76,10 @@
                     <CommandItemTemplate>
                         <asp:Button ID="btnExcel" runat="server" CausesValidation="false" Text="Export to Excel" OnClick="btnExcel_Click" CssClass="myExcelbtn" />
                     </CommandItemTemplate>
+                    <RowIndicatorColumn Visible="False">
+                    </RowIndicatorColumn>
+                    <ExpandCollapseColumn Created="True">
+                    </ExpandCollapseColumn>
                     <Columns>
                         <%-- <telerik:GridTemplateColumn HeaderText="Id" DataType="System.String" Groupable="false" HeaderStyle-CssClass="text-center GridHeader_Sunset">
                                                                             <ItemTemplate>
